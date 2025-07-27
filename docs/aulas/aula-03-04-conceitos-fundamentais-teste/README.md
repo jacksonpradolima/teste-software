@@ -243,7 +243,7 @@ A distinção entre verificação e validação é fundamental para compreender 
 
 ```mermaid
 classDiagram
-    class Verificação {
+    class Verificacao {
         +objetivo: "Produto correto"
         +pergunta: "Estamos construindo corretamente?"
         +foco: "Conformidade com especificações"
@@ -251,7 +251,7 @@ classDiagram
         +momento: "Durante desenvolvimento"
     }
     
-    class Validação {
+    class Validacao {
         +objetivo: "Produto certo"
         +pergunta: "Estamos construindo o produto certo?"
         +foco: "Atendimento às necessidades"
@@ -259,8 +259,8 @@ classDiagram
         +momento: "Com usuário final"
     }
     
-    Verificação --> QualidadeInterna
-    Validação --> QualidadeExterna
+    Verificacao --> QualidadeInterna
+    Validacao --> QualidadeExterna
     
     class QualidadeInterna {
         +conformidadeEspecificações
