@@ -4673,70 +4673,103 @@ Este capítulo estabeleceu as bases conceituais fundamentais para compreensão p
 #### Mapa Mental dos Conceitos Fundamentais:
 
 ```mermaid
-graph TB
-    %% Núcleo Central
-    TF[Teste de Software<br/>Conceitos Fundamentais] --> CC[Cadeia Causal]
-    TF --> VV[Verificação vs Validação]
-    TF --> SW[SWEBOK Integration]
+mindmap
+  root((Conceitos Fundamentais<br/>de Teste))
+    Fundamentos Teóricos
+      Terminologia Essencial
+        Erro vs Defeito vs Falha
+        Verificação vs Validação
+        Bug vs Incident
+        Mistake vs Defect
+      Cadeia Causal
+        Erro Humano
+        Defeito no Código
+        Falha Observable
+        Incidente de Negócio
+      SWEBOK Integration
+        Engenharia de Software
+        Estruturas de Software
+        Qualidade de Software
+        Gestão de Configuração
+      Modelos Matemáticos
+        Latência Causal Ponderada
+        Eficácia de Detecção
+        ROI de Testes
+        Modelagem Temporal
     
-    %% Cadeia Causal
-    CC --> ER[Erro<br/>Mistake]
-    CC --> DF[Defeito<br/>Defect/Bug]
-    CC --> FL[Falha<br/>Failure]
-    CC --> IN[Incidente<br/>Incident]
+    Aplicação Prática
+      Estudo de Caso E-commerce
+        Sistema de Pedidos
+        Validação de Pagamento
+        Gestão de Estoque
+        Análise de Performance
+      Código Exemplar
+        Defensive Programming
+        Type Safety Python
+        Error Handling
+        Logging Estruturado
+      Ferramentas Contextuais
+        Python Testing
+        Native Libraries
+        Performance Analysis
+        Observability Tools
     
-    ER --> |"Causa"| DF
-    DF --> |"Resulta em"| FL
-    FL --> |"Gera"| IN
+    Arquiteturas Avançadas
+      Microsserviços
+        Distributed Tracing
+        Service Mesh Testing
+        Circuit Breaker Pattern
+        Correlation ID Tracking
+      Event-Driven Systems
+        Temporal Consistency
+        Saga Pattern Testing
+        Event Sourcing
+        CQRS Validation
+      IA/ML Systems
+        Model Validation
+        Data Drift Detection
+        Bias Testing
+        Performance Monitoring
     
-    %% Verificação e Validação
-    VV --> VER[Verificação<br/>Building Right]
-    VV --> VAL[Validação<br/>Right Building]
+    Anti-Padrões e Armadilhas
+      Pesticide Paradox
+        Test Case Evolution
+        Coverage Stagnation
+        Regression Blindness
+      Error Absence Fallacy
+        False Security
+        Incomplete Testing
+        Quality Misconception
+      Terminal Testing
+        Last-Minute Validation
+        Deployment Panic
+        Quality Debt
+      Performance Anti-patterns
+        Memory Leaks
+        Timeout Issues
+        Concurrency Problems
     
-    VER --> |"Conformidade Técnica"| CT[Especificações<br/>Padrões<br/>Requisitos]
-    VAL --> |"Adequação ao Propósito"| AP[Necessidades Usuário<br/>Objetivos Negócio<br/>Contexto Real]
-    
-    %% SWEBOK
-    SW --> SE[Engenharia<br/>Software]
-    SW --> ES[Estruturas<br/>Software]
-    SW --> QS[Qualidade<br/>Software]
-    SW --> GC[Gestão<br/>Configuração]
-    
-    %% Arquiteturas Avançadas
-    TF --> ARQ[Arquiteturas<br/>Especializadas]
-    ARQ --> MS[Microsserviços<br/>Distributed Tracing]
-    ARQ --> ED[Event-Driven<br/>Temporal Consistency]
-    ARQ --> IA[IA/ML Systems<br/>Model Validation]
-    
-    %% Métricas e Performance
-    TF --> MP[Métricas &<br/>Performance]
-    MP --> LC[Latência Causal<br/>Ponderada]
-    MP --> ED_EF[Eficácia<br/>Detecção]
-    MP --> ROI[ROI<br/>Testes]
-    
-    %% Fronteiras Futuras
-    TF --> FF[Fronteiras<br/>Futuras]
-    FF --> TQ[Teste<br/>Quântico]
-    FF --> IAG[IA Generativa<br/>Teste Autônomo]
-    FF --> SO[Sistemas<br/>Auto-reparadores]
-    
-    %% Interconexões
-    TF --> IC[Interconexões<br/>Disciplinares]
-    IC --> AI[Inteligência<br/>Artificial]
-    IC --> SEC[Segurança da<br/>Informação]
-    IC --> ES_INT[Engenharia de<br/>Software]
-    
-    %% Estilos
-    classDef conceito_base fill:#e1f5fe,stroke:#0277bd,stroke-width:3px
-    classDef conceito_avancado fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef conceito_futuro fill:#e8f5e8,stroke:#388e3c,stroke-width:2px
-    classDef relacao fill:#fff3e0,stroke:#f57c00,stroke-width:1px
-    
-    class TF conceito_base
-    class CC,VV,SW conceito_base
-    class ARQ,MP,IC conceito_avancado
-    class FF,TQ,IAG,SO conceito_futuro
-    class ER,DF,FL,IN relacao
+    Perspectivas Futuras
+      Convergência Disciplinar
+        IA e Machine Learning
+        Segurança da Informação
+        Engenharia de Software
+        DevOps Evolution
+      Fronteiras de Pesquisa
+        Teste Quântico
+        Superposição de Estados
+        Entrelaçamento Causal
+        Computação Probabilística
+      Tendências Emergentes
+        IA Generativa
+        Teste Autônomo
+        Self-Healing Systems
+        Auto-repair Mechanisms
+      Inovações Revolucionárias
+        Quantum Testing
+        Autonomous QA
+        Production Learning
+        Immersive Testing
 ```
 
 ### 5.4. Referências e Leituras Adicionais
