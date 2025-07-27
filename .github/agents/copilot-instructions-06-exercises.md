@@ -1,4 +1,4 @@
-Para finalizar, vamos criar os exercícios.
+Para finalizar, vamos criar os exercícios da aula contida no README.md.
 
 Guia mestre: .github/copilot-instructions-core.md
 
