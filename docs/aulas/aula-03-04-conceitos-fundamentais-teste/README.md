@@ -29,23 +29,26 @@ tone: "profissional e didático"
      - 2.1.1. Definições Formais e Terminologia
      - 2.1.2. Desmistificando o Teste de Software
    - 2.2. Conceitos Fundamentais
-     - 2.2.1. Erro (Mistake)
-     - 2.2.2. Defeito (Fault ou Bug)
-     - 2.2.3. Falha (Failure)
-     - 2.2.4. Incidente
-     - 2.2.5. Relação Causal entre Conceitos
+     - 2.2.1. Terminologia da Cadeia de Causalidade
+     - 2.2.2. Análise da Relação Causal
    - 2.3. O Conceito de Bug
      - 2.3.1. História e Etimologia
      - 2.3.2. Classificação e Impacto
    - 2.4. Verificação e Validação
-     - 2.4.1. Verificação: Construindo Corretamente
-     - 2.4.2. Validação: Construindo o Produto Certo
-   - 2.5. SWEBOK e Teste de Software
-     - 2.5.1. Contextualização no Body of Knowledge
-     - 2.5.2. Integração com Outras Áreas
-   - 2.6. Modelos de Desenvolvimento e Testes
-     - 2.6.1. Evolução Histórica
-     - 2.6.2. Práticas Modernas
+     - 2.4.1. Fundamentos Conceituais
+     - 2.4.2. Análise Comparativa
+   - 2.5. Modelagem Matemática dos Conceitos de Teste
+   - 2.6. SWEBOK e Teste de Software
+     - 2.6.1. Contextualização no Body of Knowledge
+     - 2.6.2. Integração com Outras Áreas do SWEBOK
+   - 2.7. Modelos de Desenvolvimento e Testes
+     - 2.7.1. Evolução Histórica
+     - 2.7.2. Análise Comparativa dos Modelos
+     - 2.7.3. Análise de Consequências e Trade-offs
+   - 2.8. Análise Crítica dos Conceitos Fundamentais
+     - 2.8.1. Limitações e Desafios Comuns
+     - 2.8.2. Perguntas Frequentes (FAQ)
+     - 2.8.3. Evolução dos Conceitos na Era Moderna
 
 ## 1. Abertura e Engajamento
 
@@ -412,52 +415,6 @@ graph TB
 3. **Completude**: Cobertura abrangente desde fundamentos até práticas avançadas
 4. **Integração**: Conexões explícitas com outras disciplinas da engenharia
 5. **Evolução**: Framework para incorporar novas práticas e tecnologias
-
-### 2.7. Modelos de Desenvolvimento e Testes
-
-#### 2.5.1. Contextualização no Body of Knowledge
-
-O SWEBOK (Software Engineering Body of Knowledge) é um guia internacionalmente reconhecido que define e organiza o conhecimento em engenharia de software. O teste de software é uma das 15 áreas de conhecimento fundamentais definidas no SWEBOK v3.0.
-
-```mermaid
-graph TD
-    A[SWEBOK] --> B[Fundamentos]
-    A --> C[Requisitos]
-    A --> D[Design]
-    A --> E[Construção]
-    A --> F[Teste]
-    A --> G[Manutenção]
-    
-    F --> F1[Fundamentos de Teste]
-    F --> F2[Níveis de Teste]
-    F --> F3[Técnicas de Teste]
-    F --> F4[Métricas]
-    F --> F5[Processo de Teste]
-    
-    style F fill:#f9f,stroke:#333,stroke-width:4px
-```
-
-> **Analogia para Entender**
-> 
-> O SWEBOK é como uma enciclopédia médica para a engenharia de software. Assim como a medicina tem suas especialidades (cardiologia, neurologia etc.), a engenharia de software tem suas áreas de conhecimento. O teste é uma dessas "especialidades" fundamentais, com seus próprios conceitos, técnicas e melhores práticas.
-
-#### 2.5.2. Integração com Outras Áreas
-
-O teste de software no SWEBOK interage fortemente com outras áreas de conhecimento:
-
-```mermaid
-graph TB
-    Teste --> Requisitos[Requisitos<br>Validação de requisitos]
-    Teste --> Design[Design<br>Verificação arquitetural]
-    Teste --> Construcao[Construção<br>Testes unitários]
-    Teste --> Qualidade[Qualidade<br>Métricas e processos]
-    Teste --> Manutencao[Manutenção<br>Testes de regressão]
-    
-    classDef area fill:#f9f,stroke:#333,stroke-width:2px
-    class Teste,Requisitos,Design,Construcao,Qualidade,Manutencao area
-```
-
-### 2.6. Modelos de Desenvolvimento e Testes
 
 ### 2.7. Modelos de Desenvolvimento e Testes
 
