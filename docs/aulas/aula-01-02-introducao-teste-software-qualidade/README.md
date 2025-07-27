@@ -1,16 +1,16 @@
 ---
-aula: 1-2
+aula: 01-02
 titulo: "Introdução ao Teste de Software e Qualidade de Software"
-objetivo: 'Proporcionar uma introdução aprofundada ao Teste de Software, contextualizando sua relevância, discutindo conceitos de qualidade (ISO/IEC 25010) e o impacto econômico da detecção de defeitos (Curva de Boehm).'
-conceitos: ['Teste de Software', 'Qualidade de Software', 'ISO/IEC 25010', 'Curva de Boehm', 'Verificação', 'Validação']
+objetivo: "Proporcionar uma introdução aprofundada ao Teste de Software, contextualizando sua relevância, discutindo conceitos de qualidade e o impacto econômico da detecção de defeitos"
+conceitos: ['teste de software', 'qualidade de software', 'ISO/IEC 25010', 'curva de Boehm', 'verificação', 'validação']
 prerequisitos: []
 dificuldade: 'básico'
 owner: 'Jackson Antonio do Prado Lima'
-date_created: '2025-07-26'
-tempo_estimado: '03:20'
-forma_entrega: 'exercício'
-competencias: ['Compreensão Conceitual', 'Análise Crítica', 'Contextualização Histórica']
-metodologia: 'Aula expositiva, estudo de caso, exercícios conceituais'
+date_created: '2025-01-27'
+tempo_estimado: '3:20'
+forma_entrega: 'exercício conceitual'
+competencias: ['compreensão conceitual', 'análise crítica', 'contextualização histórica']
+metodologia: 'Aula expositiva dialogada, estudo de caso, exercícios conceituais'
 llm_style: "detailed"
 language: "pt-BR"
 tone: "profissional e didático"
