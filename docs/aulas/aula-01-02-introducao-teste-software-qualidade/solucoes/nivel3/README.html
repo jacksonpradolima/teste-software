@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Soluções - Nível 3 (Debate e Estratégia) &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-01-02-introducao-teste-software-qualidade/solucoes/nivel3/README';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../README.html">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/docs/aulas/aula-01-02-introducao-teste-software-qualidade/solucoes/nivel3/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Soluções - Nível 3 (Debate e Estratégia)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-1-quality-engineering-vs-quality-assurance">Questão 1: Quality Engineering vs. Quality Assurance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-2-estrategia-de-qualidade-para-um-novo-produto">Questão 2: Estratégia de Qualidade para um Novo Produto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-3-o-dilema-do-lancamento">Questão 3: O Dilema do Lançamento</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="solucoes-nivel-3-debate-e-estrategia">
+<h1>Soluções - Nível 3 (Debate e Estratégia)<a class="headerlink" href="#solucoes-nivel-3-debate-e-estrategia" title="Link to this heading">#</a></h1>
+<section id="questao-1-quality-engineering-vs-quality-assurance">
+<h2>Questão 1: Quality Engineering vs. Quality Assurance<a class="headerlink" href="#questao-1-quality-engineering-vs-quality-assurance" title="Link to this heading">#</a></h2>
+<p>a) A diferença fundamental é a <strong>proatividade versus a reatividade</strong>.</p>
+<ul class="simple">
+<li><p><strong>Quality Assurance (QA)</strong> é uma abordagem tradicionalmente reativa, focada em “garantir a qualidade” através da detecção de defeitos <em>depois</em> que o software foi construído. O time de QA atua como um “gatekeeper” no final do processo, validando o que foi feito.</p></li>
+<li><p><strong>Quality Engineering (QE)</strong> é uma abordagem proativa, focada em “construir a qualidade” desde o início. Envolve a engenharia de processos, ferramentas e cultura para <em>prevenir</em> que os defeitos ocorram. O QE está integrado ao time de desenvolvimento e se preocupa com a qualidade em todas as fases, desde os requisitos até o deploy e monitoramento.</p></li>
+</ul>
+<p>b) <strong>Três ações práticas para a transição para QE:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Implementar “Shift-Left Testing” através de TDD/BDD:</strong> Em vez de esperar o software ficar pronto para testar, a equipe passa a escrever testes (unitários, de comportamento) <em>antes</em> ou <em>durante</em> o desenvolvimento. Isso previne bugs de lógica e de requisitos, pois força os desenvolvedores a pensarem nos critérios de sucesso antes de escreverem o código, além de garantir que o design seja testável.</p></li>
+<li><p><strong>Automatizar a Análise Estática de Código no Pipeline de CI:</strong> Integrar ferramentas como SonarQube, lints (ESLint, Ruff) e analisadores de segurança no pipeline de integração contínua. Essas ferramentas analisam o código a cada commit e bloqueiam a integração se encontrarem “code smells”, vulnerabilidades ou código fora do padrão. Isso previne que código de baixa qualidade chegue à base principal, agindo como um “guardião” automatizado da qualidade intrínseca.</p></li>
+<li><p><strong>Adotar Revisões de Código (Code Reviews) Obrigatórias e Estruturadas:</strong> Instituir a prática de que nenhum código pode ser mesclado à branch principal sem a revisão e aprovação de pelo menos um outro membro da equipe. Isso não só detecta bugs, mas também dissemina conhecimento, melhora a qualidade do código e previne a introdução de lógica falha ou complexa demais. É uma forma de verificação humana e colaborativa.</p></li>
+</ol>
+<p>c) Em uma cultura de Quality Engineering, <strong>a qualidade é responsabilidade de todos</strong>. Não é mais um silo.</p>
+<ul class="simple">
+<li><p>O <strong>Desenvolvedor</strong> é responsável pela qualidade do seu código (testes unitários, código limpo).</p></li>
+<li><p>O <strong>Engenheiro de Qualidade (QE)</strong> é responsável por construir e manter a infraestrutura de testes, definir estratégias e capacitar a equipe.</p></li>
+<li><p>O <strong>Product Owner (PO)</strong> é responsável por escrever requisitos claros e critérios de aceitação testáveis.</p></li>
+<li><p>O <strong>Time de Operações (Ops)</strong> é responsável por garantir que o ambiente de produção seja monitorável para detectar problemas de qualidade em tempo real.
+A qualidade deixa de ser um “departamento” e se torna um valor cultural compartilhado por toda a equipe que constrói o produto.</p></li>
+</ul>
+</section>
+<section id="questao-2-estrategia-de-qualidade-para-um-novo-produto">
+<h2>Questão 2: Estratégia de Qualidade para um Novo Produto<a class="headerlink" href="#questao-2-estrategia-de-qualidade-para-um-novo-produto" title="Link to this heading">#</a></h2>
+<p>As quatro características mais críticas para uma plataforma de telemedicina seriam: <strong>Segurança, Confiabilidade, Usabilidade e Adequação Funcional</strong>.</p>
+<hr class="docutils" />
+<p><strong>1. Característica Escolhida:</strong> <strong>Segurança</strong></p>
+<ul class="simple">
+<li><p><strong>Justificativa:</strong> A plataforma manipula dados de saúde extremamente sensíveis (prontuários, diagnósticos), protegidos por leis rigorosas como a LGPD no Brasil. Uma falha de segurança poderia expor dados de pacientes, levar a processos judiciais e destruir a reputação da empresa.</p></li>
+<li><p><strong>Requisito de Exemplo:</strong> “Toda a comunicação por vídeo e troca de dados entre paciente e médico deve ser criptografada de ponta a ponta, e os dados em repouso (no banco de dados) devem ser armazenados em formato criptografado.”</p></li>
+<li><p><strong>Tipo de Teste Essencial:</strong> <strong>Teste de Penetração (Pentest)</strong> e <strong>Análise de Vulnerabilidades Automatizada (SAST/DAST)</strong> para identificar e explorar possíveis brechas de segurança.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>2. Característica Escolhida:</strong> <strong>Confiabilidade</strong></p>
+<ul class="simple">
+<li><p><strong>Justificativa:</strong> Médicos e pacientes dependem da plataforma para atendimentos de saúde. Uma falha durante uma consulta (ex: o sistema cai) pode interromper um diagnóstico importante. O sistema deve estar disponível e funcionar corretamente sempre que necessário.</p></li>
+<li><p><strong>Requisito de Exemplo:</strong> “O sistema deve ter uma disponibilidade de 99.9%, e em caso de falha em um servidor, o sistema de backup deve assumir a operação em menos de 1 minuto (tolerância a falhas).”</p></li>
+<li><p><strong>Tipo de Teste Essencial:</strong> <strong>Teste de Carga e Estresse</strong> para simular um grande número de consultas simultâneas e verificar a estabilidade do sistema. <strong>Teste de Failover</strong> para simular a queda de um servidor e garantir que o backup funcione como esperado.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>3. Característica Escolhida:</strong> <strong>Usabilidade</strong></p>
+<ul class="simple">
+<li><p><strong>Justificativa:</strong> O público-alvo é amplo e inclui pessoas com diferentes níveis de habilidade tecnológica, como idosos. Se a plataforma for difícil de usar, os pacientes não conseguirão se conectar às consultas ou acessar seus exames, tornando o serviço inútil.</p></li>
+<li><p><strong>Requisito de Exemplo:</strong> “Um usuário de primeira viagem, com mais de 65 anos, deve ser capaz de iniciar uma consulta por vídeo em menos de 3 cliques após fazer o login, sem a necessidade de um tutorial.”</p></li>
+<li><p><strong>Tipo de Teste Essencial:</strong> <strong>Teste de Usabilidade com Usuários Reais</strong>, observando pessoas do público-alvo (incluindo idosos) interagindo com a plataforma para identificar pontos de confusão e dificuldade.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>4. Característica Escolhida:</strong> <strong>Adequação Funcional</strong></p>
+<ul class="simple">
+<li><p><strong>Justificativa:</strong> A precisão das funcionalidades é crítica. Uma falha na exibição de um prontuário ou na geração de uma prescrição digital pode levar a um erro médico grave. O software deve fazer exatamente o que é esperado dele, sem erros.</p></li>
+<li><p><strong>Requisito de Exemplo:</strong> “O sistema deve garantir que a prescrição digital gerada para o Paciente A seja visível apenas para o Paciente A e seu médico, e que os dados do medicamento (nome, dosagem) sejam exibidos com 100% de precisão.”</p></li>
+<li><p><strong>Tipo de Teste Essencial:</strong> <strong>Teste Funcional de ponta a ponta (End-to-End)</strong>, criando casos de teste detalhados que simulam o fluxo completo de uma consulta, desde o login do paciente até a emissão e recebimento da prescrição, validando cada passo e cada dado exibido.</p></li>
+</ul>
+</section>
+<section id="questao-3-o-dilema-do-lancamento">
+<h2>Questão 3: O Dilema do Lançamento<a class="headerlink" href="#questao-3-o-dilema-do-lancamento" title="Link to this heading">#</a></h2>
+<p>a) <strong>Argumento a favor de LANÇAR:</strong>
+“Deveríamos lançar na data prevista. O bug afeta um segmento muito pequeno de usuários (1%) em uma configuração técnica específica, e o impacto financeiro por transação é baixo (5% de desconto extra). O risco de adiar o lançamento e quebrar a promessa feita aos clientes na campanha de marketing é maior do que o risco do bug. Podemos mitigar o problema de forma proativa: 1) Implementar um monitoramento no backend para detectar e logar todas as transações que se encaixam nesse cenário. 2) Preparar um <em>hotfix</em> para ser lançado na próxima semana, já comunicando internamente que a correção é prioridade máxima. 3) Se necessário, podemos contatar os poucos clientes afetados e oferecer um crédito ou estorno, transformando um problema em uma experiência positiva de atendimento ao cliente. O custo do bug é controlável e menor do que o custo de oportunidade e de reputação de um adiamento.”</p>
+<p>b) <strong>Argumento a favor de ADIAR:</strong>
+“Não podemos lançar com um bug conhecido que causa prejuízo financeiro, por menor que seja. Lançar com este defeito abre um precedente perigoso e degrada nossa cultura de qualidade. O risco não é apenas o 1% que conhecemos; não sabemos se essa mesma falha pode ter outras manifestações ainda não descobertas. Se os usuários descobrirem o bug antes de nós, ele pode ser explorado e divulgado em redes sociais, causando um dano de imagem muito maior do que um simples adiamento. Adiar o lançamento por uma semana e comunicar de forma transparente aos nossos clientes que estamos garantindo a qualidade e a segurança do sistema é uma atitude mais profissional e que, a longo prazo, constrói mais confiança do que lançar um produto com falhas. A integridade do nosso software deve ser a prioridade.”</p>
+<p>c) <strong>Recomendação Final (Exemplo):</strong>
+“Minha recomendação é <strong>adiar o lançamento</strong>. Embora o impacto imediato do bug pareça pequeno e controlável, a decisão de lançar um software com um defeito financeiro conhecido corrói os padrões de qualidade da equipe e da empresa. A confiança do cliente é o nosso ativo mais valioso, e ela é mais bem preservada com transparência e um compromisso inabalável com a qualidade do que com o cumprimento de um prazo de marketing a qualquer custo. Devemos usar esta semana extra não apenas para corrigir o bug, mas também para realizar uma rodada de testes de regressão completa, garantindo que a correção não introduziu novos problemas. Comunicaremos o adiamento de forma honesta, reforçando nosso compromisso com a excelência. A perda de uma semana no cronograma é um preço pequeno a pagar pela integridade do nosso produto e pela confiança de nossos clientes a longo prazo.”</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/aulas/aula-01-02-introducao-teste-software-qualidade/solucoes/nivel3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-1-quality-engineering-vs-quality-assurance">Questão 1: Quality Engineering vs. Quality Assurance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-2-estrategia-de-qualidade-para-um-novo-produto">Questão 2: Estratégia de Qualidade para um Novo Produto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questao-3-o-dilema-do-lancamento">Questão 3: O Dilema do Lançamento</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

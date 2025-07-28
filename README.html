@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Teste de Software I &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'README';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Teste de Software I</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre">📚 Sobre</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo-geral">🎯 Objetivo Geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-especificos">Objetivos Específicos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-do-curso">🗓️ Estrutura do Curso</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnologias-utilizadas">💻 Tecnologias Utilizadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-executar">🚀 Como Executar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisitos">Pré-requisitos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executando-testes">Executando Testes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conteudos-em-destaque">📖 Conteúdos em Destaque</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabalhos-futuros">🔮 Trabalhos Futuros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reuso-do-material">🤝 Reúso do Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenca">📄 Licença</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="teste-de-software-i">
+<h1>Teste de Software I<a class="headerlink" href="#teste-de-software-i" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.12-blue.svg" /></a>
+<a class="reference download internal" download="" href="_downloads/9879d6db96fd29134fc802214163b95a/LICENSE"><span class="xref download myst"><img alt="License" src="https://img.shields.io/badge/License-MIT-blue.svg" /></span></a></p>
+<section id="sobre">
+<h2>📚 Sobre<a class="headerlink" href="#sobre" title="Link to this heading">#</a></h2>
+<p>Este repositório reúne os materiais, exemplos, exercícios e recursos utilizados na disciplina <strong>Teste de Software I</strong>. O curso aborda fundamentos, técnicas, estratégias e ferramentas modernas para garantir a qualidade de produtos de software, com ênfase em práticas de verificação, validação, automação e gestão de defeitos.</p>
+<section id="objetivo-geral">
+<h3>🎯 Objetivo Geral<a class="headerlink" href="#objetivo-geral" title="Link to this heading">#</a></h3>
+<p>Capacitar o aluno a compreender, aplicar e criticar os princípios, conceitos fundamentais e técnicas clássicas e modernas de Teste de Software, promovendo habilidades práticas, competências analíticas e atitudes orientadas à melhoria contínua no desenvolvimento, integração e manutenção de sistemas computacionais.</p>
+<section id="objetivos-especificos">
+<h4>Objetivos Específicos<a class="headerlink" href="#objetivos-especificos" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Compreender os conceitos fundamentais de qualidade de software, incluindo defeito, falha, erro, incidente, verificação e validação.</p></li>
+<li><p>Conhecer e aplicar técnicas de teste funcional (caixa-preta), como particionamento de equivalência e análise de valor limite.</p></li>
+<li><p>Conhecer e aplicar técnicas de teste estrutural (caixa-branca), como cobertura de instruções, decisões e caminhos independentes.</p></li>
+<li><p>Identificar e aplicar as diferentes estratégias de testes: unitário, integração, regressão e de sistema.</p></li>
+<li><p>Aplicar o Desenvolvimento Orientado a Testes (TDD) em projetos simples, evidenciando os benefícios para o design do software.</p></li>
+<li><p>Conhecer e discutir práticas de Behavior-Driven Development (BDD) e Acceptance Test-Driven Development (ATDD) para melhoria da comunicação entre stakeholders e desenvolvedores.</p></li>
+<li><p>Elaborar e interpretar casos de teste, critérios de parada e métricas de qualidade, relacionando-os ao contexto real do desenvolvimento.</p></li>
+<li><p>Planejar, executar e gerenciar o processo de testes, incluindo a geração de dados de teste e a gestão de defeitos utilizando ferramentas adequadas.</p></li>
+<li><p>Desenvolver a habilidade de utilizar ferramentas de automação de testes e gestão de testes reconhecidas no mercado.</p></li>
+<li><p>Integrar os conhecimentos adquiridos na disciplina por meio do desenvolvimento de um projeto integrador final, aplicando de forma prática os conceitos de teste de software.</p></li>
+<li><p>Refletir criticamente sobre o papel estratégico do teste de software na engenharia de software e sua relação com as boas práticas de desenvolvimento e manutenção.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="estrutura-do-curso">
+<h2>🗓️ Estrutura do Curso<a class="headerlink" href="#estrutura-do-curso" title="Link to this heading">#</a></h2>
+<p>O curso está organizado conforme o cronograma de 36 aulas, abrangendo fundamentos, técnicas, estratégias, ferramentas e projeto integrador:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Aula</strong></p></th>
+<th class="head"><p><strong>Tema</strong></p></th>
+<th class="head"><p><strong>Entregas / Observações</strong></p></th>
+<th class="head"><p><strong>Status</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1-2</p></td>
+<td><p>Apresentação da Disciplina, Introdução ao Teste de Software e Qualidade de Software</p></td>
+<td><p>* Conceitos, histórico, ISO/IEC 25010, Curva de Boehm</p></td>
+<td><p>✅ Concluído</p></td>
+</tr>
+<tr class="row-odd"><td><p>3-4</p></td>
+<td><p>Conceitos Fundamentais de Teste</p></td>
+<td><p>* Erro, defeito, falha, incidente, bug, verificação vs validação, SWEBOK, modelos de processo</p></td>
+<td><p>✅ Concluído</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Casos de Teste e Critérios</p></td>
+<td><p>* Estrutura de casos de teste, critérios de entrada/saída, heurísticas, exemplos práticos</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>6-8</p></td>
+<td><p>Técnicas de Teste Funcional (Caixa-Preta)</p></td>
+<td><p>* Particionamento de equivalência, valor limite, tabelas de decisão, máquina de estados, casos de uso</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>9-10</p></td>
+<td><p>Técnicas de Teste Estrutural (Caixa-Branca)</p></td>
+<td><p>* Cobertura de instrução, decisão, caminhos independentes, condições combinadas, ferramentas de cobertura</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Critérios de Parada e Métricas de Teste</p></td>
+<td><p>* Cobertura, estabilização de defeitos, métricas de qualidade, DRE</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>12-14</p></td>
+<td><p>Estratégias de Teste: Unitário, Integração, Regressão</p></td>
+<td><p>* Teste unitário, integração, regressão, automação, exemplos práticos</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>15-16</p></td>
+<td><p>Desenvolvimento Orientado a Testes (TDD, BDD, ATDD)</p></td>
+<td><p>* TDD, BDD, ATDD, comparativo, exercícios</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>Geração de Dados de Teste</p></td>
+<td><p>* Dados sintéticos, técnicas, ferramentas, geração baseada em modelos</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>Prova Teórica I</p></td>
+<td><p>* Avaliação dos conteúdos do 1º bimestre</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>19-20</p></td>
+<td><p>Gestão de Testes e Defeitos</p></td>
+<td><p>* Planejamento, plano de testes, matriz de rastreabilidade, ciclo de vida do defeito</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>21-22</p></td>
+<td><p>Métricas e Qualidade no CI/CD</p></td>
+<td><p>* Defect Density, MTTD, MTTR, Quality Gates, automação em pipelines</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>23-24</p></td>
+<td><p>Testes Baseados em Modelos e Mutação</p></td>
+<td><p>* Model-Based Testing, Teste de Mutação, ferramentas</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>25-26</p></td>
+<td><p>Testes de Performance e Segurança</p></td>
+<td><p>* Teste de carga, OWASP Top 10, ferramentas básicas</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>27-28</p></td>
+<td><p>Testes em Microserviços e Observabilidade</p></td>
+<td><p>* Estratégias, contract testing, logs, métricas, traces</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>29-30</p></td>
+<td><p>Ferramentas de Teste</p></td>
+<td><p>* Unitários, integração, funcionais, gestão, plugins</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-even"><td><p>31-33</p></td>
+<td><p>Projeto Integrador Final</p></td>
+<td><p>* Planejamento, execução, documentação, apresentação</p></td>
+<td><p>🔄 Em desenvolvimento</p></td>
+</tr>
+<tr class="row-odd"><td><p>34-35</p></td>
+<td><p>Apresentação do Projeto Integrador</p></td>
+<td><p>* Apresentação formal, discussão de resultados</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>Prova Teórica II</p></td>
+<td><p>* Avaliação dos conteúdos do 2º bimestre</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="tecnologias-utilizadas">
+<h2>💻 Tecnologias Utilizadas<a class="headerlink" href="#tecnologias-utilizadas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python 3.12+</strong></p></li>
+<li><p><strong>pytest</strong></p></li>
+<li><p><strong><a class="reference external" href="http://Coverage.py">Coverage.py</a></strong></p></li>
+<li><p><strong>Ferramentas de automação e gestão de testes</strong> (ex: Jira, Azure DevOps, Selenium, Postman, JMeter, k6, Pact, Prometheus, Grafana, Jaeger)</p></li>
+<li><p><strong>GitHub Actions</strong></p></li>
+</ul>
+</section>
+<section id="como-executar">
+<h2>🚀 Como Executar<a class="headerlink" href="#como-executar" title="Link to this heading">#</a></h2>
+<section id="pre-requisitos">
+<h3>Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Python 3.12+</p></li>
+<li><p>Ferramentas específicas conforme a aula (pytest, coverage, etc.)</p></li>
+</ul>
+</section>
+<section id="executando-testes">
+<h3>Executando Testes<a class="headerlink" href="#executando-testes" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Instalar dependências (exemplo para pytest)</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># Executar testes</span>
+pytest<span class="w"> </span>--cov<span class="o">=</span>./
+
+<span class="c1"># Visualizar cobertura</span>
+pytest<span class="w"> </span>--cov-report<span class="w"> </span>html
+</pre></div>
+</div>
+</section>
+</section>
+<section id="conteudos-em-destaque">
+<h2>📖 Conteúdos em Destaque<a class="headerlink" href="#conteudos-em-destaque" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Fundamentos de Teste de Software</strong></p></li>
+<li><p><strong>Qualidade de Software e ISO/IEC 25010</strong></p></li>
+<li><p><strong>Técnicas de Teste Funcional e Estrutural</strong></p></li>
+<li><p><strong>Desenvolvimento Orientado a Testes (TDD, BDD, ATDD)</strong></p></li>
+<li><p><strong>Gestão de Defeitos e Métricas de Qualidade</strong></p></li>
+<li><p><strong>Automação de Testes e Integração Contínua</strong></p></li>
+<li><p><strong>Testes em Microserviços e Observabilidade</strong></p></li>
+<li><p><strong>Ferramentas de Mercado para Teste e Gestão</strong></p></li>
+<li><p><strong>Projeto Integrador Final</strong></p></li>
+</ul>
+</section>
+<section id="trabalhos-futuros">
+<h2>🔮 Trabalhos Futuros<a class="headerlink" href="#trabalhos-futuros" title="Link to this heading">#</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Finalizar exemplos práticos e estudos de caso por aula</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Documentar todas as aulas e exercícios</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implementar projeto integrador completo</p></li>
+</ul>
+</section>
+<section id="reuso-do-material">
+<h2>🤝 Reúso do Material<a class="headerlink" href="#reuso-do-material" title="Link to this heading">#</a></h2>
+<p>O conteúdo deste repositório pode ser reutilizado com devida referência. Pull Requests com melhorias e novos exemplos são bem-vindos!</p>
+<p>Para dúvidas, comentários ou sugestões, abra uma <strong>issue</strong>.</p>
+</section>
+<section id="licenca">
+<h2>📄 Licença<a class="headerlink" href="#licenca" title="Link to this heading">#</a></h2>
+<p>Este projeto está licenciado sob a <a class="reference download internal" download="" href="_downloads/9879d6db96fd29134fc802214163b95a/LICENSE"><span class="xref download myst">MIT License</span></a>.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sobre">📚 Sobre</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo-geral">🎯 Objetivo Geral</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-especificos">Objetivos Específicos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-do-curso">🗓️ Estrutura do Curso</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tecnologias-utilizadas">💻 Tecnologias Utilizadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-executar">🚀 Como Executar</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisitos">Pré-requisitos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executando-testes">Executando Testes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conteudos-em-destaque">📖 Conteúdos em Destaque</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabalhos-futuros">🔮 Trabalhos Futuros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reuso-do-material">🤝 Reúso do Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licenca">📄 Licença</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

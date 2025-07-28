@@ -1,0 +1,1502 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercícios Nível 1 - Básico 🔵 &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/nivel1/README';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../README.html">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/nivel1/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercícios Nível 1 - Básico 🔵</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visao-geral-dos-exercicios">📋 Visão Geral dos Exercícios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-1-cadeia-causal-erro-defeito-falha-incidente">🎯 Exercício 1.1 - Cadeia Causal: Erro → Defeito → Falha → Incidente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cenario-realista">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sua-tarefa">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacao-requerida">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#excelente-90-100">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bom-75-89">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#satisfatorio-60-74">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insuficiente-60">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-para-sucesso">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perguntas-para-reflexao">🔍 Perguntas para Reflexão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-2-verificacao-vs-validacao-sistema-de-login">🎯 Exercício 1.2 - Verificação vs Validação: Sistema de Login</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">💡 Dicas para Sucesso</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-3-analise-de-cenarios-swebok">🎯 Exercício 1.3 - Análise de Cenários SWEBOK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">🔍 Perguntas para Reflexão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-do-nivel-1">🎯 Resumo do Nível 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceitos-consolidados">Conceitos Consolidados</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#habilidades-desenvolvidas">Habilidades Desenvolvidas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacao-para-nivel-2">Preparação para Nível 2</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercicios-nivel-1-basico">
+<h1>Exercícios Nível 1 - Básico 🔵<a class="headerlink" href="#exercicios-nivel-1-basico" title="Link to this heading">#</a></h1>
+<p><strong>Tempo Estimado</strong>: 15-30 minutos por exercício<br />
+<strong>Objetivo</strong>: Aplicação direta de conceitos fundamentais individuais<br />
+<strong>Complexidade</strong>: Uma única funcionalidade por exercício</p>
+<section id="visao-geral-dos-exercicios">
+<h2>📋 Visão Geral dos Exercícios<a class="headerlink" href="#visao-geral-dos-exercicios" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Exercício 1.1</strong>: Identificação e Classificação da Cadeia Causal</p></li>
+<li><p><strong>Exercício 1.2</strong>: Implementação de Verificação vs Validação</p></li>
+<li><p><strong>Exercício 1.3</strong>: Análise de Cenários de Teste Básicos</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="exercicio-1-1-cadeia-causal-erro-defeito-falha-incidente">
+<h2>🎯 Exercício 1.1 - Cadeia Causal: Erro → Defeito → Falha → Incidente<a class="headerlink" href="#exercicio-1-1-cadeia-causal-erro-defeito-falha-incidente" title="Link to this heading">#</a></h2>
+<section id="contexto">
+<h3>Contexto<a class="headerlink" href="#contexto" title="Link to this heading">#</a></h3>
+<p>Você foi contratado como analista de qualidade júnior em uma startup de delivery de comida chamada <strong>FoodRush</strong>. Seu primeiro trabalho é analisar problemas reportados pelos usuários e classificá-los corretamente usando a cadeia causal estudada na aula.</p>
+</section>
+<section id="cenario-realista">
+<h3>Cenário Realista<a class="headerlink" href="#cenario-realista" title="Link to this heading">#</a></h3>
+<p>O FoodRush tem recebido reclamações sobre o sistema de cálculo de frete. Alguns usuários relatam que:</p>
+<ul class="simple">
+<li><p>O valor do frete aparece como “R$ 0,00” na tela</p></li>
+<li><p>Mas na finalização, é cobrado R$ 15,00</p></li>
+<li><p>Isso acontece especificamente em bairros da “Zona Norte”</p></li>
+</ul>
+</section>
+<section id="sua-tarefa">
+<h3>📝 Sua Tarefa<a class="headerlink" href="#sua-tarefa" title="Link to this heading">#</a></h3>
+<p><strong>Implementar</strong> uma classe <code class="docutils literal notranslate"><span class="pre">AnalisadorCadeiaCanal</span></code> que:</p>
+<ol class="arabic simple">
+<li><p><strong>Identifique</strong> cada elo da cadeia causal em um problema reportado</p></li>
+<li><p><strong>Classifique</strong> adequadamente: erro, defeito, falha, incidente</p></li>
+<li><p><strong>Determine</strong> o impacto no negócio</p></li>
+<li><p><strong>Sugira</strong> pontos de correção</p></li>
+</ol>
+</section>
+<section id="implementacao-requerida">
+<h3>🛠️ Implementação Requerida<a class="headerlink" href="#implementacao-requerida" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crie o arquivo: exercicio_1_1.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Literal</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TipoProblema</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tipos de problemas na cadeia causal.&quot;&quot;&quot;</span>
+    <span class="n">ERRO</span> <span class="o">=</span> <span class="s2">&quot;erro&quot;</span>
+    <span class="n">DEFEITO</span> <span class="o">=</span> <span class="s2">&quot;defeito&quot;</span> 
+    <span class="n">FALHA</span> <span class="o">=</span> <span class="s2">&quot;falha&quot;</span>
+    <span class="n">INCIDENTE</span> <span class="o">=</span> <span class="s2">&quot;incidente&quot;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ImpactoNegocio</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Níveis de impacto no negócio.&quot;&quot;&quot;</span>
+    <span class="n">BAIXO</span> <span class="o">=</span> <span class="s2">&quot;baixo&quot;</span>
+    <span class="n">MEDIO</span> <span class="o">=</span> <span class="s2">&quot;medio&quot;</span>
+    <span class="n">ALTO</span> <span class="o">=</span> <span class="s2">&quot;alto&quot;</span>
+    <span class="n">CRITICO</span> <span class="o">=</span> <span class="s2">&quot;critico&quot;</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ElementoCadeia</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Representa um elemento da cadeia causal.&quot;&quot;&quot;</span>
+    <span class="n">tipo</span><span class="p">:</span> <span class="n">TipoProblema</span>
+    <span class="n">descricao</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">causa_raiz</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">impacto</span><span class="p">:</span> <span class="n">ImpactoNegocio</span> <span class="o">=</span> <span class="n">ImpactoNegocio</span><span class="o">.</span><span class="n">BAIXO</span>
+    
+<span class="k">class</span><span class="w"> </span><span class="nc">AnalisadorCadeiaCanal</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analisa problemas reportados e identifica a cadeia causal completa.</span>
+<span class="sd">    </span>
+<span class="sd">    CONCEITO APLICADO: Cadeia erro → defeito → falha → incidente</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">historico_analises</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">analisar_problema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relato_usuario</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+                         <span class="n">contexto_tecnico</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ElementoCadeia</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Analisa um problema e identifica todos os elementos da cadeia causal.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        relato_usuario : str</span>
+<span class="sd">            Descrição do problema pelo usuário final</span>
+<span class="sd">        contexto_tecnico : Dict</span>
+<span class="sd">            Informações técnicas sobre o problema (logs, código, etc.)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Dict[str, ElementoCadeia]</span>
+<span class="sd">            Dicionário com cada elemento da cadeia identificado</span>
+<span class="sd">            </span>
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        &gt;&gt;&gt; analisador = AnalisadorCadeiaCanal()</span>
+<span class="sd">        &gt;&gt;&gt; relato = &quot;Frete aparece R$ 0,00 mas cobra R$ 15,00&quot;</span>
+<span class="sd">        &gt;&gt;&gt; contexto = {&quot;codigo_erro&quot;: &quot;ZONA_NORTE_BUG&quot;, &quot;funcao&quot;: &quot;calcular_frete&quot;}</span>
+<span class="sd">        &gt;&gt;&gt; resultado = analisador.analisar_problema(relato, contexto)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># 1. Identifique o ERRO (mistake humano que originou)</span>
+        <span class="c1"># 2. Identifique o DEFEITO (manifestação no código)  </span>
+        <span class="c1"># 3. Identifique a FALHA (comportamento visível incorreto)</span>
+        <span class="c1"># 4. Identifique o INCIDENTE (impacto no usuário/negócio)</span>
+        <span class="c1">#</span>
+        <span class="c1"># DICA: Use o contexto_tecnico para deduzir informações técnicas</span>
+        <span class="c1"># DICA: Use o relato_usuario para entender o impacto</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">classificar_impacto</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elemento</span><span class="p">:</span> <span class="n">ElementoCadeia</span><span class="p">,</span> 
+                          <span class="n">metricas_negocio</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ImpactoNegocio</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Classifica o impacto de um elemento da cadeia no negócio.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        elemento : ElementoCadeia</span>
+<span class="sd">            Elemento da cadeia a ser classificado</span>
+<span class="sd">        metricas_negocio : Dict</span>
+<span class="sd">            Métricas relevantes (usuários afetados, receita perdida, etc.)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ImpactoNegocio</span>
+<span class="sd">            Classificação do impacto</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># Considere:</span>
+        <span class="c1"># - Número de usuários afetados</span>
+        <span class="c1"># - Receita potencialmente perdida</span>
+        <span class="c1"># - Frequência do problema</span>
+        <span class="c1"># - Tempo para resolução</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">sugerir_pontos_correcao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cadeia</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ElementoCadeia</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sugere pontos específicos onde correções devem ser aplicadas.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        cadeia : Dict[str, ElementoCadeia]</span>
+<span class="sd">            Cadeia causal completa identificada</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        List[str]</span>
+<span class="sd">            Lista de sugestões de correção priorizadas</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># Para cada elemento da cadeia, sugira:</span>
+        <span class="c1"># - ERRO: Como prevenir (treinamento, processo, code review)</span>
+        <span class="c1"># - DEFEITO: Como corrigir (patch, refactoring)</span>
+        <span class="c1"># - FALHA: Como detectar mais cedo (testes, monitoramento)</span>
+        <span class="c1"># - INCIDENTE: Como mitigar impacto (circuit breaker, fallback)</span>
+        <span class="k">pass</span>
+
+<span class="c1"># CENÁRIO DE TESTE FORNECIDO</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_cenario_foodrush</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cenário de teste baseado no problema real do FoodRush.</span>
+<span class="sd">    </span>
+<span class="sd">    CONTEXTO: Sistema cobra frete errado em bairros específicos</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">analisador</span> <span class="o">=</span> <span class="n">AnalisadorCadeiaCanal</span><span class="p">()</span>
+    
+    <span class="n">relato_usuario</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;Quando coloco meu endereço na Zona Norte, o app mostra frete &quot;</span>
+        <span class="s2">&quot;grátis (R$ 0,00) na tela de produtos. Mas na hora de finalizar &quot;</span>
+        <span class="s2">&quot;o pedido, aparece uma cobrança de R$ 15,00 de frete. &quot;</span>
+        <span class="s2">&quot;Isso já aconteceu 3 vezes esta semana!&quot;</span>
+    <span class="p">)</span>
+    
+    <span class="n">contexto_tecnico</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;codigo_erro&quot;</span><span class="p">:</span> <span class="s2">&quot;ZONA_NORTE_FRETE_MISMATCH&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;funcao_problema&quot;</span><span class="p">:</span> <span class="s2">&quot;calcular_frete_por_bairro&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;localizacao_codigo&quot;</span><span class="p">:</span> <span class="s2">&quot;src/services/delivery_service.py:line 127&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;logs_erro&quot;</span><span class="p">:</span> <span class="s2">&quot;KeyError: &#39;zona_norte&#39; in frete_config&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;frequencia&quot;</span><span class="p">:</span> <span class="s2">&quot;15</span><span class="si">% d</span><span class="s2">os pedidos da Zona Norte&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;usuarios_afetados&quot;</span><span class="p">:</span> <span class="mi">450</span><span class="p">,</span>
+        <span class="s2">&quot;receita_perdida_estimada&quot;</span><span class="p">:</span> <span class="mf">12500.00</span>
+    <span class="p">}</span>
+    
+    <span class="c1"># Teste sua implementação</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">analisador</span><span class="o">.</span><span class="n">analisar_problema</span><span class="p">(</span><span class="n">relato_usuario</span><span class="p">,</span> <span class="n">contexto_tecnico</span><span class="p">)</span>
+    
+    <span class="c1"># Verificações esperadas (descomente após implementar)</span>
+    <span class="c1"># assert &quot;erro&quot; in resultado</span>
+    <span class="c1"># assert &quot;defeito&quot; in resultado  </span>
+    <span class="c1"># assert &quot;falha&quot; in resultado</span>
+    <span class="c1"># assert &quot;incidente&quot; in resultado</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Análise concluída!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elementos identificados:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">resultado</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+    
+    <span class="c1"># Teste classificação de impacto</span>
+    <span class="k">if</span> <span class="s2">&quot;incidente&quot;</span> <span class="ow">in</span> <span class="n">resultado</span><span class="p">:</span>
+        <span class="n">impacto</span> <span class="o">=</span> <span class="n">analisador</span><span class="o">.</span><span class="n">classificar_impacto</span><span class="p">(</span>
+            <span class="n">resultado</span><span class="p">[</span><span class="s2">&quot;incidente&quot;</span><span class="p">],</span> 
+            <span class="p">{</span><span class="s2">&quot;usuarios_afetados&quot;</span><span class="p">:</span> <span class="mi">450</span><span class="p">,</span> <span class="s2">&quot;receita_perdida&quot;</span><span class="p">:</span> <span class="mf">12500.00</span><span class="p">}</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Impacto classificado como: </span><span class="si">{</span><span class="n">impacto</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Teste sugestões</span>
+    <span class="n">sugestoes</span> <span class="o">=</span> <span class="n">analisador</span><span class="o">.</span><span class="n">sugerir_pontos_correcao</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sugestões de correção:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sugestao</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sugestoes</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">sugestao</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_cenario_foodrush</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="criterios-de-avaliacao">
+<h3>🎯 Critérios de Avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Link to this heading">#</a></h3>
+<section id="excelente-90-100">
+<h4>✅ Excelente (90-100%)<a class="headerlink" href="#excelente-90-100" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identifica corretamente todos os 4 elementos da cadeia</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classificação de impacto precisa e bem justificada</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Sugestões de correção específicas e viáveis</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Código bem documentado com comentários pedagógicos</p></li>
+</ul>
+</section>
+<section id="bom-75-89">
+<h4>✓ Bom (75-89%)<a class="headerlink" href="#bom-75-89" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identifica pelo menos 3 elementos da cadeia corretamente</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Boa classificação de impacto</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Sugestões gerais mas relevantes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Código funcional com documentação adequada</p></li>
+</ul>
+</section>
+<section id="satisfatorio-60-74">
+<h4>⚠️ Satisfatório (60-74%)<a class="headerlink" href="#satisfatorio-60-74" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identifica 2 elementos da cadeia</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classificação básica de impacto</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Algumas sugestões relevantes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Código funciona mas falta documentação</p></li>
+</ul>
+</section>
+<section id="insuficiente-60">
+<h4>❌ Insuficiente (&lt;60%)<a class="headerlink" href="#insuficiente-60" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Não demonstra compreensão da cadeia causal</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classificação incorreta de elementos</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Sugestões irrelevantes ou genéricas</p></li>
+</ul>
+</section>
+</section>
+<section id="dicas-para-sucesso">
+<h3>💡 Dicas para Sucesso<a class="headerlink" href="#dicas-para-sucesso" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Comece pela definição</strong>: Releia as definições de erro, defeito, falha e incidente</p></li>
+<li><p><strong>Use o contexto</strong>: As informações técnicas contêm pistas importantes</p></li>
+<li><p><strong>Pense como investigador</strong>: Cada elemento causa o próximo na cadeia</p></li>
+<li><p><strong>Seja específico</strong>: Evite descrições genéricas, use o contexto do FoodRush</p></li>
+</ol>
+</section>
+<section id="perguntas-para-reflexao">
+<h3>🔍 Perguntas para Reflexão<a class="headerlink" href="#perguntas-para-reflexao" title="Link to this heading">#</a></h3>
+<p>Após implementar, reflita sobre:</p>
+<ol class="arabic simple">
+<li><p><strong>Por que</strong> é importante distinguir entre erro e defeito?</p></li>
+<li><p><strong>Como</strong> essa análise poderia prevenir problemas similares?</p></li>
+<li><p><strong>Qual</strong> elemento da cadeia é mais fácil de corrigir? Por quê?</p></li>
+<li><p><strong>Onde</strong> você investiria recursos para máximo impacto preventivo?</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="exercicio-1-2-verificacao-vs-validacao-sistema-de-login">
+<h2>🎯 Exercício 1.2 - Verificação vs Validação: Sistema de Login<a class="headerlink" href="#exercicio-1-2-verificacao-vs-validacao-sistema-de-login" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Contexto<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Você está trabalhando no desenvolvimento de um sistema de autenticação para um <strong>Internet Banking</strong>. O sistema precisa ser extremamente rigoroso, mas também user-friendly. Sua tarefa é implementar tanto a <strong>verificação</strong> (conformidade técnica) quanto a <strong>validação</strong> (adequação ao propósito).</p>
+</section>
+<section id="id2">
+<h3>Cenário Realista<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>O banco <strong>TechBank</strong> tem regras específicas para senhas:</p>
+<ul class="simple">
+<li><p><strong>Verificação</strong>: Cumpre regras técnicas (8+ chars, maiúscula, número, símbolo)</p></li>
+<li><p><strong>Validação</strong>: Realmente protege a conta no contexto do usuário específico</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>📝 Sua Tarefa<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Implementar um <strong>Sistema de Autenticação Dupla</strong> que demonstre claramente a diferença entre verificação e validação.</p>
+</section>
+<section id="id4">
+<h3>🛠️ Implementação Requerida<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crie o arquivo: exercicio_1_2.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ResultadoVerificacao</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resultado da verificação técnica.&quot;&quot;&quot;</span>
+    <span class="n">aprovado</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">regras_cumpridas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">regras_violadas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">pontuacao_tecnica</span><span class="p">:</span> <span class="nb">float</span>  <span class="c1"># 0.0 a 1.0</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ResultadoValidacao</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Resultado da validação contextual.&quot;&quot;&quot;</span>
+    <span class="n">adequado</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">fatores_positivos</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">fatores_negativos</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">nivel_protecao</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># &quot;baixo&quot;, &quot;medio&quot;, &quot;alto&quot;</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PerfilUsuario</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Perfil do usuário para validação contextual.&quot;&quot;&quot;</span>
+    <span class="n">id_usuario</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">historico_senhas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>  <span class="c1"># hashes das últimas senhas</span>
+    <span class="n">tentativas_login_falharam</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">data_ultimo_acesso</span><span class="p">:</span> <span class="n">datetime</span>
+    <span class="n">tipo_conta</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># &quot;comum&quot;, &quot;premium&quot;, &quot;empresarial&quot;</span>
+    <span class="n">valor_conta</span><span class="p">:</span> <span class="nb">float</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">VerificadorTecnico</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Realiza verificação técnica de senhas (Building the product right).</span>
+<span class="sd">    </span>
+<span class="sd">    CONCEITO: Verificação = Conformidade com especificações técnicas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regras_tecnicas</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;comprimento_minimo&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="s2">&quot;comprimento_maximo&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+            <span class="s2">&quot;requer_maiuscula&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;requer_minuscula&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;requer_numero&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;requer_simbolo&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;proibe_sequencias&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>  <span class="c1"># 123, abc, qwerty</span>
+            <span class="s2">&quot;proibe_repeticoes&quot;</span><span class="p">:</span> <span class="kc">True</span>   <span class="c1"># aaa, 111</span>
+        <span class="p">}</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">verificar_senha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResultadoVerificacao</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Verifica se senha cumpre todas as regras técnicas.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        senha : str</span>
+<span class="sd">            Senha a ser verificada</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ResultadoVerificacao</span>
+<span class="sd">            Resultado detalhado da verificação técnica</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># Para cada regra em self.regras_tecnicas:</span>
+        <span class="c1"># 1. Teste se a senha cumpre a regra</span>
+        <span class="c1"># 2. Registre em regras_cumpridas ou regras_violadas</span>
+        <span class="c1"># 3. Calcule pontuacao_tecnica (% de regras cumpridas)</span>
+        <span class="c1"># 4. aprovado = True se TODAS as regras foram cumpridas</span>
+        <span class="c1">#</span>
+        <span class="c1"># DICA: Use regex para validações complexas</span>
+        <span class="c1"># DICA: Teste sequências comuns como &quot;123&quot;, &quot;abc&quot;, &quot;qwerty&quot;</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verificar_comprimento</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifica se comprimento está dentro dos limites.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verificar_caracteres_obrigatorios</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifica presença de tipos de caracteres obrigatórios.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="c1"># Retorne dict com chaves: maiuscula, minuscula, numero, simbolo</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verificar_sequencias_proibidas</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifica se contém sequências proibidas.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="c1"># Teste: 123, 456, abc, qwerty, asdf, etc.</span>
+        <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ValidadorContextual</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Realiza validação contextual de senhas (Building the right product).</span>
+<span class="sd">    </span>
+<span class="sd">    CONCEITO: Validação = Adequação ao propósito real de segurança</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">senhas_comuns</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_carregar_senhas_comuns</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">padroes_pessoais</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;data_nascimento&quot;</span><span class="p">,</span> <span class="s2">&quot;nome_completo&quot;</span><span class="p">,</span> <span class="s2">&quot;cpf&quot;</span><span class="p">,</span> 
+            <span class="s2">&quot;telefone&quot;</span><span class="p">,</span> <span class="s2">&quot;endereco&quot;</span><span class="p">,</span> <span class="s2">&quot;nome_pet&quot;</span>
+        <span class="p">]</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">validar_senha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+                     <span class="n">perfil</span><span class="p">:</span> <span class="n">PerfilUsuario</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResultadoValidacao</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Valida se senha é adequada ao contexto do usuário específico.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        senha : str</span>
+<span class="sd">            Senha a ser validada</span>
+<span class="sd">        perfil : PerfilUsuario</span>
+<span class="sd">            Contexto específico do usuário</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ResultadoValidacao</span>
+<span class="sd">            Resultado da validação contextual</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># Considere:</span>
+        <span class="c1"># 1. Senha está na lista de senhas comuns?</span>
+        <span class="c1"># 2. Senha é similar às anteriores do usuário?</span>
+        <span class="c1"># 3. Senha contém informações pessoais do usuário?</span>
+        <span class="c1"># 4. Força da senha é adequada ao valor da conta?</span>
+        <span class="c1"># 5. Histórico de tentativas indica possível comprometimento?</span>
+        <span class="c1">#</span>
+        <span class="c1"># VALIDAÇÃO ≠ VERIFICAÇÃO:</span>
+        <span class="c1"># - Uma senha pode passar na verificação técnica mas</span>
+        <span class="c1">#   ser inadequada para o contexto específico do usuário</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_senha_eh_comum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifica se senha está na lista de senhas comuns.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_senha_similar_historico</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+                               <span class="n">historico</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Verifica similaridade com senhas anteriores.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="c1"># DICA: Use conceito de distância de edição ou hash similarity</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_detectar_informacoes_pessoais</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+                                     <span class="n">perfil</span><span class="p">:</span> <span class="n">PerfilUsuario</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Detecta informações pessoais na senha.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="c1"># Simule verificação de data nascimento, nome, etc.</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_calcular_forca_necessaria</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perfil</span><span class="p">:</span> <span class="n">PerfilUsuario</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calcula força necessária baseada no perfil.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implementar</span>
+        <span class="c1"># Conta empresarial ou alto valor = força maior</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_carregar_senhas_comuns</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Carrega lista de senhas mais comuns.&quot;&quot;&quot;</span>
+        <span class="c1"># Lista simplificada das senhas mais usadas</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="s2">&quot;123456&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">,</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span> <span class="s2">&quot;12345678&quot;</span><span class="p">,</span> <span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;qwerty&quot;</span><span class="p">,</span> <span class="s2">&quot;abc123&quot;</span><span class="p">,</span> <span class="s2">&quot;111111&quot;</span><span class="p">,</span> <span class="s2">&quot;123123&quot;</span><span class="p">,</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;senha123&quot;</span><span class="p">,</span> <span class="s2">&quot;123mudar&quot;</span><span class="p">,</span> <span class="s2">&quot;senha&quot;</span><span class="p">,</span> <span class="s2">&quot;1234567890&quot;</span>
+        <span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SistemaAutenticacaoDupla</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Sistema que combina verificação E validação para autenticação robusta.</span>
+<span class="sd">    </span>
+<span class="sd">    CONCEITO APLICADO: Verificação ∩ Validação = Segurança Real</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verificador</span> <span class="o">=</span> <span class="n">VerificadorTecnico</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validador</span> <span class="o">=</span> <span class="n">ValidadorContextual</span><span class="p">()</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">avaliar_senha_completa</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">senha</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+                             <span class="n">perfil</span><span class="p">:</span> <span class="n">PerfilUsuario</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Avalia senha usando tanto verificação quanto validação.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Dict</span>
+<span class="sd">            Resultado completo com ambas as análises</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># 1. Execute verificação técnica</span>
+        <span class="c1"># 2. Execute validação contextual  </span>
+        <span class="c1"># 3. Determine aprovação final:</span>
+        <span class="c1">#    - DEVE passar em ambas para ser aprovada</span>
+        <span class="c1">#    - Forneça feedback específico sobre cada dimensão</span>
+        <span class="c1"># 4. Calcule score de segurança final</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">gerar_relatorio_decisao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resultado_completo</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gera relatório explicando a decisão de aceitar/rejeitar senha.</span>
+<span class="sd">        </span>
+<span class="sd">        OBJETIVO: Demonstrar claramente a diferença entre</span>
+<span class="sd">        verificação e validação na tomada de decisão.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># O relatório deve explicar:</span>
+        <span class="c1"># - Por que passou/falhou na verificação</span>
+        <span class="c1"># - Por que passou/falhou na validação  </span>
+        <span class="c1"># - Como isso impacta a decisão final</span>
+        <span class="c1"># - Sugestões para melhoria</span>
+        <span class="k">pass</span>
+
+<span class="c1"># CENÁRIOS DE TESTE FORNECIDOS</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_verificacao_vs_validacao</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Testa cenários que demonstram a diferença entre verificação e validação.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sistema</span> <span class="o">=</span> <span class="n">SistemaAutenticacaoDupla</span><span class="p">()</span>
+    
+    <span class="c1"># Perfil de usuário exemplo</span>
+    <span class="n">perfil_joao</span> <span class="o">=</span> <span class="n">PerfilUsuario</span><span class="p">(</span>
+        <span class="n">id_usuario</span><span class="o">=</span><span class="s2">&quot;joao123&quot;</span><span class="p">,</span>
+        <span class="n">historico_senhas</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;$2b$hash_senha_anterior_1&quot;</span><span class="p">,</span> <span class="s2">&quot;$2b$hash_senha_anterior_2&quot;</span><span class="p">],</span>
+        <span class="n">tentativas_login_falharam</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">data_ultimo_acesso</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">tipo_conta</span><span class="o">=</span><span class="s2">&quot;premium&quot;</span><span class="p">,</span>
+        <span class="n">valor_conta</span><span class="o">=</span><span class="mf">150000.00</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># CENÁRIO 1: Passa na verificação, falha na validação</span>
+    <span class="n">senha_tecnica</span> <span class="o">=</span> <span class="s2">&quot;TechB@nk123&quot;</span>  <span class="c1"># Cumpre regras técnicas</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔍 CENÁRIO 1: Senha tecnicamente correta&quot;</span><span class="p">)</span>
+    <span class="n">resultado1</span> <span class="o">=</span> <span class="n">sistema</span><span class="o">.</span><span class="n">avaliar_senha_completa</span><span class="p">(</span><span class="n">senha_tecnica</span><span class="p">,</span> <span class="n">perfil_joao</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sistema</span><span class="o">.</span><span class="n">gerar_relatorio_decisao</span><span class="p">(</span><span class="n">resultado1</span><span class="p">))</span>
+    
+    <span class="c1"># CENÁRIO 2: Falha na verificação, validação não importa</span>
+    <span class="n">senha_fraca</span> <span class="o">=</span> <span class="s2">&quot;123456&quot;</span>  <span class="c1"># Não cumpre regras técnicas</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 CENÁRIO 2: Senha tecnicamente incorreta&quot;</span><span class="p">)</span>
+    <span class="n">resultado2</span> <span class="o">=</span> <span class="n">sistema</span><span class="o">.</span><span class="n">avaliar_senha_completa</span><span class="p">(</span><span class="n">senha_fraca</span><span class="p">,</span> <span class="n">perfil_joao</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sistema</span><span class="o">.</span><span class="n">gerar_relatorio_decisao</span><span class="p">(</span><span class="n">resultado2</span><span class="p">))</span>
+    
+    <span class="c1"># CENÁRIO 3: Passa em ambas (senha ideal)</span>
+    <span class="n">senha_forte</span> <span class="o">=</span> <span class="s2">&quot;Meu&amp;Gato$Mimi@2024!&quot;</span>  <span class="c1"># Técnica + contextualmente adequada</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 CENÁRIO 3: Senha ideal&quot;</span><span class="p">)</span>
+    <span class="n">resultado3</span> <span class="o">=</span> <span class="n">sistema</span><span class="o">.</span><span class="n">avaliar_senha_completa</span><span class="p">(</span><span class="n">senha_forte</span><span class="p">,</span> <span class="n">perfil_joao</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sistema</span><span class="o">.</span><span class="n">gerar_relatorio_decisao</span><span class="p">(</span><span class="n">resultado3</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_verificacao_vs_validacao</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>🎯 Critérios de Avaliação<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h4>✅ Excelente (90-100%)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implementa verificação técnica rigorosa e completa</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Validação contextual considera múltiplos fatores do usuário</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Demonstra claramente quando verificação ≠ validação</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Relatório de decisão é didático e explicativo</p></li>
+</ul>
+</section>
+<section id="id7">
+<h4>✓ Bom (75-89%)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Boa implementação de verificação técnica</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Validação considera alguns fatores contextuais</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Mostra diferença básica entre verificação e validação</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Feedback adequado sobre decisões</p></li>
+</ul>
+</section>
+<section id="id8">
+<h4>⚠️ Satisfatório (60-74%)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Verificação básica implementada</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Validação simplificada mas funcional</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Entende conceitos mas implementação limitada</p></li>
+</ul>
+</section>
+<section id="id9">
+<h4>❌ Insuficiente (&lt;60%)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Não distingue verificação de validação</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implementação incorreta ou incompleta</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Não demonstra compreensão dos conceitos</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h3>💡 Dicas para Sucesso<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Verificação é binária</strong>: Regra foi cumprida ou não</p></li>
+<li><p><strong>Validação é contextual</strong>: Depende da situação específica</p></li>
+<li><p><strong>Ambas são necessárias</strong>: Uma sem a outra é insuficiente</p></li>
+<li><p><strong>Documente diferenças</strong>: Comente por que cada verificação existe</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="exercicio-1-3-analise-de-cenarios-swebok">
+<h2>🎯 Exercício 1.3 - Análise de Cenários SWEBOK<a class="headerlink" href="#exercicio-1-3-analise-de-cenarios-swebok" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h3>Contexto<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Como especialista em qualidade, você precisa <strong>classificar diferentes atividades de teste</strong> de acordo com a taxonomia do SWEBOK. Você trabalhará com cenários reais de uma empresa de software que desenvolve um sistema de <strong>gestão hospitalar</strong>.</p>
+</section>
+<section id="id12">
+<h3>Cenário Realista<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>O <strong>Hospital TechCare</strong> está implementando um novo sistema e você precisa categorizar as atividades de teste seguindo as diretrizes do SWEBOK para garantir cobertura completa.</p>
+</section>
+<section id="id13">
+<h3>📝 Sua Tarefa<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Implementar um <strong>Classificador de Atividades de Teste</strong> que organize atividades segundo a taxonomia SWEBOK.</p>
+</section>
+<section id="id14">
+<h3>🛠️ Implementação Requerida<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crie o arquivo: exercicio_1_3.py</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TipoTesteSWEBOK</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Tipos de teste segundo SWEBOK.&quot;&quot;&quot;</span>
+    <span class="c1"># Por objetivo</span>
+    <span class="n">ACEITACAO</span> <span class="o">=</span> <span class="s2">&quot;aceitacao&quot;</span>
+    <span class="n">INSTALACAO</span> <span class="o">=</span> <span class="s2">&quot;instalacao&quot;</span>
+    <span class="n">ALFA</span> <span class="o">=</span> <span class="s2">&quot;alfa&quot;</span>
+    <span class="n">BETA</span> <span class="o">=</span> <span class="s2">&quot;beta&quot;</span>
+    
+    <span class="c1"># Por nível</span>
+    <span class="n">UNITARIO</span> <span class="o">=</span> <span class="s2">&quot;unitario&quot;</span>
+    <span class="n">INTEGRACAO</span> <span class="o">=</span> <span class="s2">&quot;integracao&quot;</span>
+    <span class="n">SISTEMA</span> <span class="o">=</span> <span class="s2">&quot;sistema&quot;</span>
+    
+    <span class="c1"># Por característica</span>
+    <span class="n">FUNCIONAL</span> <span class="o">=</span> <span class="s2">&quot;funcional&quot;</span>
+    <span class="n">ESTRUTURAL</span> <span class="o">=</span> <span class="s2">&quot;estrutural&quot;</span>
+    
+    <span class="c1"># Por propósito</span>
+    <span class="n">REGRESSAO</span> <span class="o">=</span> <span class="s2">&quot;regressao&quot;</span>
+    <span class="n">PERFORMANCE</span> <span class="o">=</span> <span class="s2">&quot;performance&quot;</span>
+    <span class="n">STRESS</span> <span class="o">=</span> <span class="s2">&quot;stress&quot;</span>
+    <span class="n">VOLUME</span> <span class="o">=</span> <span class="s2">&quot;volume&quot;</span>
+    <span class="n">USABILIDADE</span> <span class="o">=</span> <span class="s2">&quot;usabilidade&quot;</span>
+    <span class="n">SEGURANCA</span> <span class="o">=</span> <span class="s2">&quot;seguranca&quot;</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AtividadeTeste</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Representa uma atividade de teste a ser classificada.&quot;&quot;&quot;</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">descricao</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">contexto</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">stakeholder</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">ambiente</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">criterio_sucesso</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ClassificacaoSWEBOK</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classificação de uma atividade segundo SWEBOK.&quot;&quot;&quot;</span>
+    <span class="n">atividade_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tipos_principais</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="p">]</span>
+    <span class="n">tipos_secundarios</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="p">]</span>
+    <span class="n">justificativa</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">area_swebok</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">nivel_confianca</span><span class="p">:</span> <span class="nb">float</span>  <span class="c1"># 0.0 a 1.0</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ClassificadorSWEBOK</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Classifica atividades de teste segundo a taxonomia SWEBOK.</span>
+<span class="sd">    </span>
+<span class="sd">    CONCEITO APLICADO: Organização sistemática do conhecimento de teste</span>
+<span class="sd">    segundo padrões internacionais (SWEBOK).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapeamento_contexto</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construir_mapeamento_contexto</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">regras_classificacao</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_construir_regras_classificacao</span><span class="p">()</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">classificar_atividade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atividade</span><span class="p">:</span> <span class="n">AtividadeTeste</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClassificacaoSWEBOK</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Classifica uma atividade de teste segundo SWEBOK.</span>
+<span class="sd">        </span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        atividade : AtividadeTeste</span>
+<span class="sd">            Atividade a ser classificada</span>
+<span class="sd">            </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        ClassificacaoSWEBOK</span>
+<span class="sd">            Classificação completa da atividade</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># 1. Analise a descrição da atividade</span>
+        <span class="c1"># 2. Identifique palavras-chave que indicam tipo de teste</span>
+        <span class="c1"># 3. Considere o contexto (quem faz, onde, quando)</span>
+        <span class="c1"># 4. Aplique regras de classificação do SWEBOK</span>
+        <span class="c1"># 5. Determine tipos principais e secundários</span>
+        <span class="c1"># 6. Calcule nível de confiança na classificação</span>
+        <span class="c1">#</span>
+        <span class="c1"># DICA: Uma atividade pode ter múltiplos tipos (ex: teste de </span>
+        <span class="c1">#       integração + performance + regressão)</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">validar_completude_swebok</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atividades</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AtividadeTeste</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Valida se conjunto de atividades cobre adequadamente SWEBOK.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Dict</span>
+<span class="sd">            Análise de cobertura das categorias SWEBOK</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1">#</span>
+        <span class="c1"># 1. Classifique todas as atividades</span>
+        <span class="c1"># 2. Identifique lacunas na cobertura SWEBOK</span>
+        <span class="c1"># 3. Calcule percentual de cobertura por categoria</span>
+        <span class="c1"># 4. Sugira atividades faltantes</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">gerar_relatorio_conformidade</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atividades</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AtividadeTeste</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gera relatório de conformidade com SWEBOK.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="k">pass</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_construir_mapeamento_contexto</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constrói mapeamento entre contexto e tipos de teste.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;palavras_chave&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">UNITARIO</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;função&quot;</span><span class="p">,</span> <span class="s2">&quot;método&quot;</span><span class="p">,</span> <span class="s2">&quot;classe&quot;</span><span class="p">,</span> <span class="s2">&quot;componente isolado&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;mock&quot;</span><span class="p">,</span> <span class="s2">&quot;stub&quot;</span><span class="p">,</span> <span class="s2">&quot;unit test&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">INTEGRACAO</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;integração&quot;</span><span class="p">,</span> <span class="s2">&quot;interface&quot;</span><span class="p">,</span> <span class="s2">&quot;comunicação entre&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;API&quot;</span><span class="p">,</span> <span class="s2">&quot;banco de dados&quot;</span><span class="p">,</span> <span class="s2">&quot;serviço externo&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">SISTEMA</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;sistema completo&quot;</span><span class="p">,</span> <span class="s2">&quot;end-to-end&quot;</span><span class="p">,</span> <span class="s2">&quot;fluxo completo&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;cenário completo&quot;</span><span class="p">,</span> <span class="s2">&quot;requisito funcional&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">ACEITACAO</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;usuário final&quot;</span><span class="p">,</span> <span class="s2">&quot;cliente&quot;</span><span class="p">,</span> <span class="s2">&quot;aceitação&quot;</span><span class="p">,</span> <span class="s2">&quot;homologação&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;validação de negócio&quot;</span><span class="p">,</span> <span class="s2">&quot;critério de aceite&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">PERFORMANCE</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;performance&quot;</span><span class="p">,</span> <span class="s2">&quot;tempo de resposta&quot;</span><span class="p">,</span> <span class="s2">&quot;throughput&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;latência&quot;</span><span class="p">,</span> <span class="s2">&quot;velocidade&quot;</span><span class="p">,</span> <span class="s2">&quot;carga&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">SEGURANCA</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;segurança&quot;</span><span class="p">,</span> <span class="s2">&quot;autenticação&quot;</span><span class="p">,</span> <span class="s2">&quot;autorização&quot;</span><span class="p">,</span> <span class="s2">&quot;criptografia&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;vulnerabilidade&quot;</span><span class="p">,</span> <span class="s2">&quot;invasão&quot;</span><span class="p">,</span> <span class="s2">&quot;SQL injection&quot;</span>
+                <span class="p">],</span>
+                <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">USABILIDADE</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;usabilidade&quot;</span><span class="p">,</span> <span class="s2">&quot;interface usuário&quot;</span><span class="p">,</span> <span class="s2">&quot;UX&quot;</span><span class="p">,</span> <span class="s2">&quot;facilidade uso&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;navegação&quot;</span><span class="p">,</span> <span class="s2">&quot;acessibilidade&quot;</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;stakeholders&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;desenvolvedor&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">UNITARIO</span><span class="p">,</span> <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">INTEGRACAO</span><span class="p">],</span>
+                <span class="s2">&quot;tester&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">SISTEMA</span><span class="p">,</span> <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">FUNCIONAL</span><span class="p">],</span>
+                <span class="s2">&quot;usuario_final&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">ACEITACAO</span><span class="p">,</span> <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">USABILIDADE</span><span class="p">],</span>
+                <span class="s2">&quot;cliente&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">ACEITACAO</span><span class="p">,</span> <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">BETA</span><span class="p">],</span>
+                <span class="s2">&quot;ops&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">INSTALACAO</span><span class="p">,</span> <span class="n">TipoTesteSWEBOK</span><span class="o">.</span><span class="n">PERFORMANCE</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    
+    <span class="k">def</span><span class="w"> </span><span class="nf">_construir_regras_classificacao</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constrói regras de classificação baseadas em SWEBOK.&quot;&quot;&quot;</span>
+        <span class="c1"># TODO: IMPLEMENTAR</span>
+        <span class="c1"># Defina regras que combinam contexto, stakeholder, ambiente</span>
+        <span class="c1"># para determinar classificação final</span>
+        <span class="k">pass</span>
+
+<span class="c1"># CENÁRIOS DE TESTE FORNECIDOS</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_cenarios_hospital</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Testa classificação com cenários reais do Hospital TechCare.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">classificador</span> <span class="o">=</span> <span class="n">ClassificadorSWEBOK</span><span class="p">()</span>
+    
+    <span class="c1"># Cenários reais de um sistema hospitalar</span>
+    <span class="n">atividades</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">AtividadeTeste</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;HT001&quot;</span><span class="p">,</span>
+            <span class="n">descricao</span><span class="o">=</span><span class="s2">&quot;Testar se a função calcular_dosagem_medicamento() &quot;</span>
+                     <span class="s2">&quot;retorna dosagem correta para peso e idade do paciente&quot;</span><span class="p">,</span>
+            <span class="n">contexto</span><span class="o">=</span><span class="s2">&quot;Desenvolvimento de módulo de prescrição médica&quot;</span><span class="p">,</span>
+            <span class="n">stakeholder</span><span class="o">=</span><span class="s2">&quot;desenvolvedor&quot;</span><span class="p">,</span>
+            <span class="n">ambiente</span><span class="o">=</span><span class="s2">&quot;IDE local com dados mock&quot;</span><span class="p">,</span>
+            <span class="n">criterio_sucesso</span><span class="o">=</span><span class="s2">&quot;100</span><span class="si">% d</span><span class="s2">os cálculos corretos para casos conhecidos&quot;</span>
+        <span class="p">),</span>
+        
+        <span class="n">AtividadeTeste</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;HT002&quot;</span><span class="p">,</span> 
+            <span class="n">descricao</span><span class="o">=</span><span class="s2">&quot;Validar fluxo completo: médico prescreve → farmácia &quot;</span>
+                     <span class="s2">&quot;recebe → paciente retira medicamento&quot;</span><span class="p">,</span>
+            <span class="n">contexto</span><span class="o">=</span><span class="s2">&quot;Integração entre sistemas médico e farmácia&quot;</span><span class="p">,</span>
+            <span class="n">stakeholder</span><span class="o">=</span><span class="s2">&quot;tester&quot;</span><span class="p">,</span>
+            <span class="n">ambiente</span><span class="o">=</span><span class="s2">&quot;Ambiente de teste com sistemas reais&quot;</span><span class="p">,</span>
+            <span class="n">criterio_sucesso</span><span class="o">=</span><span class="s2">&quot;Fluxo completo sem erros em 95</span><span class="si">% d</span><span class="s2">os casos&quot;</span>
+        <span class="p">),</span>
+        
+        <span class="n">AtividadeTeste</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;HT003&quot;</span><span class="p">,</span>
+            <span class="n">descricao</span><span class="o">=</span><span class="s2">&quot;Médico real utilizando sistema para atender pacientes &quot;</span>
+                     <span class="s2">&quot;reais durante 1 semana, avaliando facilidade de uso&quot;</span><span class="p">,</span>
+            <span class="n">contexto</span><span class="o">=</span><span class="s2">&quot;Piloto em hospital parceiro&quot;</span><span class="p">,</span>
+            <span class="n">stakeholder</span><span class="o">=</span><span class="s2">&quot;usuario_final&quot;</span><span class="p">,</span>
+            <span class="n">ambiente</span><span class="o">=</span><span class="s2">&quot;Produção controlada&quot;</span><span class="p">,</span>
+            <span class="n">criterio_sucesso</span><span class="o">=</span><span class="s2">&quot;Satisfação &gt; 8/10 e tempo de consulta não aumenta&quot;</span>
+        <span class="p">),</span>
+        
+        <span class="n">AtividadeTeste</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;HT004&quot;</span><span class="p">,</span>
+            <span class="n">descricao</span><span class="o">=</span><span class="s2">&quot;Simular 10.000 agendamentos simultâneos para verificar &quot;</span>
+                     <span class="s2">&quot;se sistema suporta pico de demanda&quot;</span><span class="p">,</span>
+            <span class="n">contexto</span><span class="o">=</span><span class="s2">&quot;Preparação para Black Friday da saúde&quot;</span><span class="p">,</span>
+            <span class="n">stakeholder</span><span class="o">=</span><span class="s2">&quot;ops&quot;</span><span class="p">,</span>
+            <span class="n">ambiente</span><span class="o">=</span><span class="s2">&quot;Ambiente de carga com dados sintéticos&quot;</span><span class="p">,</span>
+            <span class="n">criterio_sucesso</span><span class="o">=</span><span class="s2">&quot;Tempo resposta &lt; 2s para 95</span><span class="si">% d</span><span class="s2">as requisições&quot;</span>
+        <span class="p">),</span>
+        
+        <span class="n">AtividadeTeste</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;HT005&quot;</span><span class="p">,</span>
+            <span class="n">descricao</span><span class="o">=</span><span class="s2">&quot;Tentar acessar prontuários de outros pacientes usando &quot;</span>
+                     <span class="s2">&quot;técnicas de SQL injection e bypass de autenticação&quot;</span><span class="p">,</span>
+            <span class="n">contexto</span><span class="o">=</span><span class="s2">&quot;Auditoria de segurança antes do go-live&quot;</span><span class="p">,</span>
+            <span class="n">stakeholder</span><span class="o">=</span><span class="s2">&quot;especialista_seguranca&quot;</span><span class="p">,</span>
+            <span class="n">ambiente</span><span class="o">=</span><span class="s2">&quot;Ambiente isolado com dados anonimizados&quot;</span><span class="p">,</span>
+            <span class="n">criterio_sucesso</span><span class="o">=</span><span class="s2">&quot;Nenhuma vulnerabilidade crítica encontrada&quot;</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏥 ANÁLISE SWEBOK - Sistema Hospital TechCare&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+    
+    <span class="c1"># Teste classificação individual</span>
+    <span class="k">for</span> <span class="n">atividade</span> <span class="ow">in</span> <span class="n">atividades</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📋 Analisando: </span><span class="si">{</span><span class="n">atividade</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">classificacao</span> <span class="o">=</span> <span class="n">classificador</span><span class="o">.</span><span class="n">classificar_atividade</span><span class="p">(</span><span class="n">atividade</span><span class="p">)</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tipos principais: </span><span class="si">{</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">classificacao</span><span class="o">.</span><span class="n">tipos_principais</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tipos secundários: </span><span class="si">{</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">classificacao</span><span class="o">.</span><span class="n">tipos_secundarios</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Justificativa: </span><span class="si">{</span><span class="n">classificacao</span><span class="o">.</span><span class="n">justificativa</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Confiança: </span><span class="si">{</span><span class="n">classificacao</span><span class="o">.</span><span class="n">nivel_confianca</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Teste análise de completude</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 ANÁLISE DE COMPLETUDE SWEBOK&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="n">completude</span> <span class="o">=</span> <span class="n">classificador</span><span class="o">.</span><span class="n">validar_completude_swebok</span><span class="p">(</span><span class="n">atividades</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">completude</span><span class="p">)</span>
+    
+    <span class="c1"># Teste relatório</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📋 RELATÓRIO DE CONFORMIDADE&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+    <span class="n">relatorio</span> <span class="o">=</span> <span class="n">classificador</span><span class="o">.</span><span class="n">gerar_relatorio_conformidade</span><span class="p">(</span><span class="n">atividades</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">relatorio</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_cenarios_hospital</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h3>🎯 Critérios de Avaliação<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<section id="id16">
+<h4>✅ Excelente (90-100%)<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classifica corretamente todos os tipos de teste SWEBOK</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Identifica tipos principais e secundários adequadamente</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Análise de completude é precisa e útil</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Demonstra compreensão profunda da taxonomia SWEBOK</p></li>
+</ul>
+</section>
+<section id="id17">
+<h4>✓ Bom (75-89%)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Boa classificação da maioria dos cenários</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Entende diferenças entre tipos de teste</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Análise de completude básica mas adequada</p></li>
+</ul>
+</section>
+<section id="id18">
+<h4>⚠️ Satisfatório (60-74%)<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classificação básica funcional</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Compreensão limitada da taxonomia</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Análise superficial</p></li>
+</ul>
+</section>
+<section id="id19">
+<h4>❌ Insuficiente (&lt;60%)<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Classificação incorreta ou inconsistente</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Não demonstra compreensão do SWEBOK</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implementação inadequada</p></li>
+</ul>
+</section>
+</section>
+<section id="id20">
+<h3>💡 Dicas para Sucesso<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Estude a taxonomia</strong>: Revise a seção SWEBOK da aula principal</p></li>
+<li><p><strong>Analise o contexto</strong>: Quem faz, onde, quando, por que</p></li>
+<li><p><strong>Múltiplas dimensões</strong>: Uma atividade pode ter vários tipos</p></li>
+<li><p><strong>Seja específico</strong>: Justifique suas classificações</p></li>
+</ol>
+</section>
+<section id="id21">
+<h3>🔍 Perguntas para Reflexão<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Por que</strong> é importante ter uma taxonomia padronizada como SWEBOK?</p></li>
+<li><p><strong>Como</strong> a classificação correta impacta o planejamento de testes?</p></li>
+<li><p><strong>Qual</strong> a diferença prática entre teste de sistema e teste de aceitação?</p></li>
+<li><p><strong>Onde</strong> você vê gaps mais comuns na cobertura SWEBOK?</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="resumo-do-nivel-1">
+<h2>🎯 Resumo do Nível 1<a class="headerlink" href="#resumo-do-nivel-1" title="Link to this heading">#</a></h2>
+<section id="conceitos-consolidados">
+<h3>Conceitos Consolidados<a class="headerlink" href="#conceitos-consolidados" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>✅ <strong>Cadeia Causal</strong>: Erro → Defeito → Falha → Incidente</p></li>
+<li><p>✅ <strong>Dualidade</strong>: Verificação vs Validação</p></li>
+<li><p>✅ <strong>Taxonomia</strong>: Classificação SWEBOK de atividades de teste</p></li>
+</ul>
+</section>
+<section id="habilidades-desenvolvidas">
+<h3>Habilidades Desenvolvidas<a class="headerlink" href="#habilidades-desenvolvidas" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>🔍 <strong>Análise sistemática</strong> de problemas</p></li>
+<li><p>⚖️ <strong>Distinção precisa</strong> entre conceitos similares</p></li>
+<li><p>📋 <strong>Classificação padronizada</strong> segundo normas internacionais</p></li>
+</ul>
+</section>
+<section id="preparacao-para-nivel-2">
+<h3>Preparação para Nível 2<a class="headerlink" href="#preparacao-para-nivel-2" title="Link to this heading">#</a></h3>
+<p>Os exercícios do Nível 1 estabeleceram as bases conceituais. No <strong>Nível 2</strong>, você integrará esses conceitos em sistemas mais complexos, analisará trade-offs e tomará decisões arquiteturais baseadas nos fundamentos aqui estabelecidos.</p>
+<p><strong>Continue sua jornada!</strong> 🚀</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/nivel1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visao-geral-dos-exercicios">📋 Visão Geral dos Exercícios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-1-cadeia-causal-erro-defeito-falha-incidente">🎯 Exercício 1.1 - Cadeia Causal: Erro → Defeito → Falha → Incidente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cenario-realista">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sua-tarefa">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementacao-requerida">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#excelente-90-100">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bom-75-89">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#satisfatorio-60-74">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insuficiente-60">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-para-sucesso">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perguntas-para-reflexao">🔍 Perguntas para Reflexão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-2-verificacao-vs-validacao-sistema-de-login">🎯 Exercício 1.2 - Verificação vs Validação: Sistema de Login</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">💡 Dicas para Sucesso</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercicio-1-3-analise-de-cenarios-swebok">🎯 Exercício 1.3 - Análise de Cenários SWEBOK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Contexto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Cenário Realista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">📝 Sua Tarefa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🛠️ Implementação Requerida</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">🎯 Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✅ Excelente (90-100%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">✓ Bom (75-89%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">⚠️ Satisfatório (60-74%)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">❌ Insuficiente (&lt;60%)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">🔍 Perguntas para Reflexão</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumo-do-nivel-1">🎯 Resumo do Nível 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceitos-consolidados">Conceitos Consolidados</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#habilidades-desenvolvidas">Habilidades Desenvolvidas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preparacao-para-nivel-2">Preparação para Nível 2</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
