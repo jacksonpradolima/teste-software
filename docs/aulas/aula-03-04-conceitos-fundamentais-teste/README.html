@@ -61,6 +61,14 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-03-04-conceitos-fundamentais-teste/README';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
@@ -636,7 +644,8 @@ document.write(`
 <section id="terminologia-da-cadeia-de-causalidade">
 <h4>2.2.1. Terminologia da Cadeia de Causalidade<a class="headerlink" href="#terminologia-da-cadeia-de-causalidade" title="Link to this heading">#</a></h4>
 <p>A compreensão precisa dos conceitos de erro, defeito, falha e incidente é fundamental para qualquer profissional de teste. Estes conceitos formam uma cadeia causal que explica como problemas humanos se manifestam em impactos no negócio.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Erro&lt;br&gt;Mistake] --&gt;|&quot;Introduz&quot;| B[Defeito&lt;br&gt;Fault/Bug]
     B --&gt;|&quot;Manifesta-se como&quot;| C[Falha&lt;br&gt;Failure]
     C --&gt;|&quot;Resulta em&quot;| D[Incidente&lt;br&gt;Incident]
@@ -650,9 +659,7 @@ document.write(`
     style B fill:#bbf,stroke:#333,stroke-width:2px
     style C fill:#fbb,stroke:#333,stroke-width:2px
     style D fill:#bfb,stroke:#333,stroke-width:2px
-</pre></div>
-</div>
-<p><strong>Erro (Mistake):</strong></p>
+    </pre><p><strong>Erro (Mistake):</strong></p>
 <ul class="simple">
 <li><p><strong>Definição Formal</strong>: Ação humana que produz um resultado incorreto</p></li>
 <li><p><strong>Características</strong>:</p>
@@ -727,7 +734,8 @@ document.write(`
 </section>
 <section id="analise-da-relacao-causal">
 <h4>2.2.2. Análise da Relação Causal<a class="headerlink" href="#analise-da-relacao-causal" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart TD
+<pre  class="mermaid">
+        flowchart TD
     A[Erro Humano] --&gt; B{Defeito Introduzido?}
     B --&gt;|Sim| C[Defeito no Código]
     B --&gt;|Não| D[Nenhum Impacto]
@@ -744,9 +752,7 @@ document.write(`
     style C fill:#bbf,stroke:#333,stroke-width:2px
     style F fill:#fbb,stroke:#333,stroke-width:2px
     style I fill:#bfb,stroke:#333,stroke-width:2px
-</pre></div>
-</div>
-<p><strong>Pontos Críticos da Cadeia:</strong></p>
+    </pre><p><strong>Pontos Críticos da Cadeia:</strong></p>
 <ol class="arabic simple">
 <li><p><strong>Nem todo erro gera defeito</strong>: Revisões e validações podem interceptar</p></li>
 <li><p><strong>Nem todo defeito gera falha</strong>: Algumas condições podem nunca ser executadas</p></li>
@@ -763,7 +769,8 @@ document.write(`
 </section>
 <section id="classificacao-e-impacto-de-bugs">
 <h4>2.3.2. Classificação e Impacto de Bugs<a class="headerlink" href="#classificacao-e-impacto-de-bugs" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Classificação de Bugs] --&gt; B[Por Severidade]
     A --&gt; C[Por Tipo]
     A --&gt; D[Por Impacto no Negócio]
@@ -781,9 +788,7 @@ document.write(`
     D --&gt; D1[Bloqueante: Impede Lançamento]
     D --&gt; D2[Significativo: Afeta KPIs]
     D --&gt; D3[Menor: Impacto Limitado]
-</pre></div>
-</div>
-<p><strong>Casos Famosos de Bugs Custosos:</strong></p>
+    </pre><p><strong>Casos Famosos de Bugs Custosos:</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Ano</strong></p></th>
@@ -823,7 +828,8 @@ document.write(`
 <section id="fundamentos-conceituais">
 <h4>2.4.1. Fundamentos Conceituais<a class="headerlink" href="#fundamentos-conceituais" title="Link to this heading">#</a></h4>
 <p>A distinção entre verificação e validação é fundamental para compreender os diferentes objetivos dos testes. Esta separação, conhecida como V&amp;V (Verification and Validation), foi formalizada por Barry Boehm em 1981.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>classDiagram
+<pre  class="mermaid">
+        classDiagram
     class Verificacao {
         +objetivo: &quot;Produto correto&quot;
         +pergunta: &quot;Estamos construindo corretamente?&quot;
@@ -854,9 +860,7 @@ document.write(`
         +utilidadePrática
         +valorNegócio
     }
-</pre></div>
-</div>
-<p><strong>Verificação:</strong></p>
+    </pre><p><strong>Verificação:</strong></p>
 <ul class="simple">
 <li><p><strong>Definição</strong>: Processo de confirmação que o produto está sendo construído de acordo com especificações</p></li>
 <li><p><strong>Atividades Típicas</strong>:</p>
@@ -966,7 +970,8 @@ document.write(`
 <section id="contextualizacao-no-body-of-knowledge">
 <h4>2.6.1. Contextualização no Body of Knowledge<a class="headerlink" href="#contextualizacao-no-body-of-knowledge" title="Link to this heading">#</a></h4>
 <p>O SWEBOK (Software Engineering Body of Knowledge) é um guia internacionalmente reconhecido que define e organiza o conhecimento em engenharia de software. O teste de software é uma das 15 áreas de conhecimento fundamentais definidas no SWEBOK v3.0.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[SWEBOK v3.0] --&gt; B[Fundamentos de Engenharia]
     A --&gt; C[Requisitos de Software]
     A --&gt; D[Design de Software]
@@ -991,9 +996,7 @@ document.write(`
     
     style F fill:#f9f,stroke:#333,stroke-width:4px
     style F1,F2,F3,F4,F5 fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
-</pre></div>
-</div>
-<blockquote>
+    </pre><blockquote>
 <div><p><strong>Analogia para Entender</strong></p>
 <p>O SWEBOK é como uma enciclopédia médica para a engenharia de software. Assim como a medicina tem suas especialidades (cardiologia, neurologia etc.), a engenharia de software tem suas áreas de conhecimento. O teste é uma dessas “especialidades” fundamentais, com seus próprios conceitos, técnicas e melhores práticas bem definidas.</p>
 </div></blockquote>
@@ -1001,7 +1004,8 @@ document.write(`
 <section id="integracao-com-outras-areas-do-swebok">
 <h4>2.6.2. Integração com Outras Áreas do SWEBOK<a class="headerlink" href="#integracao-com-outras-areas-do-swebok" title="Link to this heading">#</a></h4>
 <p>O teste de software no SWEBOK interage fortemente com outras áreas de conhecimento, criando um ecossistema integrado de práticas:</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+<pre  class="mermaid">
+        graph TB
     Teste[Teste de Software] --&gt; Requisitos[Requisitos de Software&lt;br&gt;• Validação de requisitos&lt;br&gt;• Critérios de aceitação]
     Teste --&gt; Design[Design de Software&lt;br&gt;• Verificação arquitetural&lt;br&gt;• Testabilidade do design]
     Teste --&gt; Construcao[Construção de Software&lt;br&gt;• Testes unitários&lt;br&gt;• Code review]
@@ -1014,9 +1018,7 @@ document.write(`
     
     class Teste teste
     class Requisitos,Design,Construcao,Qualidade,Manutencao,Configuracao area
-</pre></div>
-</div>
-<p><strong>Benefícios da Abordagem SWEBOK para Testes:</strong></p>
+    </pre><p><strong>Benefícios da Abordagem SWEBOK para Testes:</strong></p>
 <ol class="arabic simple">
 <li><p><strong>Padronização</strong>: Terminologia e conceitos consistentes internacionalmente</p></li>
 <li><p><strong>Sistematização</strong>: Organização clara das práticas e conhecimentos</p></li>
@@ -1030,7 +1032,8 @@ document.write(`
 <h3>2.7. Modelos de Desenvolvimento e Testes<a class="headerlink" href="#modelos-de-desenvolvimento-e-testes" title="Link to this heading">#</a></h3>
 <section id="evolucao-historica-dos-testes-nos-modelos-de-desenvolvimento">
 <h4>2.7.1. Evolução Histórica dos Testes nos Modelos de Desenvolvimento<a class="headerlink" href="#evolucao-historica-dos-testes-nos-modelos-de-desenvolvimento" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>timeline
+<pre  class="mermaid">
+        timeline
     title Evolução dos Testes nos Modelos de Desenvolvimento
     1970 : Modelo Cascata
           : &quot;Testes apenas no final&quot;
@@ -1050,14 +1053,13 @@ document.write(`
     2020 : DevSecOps/Observabilidade
           : &quot;Testes de segurança integrados&quot;
           : &quot;Testes em produção com feature flags&quot;
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="analise-comparativa-dos-modelos">
 <h4>2.7.2. Análise Comparativa dos Modelos<a class="headerlink" href="#analise-comparativa-dos-modelos" title="Link to this heading">#</a></h4>
 <section id="modelo-tradicional-cascata">
 <h5>Modelo Tradicional (Cascata)<a class="headerlink" href="#modelo-tradicional-cascata" title="Link to this heading">#</a></h5>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+<pre  class="mermaid">
+        graph TB
     A[Análise de Requisitos] --&gt; B[Design do Sistema]
     B --&gt; C[Implementação]
     C --&gt; D[Teste]
@@ -1070,9 +1072,7 @@ document.write(`
     
     style D fill:#ffcdd2,stroke:#c62828,stroke-width:4px
     style D1,D2,D3 fill:#ffcdd2,stroke:#c62828,stroke-width:2px
-</pre></div>
-</div>
-<p><strong>Características do Teste no Modelo Cascata:</strong></p>
+    </pre><p><strong>Características do Teste no Modelo Cascata:</strong></p>
 <ul class="simple">
 <li><p><strong>Timing</strong>: Testes executados apenas após desenvolvimento completo</p></li>
 <li><p><strong>Risco</strong>: Alto risco de descoberta tardia de defeitos críticos</p></li>
@@ -1088,7 +1088,8 @@ document.write(`
 </section>
 <section id="modelo-v">
 <h5>Modelo V<a class="headerlink" href="#modelo-v" title="Link to this heading">#</a></h5>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Requisitos] --&gt; B[Design Sistema]
     B --&gt; C[Design Detalhado]
     C --&gt; D[Implementação]
@@ -1104,9 +1105,7 @@ document.write(`
     
     style E,F,G,H fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
     style A,B,C,D fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-</pre></div>
-</div>
-<p><strong>Inovações do Modelo V:</strong></p>
+    </pre><p><strong>Inovações do Modelo V:</strong></p>
 <ul class="simple">
 <li><p><strong>Planejamento Paralelo</strong>: Casos de teste desenvolvidos junto com requisitos</p></li>
 <li><p><strong>Rastreabilidade</strong>: Cada nível de desenvolvimento tem nível de teste correspondente</p></li>
@@ -1115,7 +1114,8 @@ document.write(`
 </section>
 <section id="modelo-agil-devops">
 <h5>Modelo Ágil/DevOps<a class="headerlink" href="#modelo-agil-devops" title="Link to this heading">#</a></h5>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Plan] --&gt; B[Code]
     B --&gt; C[Build]
     C --&gt; D[Test]
@@ -1134,9 +1134,7 @@ document.write(`
     
     style C,D,H fill:#f9f,stroke:#333,stroke-width:2px
     style D1,D2,D3,H1,H2,H3 fill:#e8f5e8,stroke:#2e7d32,stroke-width:2px
-</pre></div>
-</div>
-<p><strong>Características Revolucionárias:</strong></p>
+    </pre><p><strong>Características Revolucionárias:</strong></p>
 <ul class="simple">
 <li><p><strong>Testes Contínuos</strong>: Execução automatizada a cada commit</p></li>
 <li><p><strong>Feedback Rápido</strong>: Resultados em minutos, não semanas</p></li>
@@ -1580,7 +1578,8 @@ Nossa biblioteca universitária precisa de um sistema para gerenciar empréstimo
 <section id="passo-3-analise-dos-problemas-identificados">
 <h4>Passo 3: Análise dos Problemas Identificados<a class="headerlink" href="#passo-3-analise-dos-problemas-identificados" title="Link to this heading">#</a></h4>
 <p>Vamos mapear cada problema encontrado na cadeia causal:</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     E1[ERRO 1: Programador não validou ISBN] --&gt; D1[DEFEITO 1: Livros com ISBN inválido aceitos]
     E2[ERRO 2: Confundiu == com != na lógica] --&gt; D2[DEFEITO 2: Condição invertida em pode_emprestar]
     E3[ERRO 3: Digitou 3 em vez de 30 dias] --&gt; D3[DEFEITO 3: Prazo errado para professores]
@@ -1601,9 +1600,7 @@ Nossa biblioteca universitária precisa de um sistema para gerenciar empréstimo
     style D1,D2,D3,D4,D5 fill:#e3f2fd,stroke:#1976d2
     style F1,F2,F3,F4 fill:#fff3e0,stroke:#f57c00
     style I1,I2,I3,I4 fill:#e8f5e8,stroke:#388e3c
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="passo-4-implementacao-corrigida-aplicando-verificacao-e-validacao">
 <h4>Passo 4: Implementação Corrigida - Aplicando Verificação e Validação<a class="headerlink" href="#passo-4-implementacao-corrigida-aplicando-verificacao-e-validacao" title="Link to this heading">#</a></h4>
 <p>Agora vamos corrigir os problemas aplicando técnicas de verificação e validação:</p>
@@ -5314,7 +5311,8 @@ python<span class="w"> </span>demonstracao_ferramentas_teste.py
 </section>
 <section id="mapa-mental-dos-conceitos-fundamentais">
 <h4>Mapa Mental dos Conceitos Fundamentais:<a class="headerlink" href="#mapa-mental-dos-conceitos-fundamentais" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
+<pre  class="mermaid">
+        mindmap
   root((Conceitos Fundamentais&lt;br/&gt;de Teste))
     Fundamentos Teóricos
       Terminologia Essencial
@@ -5411,9 +5409,7 @@ python<span class="w"> </span>demonstracao_ferramentas_teste.py
         Autonomous QA
         Production Learning
         Immersive Testing
-</pre></div>
-</div>
-</section>
+    </pre></section>
 </section>
 <section id="referencias-e-leituras-adicionais">
 <h3>5.4. Referências e Leituras Adicionais<a class="headerlink" href="#referencias-e-leituras-adicionais" title="Link to this heading">#</a></h3>

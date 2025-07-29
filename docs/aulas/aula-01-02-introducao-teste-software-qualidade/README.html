@@ -61,6 +61,14 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+    <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-01-02-introducao-teste-software-qualidade/README';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
@@ -600,7 +608,8 @@ document.write(`
 <li><p><strong>Explosão Combinatorial:</strong> O número de caminhos de execução cresce exponencialmente com a complexidade</p></li>
 <li><p><strong>Dependência de Oráculo:</strong> Necessidade de um mecanismo confiável para determinar se o resultado está correto</p></li>
 </ul>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Defeito Latente no Código] --&gt; B[Execução de Teste Específico]
     B --&gt; C[Condições Adequadas]
     C --&gt; D[Manifestação da Falha]
@@ -611,9 +620,7 @@ document.write(`
     style A fill:#ffcccc
     style D fill:#ff9999
     style G fill:#ccffcc
-</pre></div>
-</div>
-<p><strong>Pilar 2: Prevenção Proativa de Defeitos</strong></p>
+    </pre><p><strong>Pilar 2: Prevenção Proativa de Defeitos</strong></p>
 <p>A abordagem preventiva representa uma evolução na mentalidade de teste, migrando de uma postura <strong>reativa</strong> (encontrar defeitos após sua criação) para uma postura <strong>proativa</strong> (evitar que defeitos sejam introduzidos).</p>
 <p><em>Fundamento Teórico:</em> Baseado na <strong>Lei de Pareto aplicada à qualidade de software</strong>: 80% dos defeitos emergem de 20% das funcionalidades. A prevenção foca nos pontos de maior risco.</p>
 <p><em>Mecanismos de Prevenção:</em></p>
@@ -671,7 +678,8 @@ document.write(`
 </li>
 </ol>
 <p><em>Processo de Transformação de Dados em Decisões:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart LR
+<pre  class="mermaid">
+        flowchart LR
     A[Execução de Testes] --&gt; B[Coleta de Dados Brutos]
     B --&gt; C[Análise e Agregação]
     C --&gt; D[Geração de Métricas]
@@ -682,9 +690,7 @@ document.write(`
     style A fill:#e1f5fe
     style D fill:#fff3e0
     style G fill:#e8f5e8
-</pre></div>
-</div>
-<p><strong>Pilar 4: Garantia de Conformidade Regulatória e Contratual</strong></p>
+    </pre><p><strong>Pilar 4: Garantia de Conformidade Regulatória e Contratual</strong></p>
 <p>Em muitos domínios, o teste não é apenas uma boa prática, mas uma <strong>obrigação legal e contratual</strong>. Este pilar garante que o software atenda a padrões externos obrigatórios.</p>
 <p><em>Domínios Críticos de Conformidade:</em></p>
 <ol class="arabic simple">
@@ -718,7 +724,8 @@ document.write(`
 </ol>
 <p><strong>Análise da Interdependência entre Pilares:</strong></p>
 <p>Os quatro pilares não são independentes; eles formam um <strong>sistema sinérgico</strong> onde o fortalecimento de um pilar beneficia os demais:</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
+<pre  class="mermaid">
+        mindmap
   root((Sinergia entre Pilares))
     (Descoberta de Defeitos)
       (Melhora informações para decisão)
@@ -732,9 +739,7 @@ document.write(`
     (Conformidade)
       (Força descoberta sistemática)
       (Exige prevenção estruturada)
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="analise-de-consequencias-e-trade-offs">
 <h4>2.1.3. Análise de Consequências e Trade-offs<a class="headerlink" href="#analise-de-consequencias-e-trade-offs" title="Link to this heading">#</a></h4>
 <p>A decisão estratégica sobre quanto, como e quando testar constitui um dos <strong>problemas de otimização mais complexos</strong> na engenharia de software. Esta decisão não é puramente técnica, mas envolve uma análise multidimensional de trade-offs que afeta diretamente o sucesso do projeto e do produto.</p>
@@ -843,7 +848,8 @@ Ponto de Equilíbrio: n_execuções = custo_desenvolvimento_automação / (custo
 </ul>
 <p><em>Exemplo Histórico:</em> Microsoft Windows Vista (2007) - Desenvolvimento de 5 anos com testes extensivos, mas perdeu relevância para concorrentes mais ágeis.</p>
 <p><strong>Framework para Tomada de Decisão: Matriz de Risco-Benefício</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Identificar Stakeholders] --&gt; B[Mapear Riscos por Stakeholder]
     B --&gt; C[Quantificar Impactos]
     C --&gt; D[Avaliar Probabilidades]
@@ -854,9 +860,7 @@ Ponto de Equilíbrio: n_execuções = custo_desenvolvimento_automação / (custo
     style A fill:#e3f2fd
     style E fill:#fff3e0
     style G fill:#e8f5e8
-</pre></div>
-</div>
-<p><strong>Stakeholders e Seus Critérios de Decisão:</strong></p>
+    </pre><p><strong>Stakeholders e Seus Critérios de Decisão:</strong></p>
 <ol class="arabic simple">
 <li><p><strong>Usuários Finais:</strong> Priorizam funcionalidade, usabilidade e confiabilidade</p></li>
 <li><p><strong>Gestão Executiva:</strong> Foca em ROI, time-to-market e risco regulatório</p></li>
@@ -978,7 +982,8 @@ O objetivo real do teste é <strong>reduzir o risco de falhas a um nível aceit�
 <li><p>Custos de mitigação vs. custos de impacto</p></li>
 <li><p>Restrições regulatórias</p></li>
 </ul>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Risco Infinito&lt;br/&gt;Sem Testes] --&gt; B[Risco Alto&lt;br/&gt;Testes Básicos]
     B --&gt; C[Risco Moderado&lt;br/&gt;Testes Abrangentes]
     C --&gt; D[Risco Baixo&lt;br/&gt;Testes Extensivos]
@@ -992,9 +997,7 @@ O objetivo real do teste é <strong>reduzir o risco de falhas a um nível aceit�
     style D fill:#e3f2fd
     style E fill:#f3e5f5
     style F fill:#ffebee
-</pre></div>
-</div>
-<p><strong>Mito 3: “Qualquer pessoa pode testar software”</strong></p>
+    </pre><p><strong>Mito 3: “Qualquer pessoa pode testar software”</strong></p>
 <p><em>Análise da Complexidade Cognitiva:</em>
 Este mito subestima dramaticamente a <strong>sofisticação intelectual</strong> requerida para teste eficaz de software.</p>
 <p><em>Competências Técnicas Necessárias:</em></p>
@@ -1070,7 +1073,8 @@ Este mito reflete uma visão <strong>taylorista obsoleta</strong> de divisão do
 <li><p><strong>Contextualização:</strong> Interpretação de resultados em contexto de negócio</p></li>
 </ul>
 <p><em>Modelo de Complementaridade:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Teste Automatizado] --&gt; B[Execução Rápida]
     A --&gt; C[Regressão Contínua]
     A --&gt; D[Cobertura Ampla]
@@ -1090,9 +1094,7 @@ Este mito reflete uma visão <strong>taylorista obsoleta</strong> de divisão do
     style A fill:#e3f2fd
     style E fill:#fff3e0
     style K fill:#e8f5e8
-</pre></div>
-</div>
-<p><strong>Mito 6: “Mais testes sempre significa melhor qualidade”</strong></p>
+    </pre><p><strong>Mito 6: “Mais testes sempre significa melhor qualidade”</strong></p>
 <p><em>Análise da Curva de Utilidade Marginal:</em>
 A relação entre quantidade de teste e qualidade segue uma <strong>curva de utilidade marginal decrescente</strong>, onde cada teste adicional produz benefício progressivamente menor.</p>
 <p><em>Ponto de Saturação:</em>
@@ -1140,7 +1142,8 @@ No modelo cascata, o teste é conceptualizado como uma <strong>fase distinta e t
 <li><p><strong>Responsabilidade Unilateral:</strong> QA é o “gatekeeper” da qualidade</p></li>
 </ul>
 <p><em>Fluxo de Trabalho Típico:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Requisitos] --&gt; B[Design]
     B --&gt; C[Implementação]
     C --&gt; D[Teste do Sistema]
@@ -1153,9 +1156,7 @@ No modelo cascata, o teste é conceptualizado como uma <strong>fase distinta e t
     
     style D fill:#ffcdd2
     style G fill:#ffcdd2
-</pre></div>
-</div>
-<p><em>Vantagens Contextuais:</em></p>
+    </pre><p><em>Vantagens Contextuais:</em></p>
 <ul class="simple">
 <li><p><strong>Documentação Exaustiva:</strong> Força especificação detalhada antes da implementação</p></li>
 <li><p><strong>Auditabilidade:</strong> Trilha completa de decisões e aprovações</p></li>
@@ -1173,7 +1174,8 @@ No modelo cascata, o teste é conceptualizado como uma <strong>fase distinta e t
 <p><em>Inovação Conceitual:</em>
 O Modelo V representa uma <strong>evolução arquitetural</strong> do cascata, estabelecendo correspondência temporal e conceptual entre fases de desenvolvimento e fases de teste. Para cada atividade de desenvolvimento existe uma atividade de verificação planejada em paralelo.</p>
 <p><em>Mapeamento de Correspondências:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Requisitos de Usuário] --&gt; B[Especificação de Sistema]
     B --&gt; C[Design de Arquitetura]
     C --&gt; D[Design Detalhado]
@@ -1193,9 +1195,7 @@ O Modelo V representa uma <strong>evolução arquitetural</strong> do cascata, e
     style I fill:#e3f2fd
     style B fill:#fff3e0
     style H fill:#fff3e0
-</pre></div>
-</div>
-<p><em>Princípios Fundamentais:</em></p>
+    </pre><p><em>Princípios Fundamentais:</em></p>
 <ol class="arabic simple">
 <li><p><strong>Planejamento Antecipado:</strong> Critérios de teste são definidos simultaneamente aos requisitos</p></li>
 <li><p><strong>Rastreabilidade Bidirecional:</strong> Cada requisito tem testes correspondentes e vice-versa</p></li>
@@ -1226,7 +1226,8 @@ Os modelos iterativos introduzem o conceito de <strong>desenvolvimento increment
 <li><p><strong>Evolução Adaptativa:</strong> Requisitos e design evoluem baseados em aprendizado</p></li>
 </ul>
 <p><em>Fluxo de Trabalho por Iteração:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Planejamento da Iteração] --&gt; B[Análise e Design]
     B --&gt; C[Implementação]
     C --&gt; D[Teste]
@@ -1239,9 +1240,7 @@ Os modelos iterativos introduzem o conceito de <strong>desenvolvimento increment
     
     style D fill:#e8f5e8
     style E fill:#fff3e0
-</pre></div>
-</div>
-<p><em>Transformações no Papel do Teste:</em></p>
+    </pre><p><em>Transformações no Papel do Teste:</em></p>
 <ol class="arabic simple">
 <li><p><strong>Integração Temporal:</strong> Teste ocorre dentro de cada iteração, não ao final</p></li>
 <li><p><strong>Validação Contínua:</strong> Stakeholders avaliam incrementos funcionais regularmente</p></li>
@@ -1280,7 +1279,8 @@ Os modelos ágeis representam uma <strong>ruptura fundamental</strong> com a sep
 <li><p><strong>Refactoring:</strong> Melhoria contínua da qualidade interna do código</p></li>
 </ul>
 <p><em>Transformação do Fluxo de Trabalho:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[User Story] --&gt; B[Acceptance Criteria]
     B --&gt; C[Test Cases]
     C --&gt; D[Red Test]
@@ -1297,9 +1297,7 @@ Os modelos ágeis representam uma <strong>ruptura fundamental</strong> com a sep
     style D fill:#ffcdd2
     style F fill:#ccffcc
     style I fill:#e3f2fd
-</pre></div>
-</div>
-<p><em>Benefícios Sistêmicos:</em></p>
+    </pre><p><em>Benefícios Sistêmicos:</em></p>
 <ul class="simple">
 <li><p><strong>Shift-Left Radical:</strong> Teste ocorre simultaneamente ao desenvolvimento</p></li>
 <li><p><strong>Feedback Imediato:</strong> Problemas são detectados em minutos/horas, não semanas</p></li>
@@ -1317,7 +1315,8 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
 <li><p><strong>Observability:</strong> Monitoramento e teste continuam em produção</p></li>
 </ol>
 <p><em>Arquitetura de Pipeline Típica:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Code Commit] --&gt; B[Unit Tests]
     B --&gt; C[Static Analysis]
     C --&gt; D[Build]
@@ -1335,9 +1334,7 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
     style G fill:#ccffcc
     style I fill:#ccffcc
     style K fill:#e3f2fd
-</pre></div>
-</div>
-<p><em>Práticas Características:</em></p>
+    </pre><p><em>Práticas Características:</em></p>
 <ul class="simple">
 <li><p><strong>Continuous Integration (CI):</strong> Testes executados automaticamente a cada commit</p></li>
 <li><p><strong>Continuous Deployment (CD):</strong> Deploy automático após aprovação em quality gates</p></li>
@@ -1371,7 +1368,8 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
 <li><p>Metáfora: “Teste é o sistema imunológico do software”</p></li>
 </ul>
 <p><em>Implicações Práticas:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Paradigma Clássico] --&gt; B[Teste como Fase]
     A --&gt; C[Feedback Tardio]
     A --&gt; D[Correções Caras]
@@ -1382,9 +1380,7 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
     
     style A fill:#ffcdd2
     style E fill:#ccffcc
-</pre></div>
-</div>
-<p><strong>2. Transformação Filosófica: De Detecção para Prevenção</strong></p>
+    </pre><p><strong>2. Transformação Filosófica: De Detecção para Prevenção</strong></p>
 <p><em>Filosofia Reativa (Detecção):</em></p>
 <ul class="simple">
 <li><p><strong>Pressuposto:</strong> Defeitos são inevitáveis e devem ser encontrados</p></li>
@@ -1401,7 +1397,8 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
 </ul>
 <p><strong>3. Transformação Organizacional: De Silo para Colaboração</strong></p>
 <p><em>Modelo de Separação (QA-Centric):</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Desenvolvedores] --&gt; B[Código]
     B --&gt; C[Handoff]
     C --&gt; D[Testadores]
@@ -1411,9 +1408,7 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
     
     style C fill:#ffcdd2
     style E fill:#ffcdd2
-</pre></div>
-</div>
-<p><em>Características:</em></p>
+    </pre><p><em>Características:</em></p>
 <ul class="simple">
 <li><p><strong>Responsabilidade Unilateral:</strong> QA “aprova” ou “reprova” releases</p></li>
 <li><p><strong>Comunicação Formal:</strong> Bugs reportados através de sistemas de tracking</p></li>
@@ -1421,7 +1416,8 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
 <li><p><strong>Ownership Fragmentado:</strong> Ninguém é responsável pela qualidade end-to-end</p></li>
 </ul>
 <p><em>Modelo de Integração (Whole-Team):</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Equipe Cross-functional] --&gt; B[Planejamento Colaborativo]
     B --&gt; C[Desenvolvimento + Teste]
     C --&gt; D[Review Coletivo]
@@ -1431,9 +1427,7 @@ DevOps representa a <strong>convergência completa</strong> entre desenvolviment
     style A fill:#ccffcc
     style C fill:#ccffcc
     style E fill:#ccffcc
-</pre></div>
-</div>
-<p><em>Características:</em></p>
+    </pre><p><em>Características:</em></p>
 <ul class="simple">
 <li><p><strong>Responsabilidade Compartilhada:</strong> Toda equipe é responsável pela qualidade</p></li>
 <li><p><strong>Comunicação Contínua:</strong> Conversas face-a-face, pair programming, mob testing</p></li>
@@ -1511,7 +1505,8 @@ A norma internacional define qualidade como <strong>“o grau em que um sistema,
 <p><em>Definição de Crosby (Zero Defeitos):</em>
 Philip Crosby propõe qualidade como <strong>“conformidade com requisitos”</strong>, uma definição aparentemente mais restritiva que enfatiza a prevenção de defeitos e a importância da especificação precisa.</p>
 <p><em>Síntese Conceitual:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Qualidade de Software] --&gt; B[Conformidade com Requisitos]
     A --&gt; C[Adequação ao Uso]
     A --&gt; D[Satisfação do Usuário]
@@ -1527,9 +1522,7 @@ Philip Crosby propõe qualidade como <strong>“conformidade com requisitos”</
     style G fill:#e8f5e8
     style H fill:#f3e5f5
     style I fill:#fff8e1
-</pre></div>
-</div>
-<p><strong>Perspectivas Multidimensionais da Qualidade</strong></p>
+    </pre><p><strong>Perspectivas Multidimensionais da Qualidade</strong></p>
 <p><em>Qualidade Transcendental:</em> Qualidade como excelência inata, reconhecível mas difícil de definir precisamente. Relevante para produtos premium onde a percepção de qualidade impacta valor de marca.</p>
 <p><em>Qualidade Baseada em Produto:</em> Qualidade como função de características mensuráveis e específicas. Alinha-se com métricas técnicas como performance, disponibilidade, precisão.</p>
 <p><em>Qualidade Baseada em Usuário:</em> Qualidade determinada pela satisfação e adequação às necessidades específicas de usuários individuais. Enfatiza usabilidade, acessibilidade, experiência.</p>
@@ -1593,7 +1586,8 @@ Representa as <strong>características perceptíveis pelos usuários</strong> qu
 <li><p><strong>Baixa qualidade intrínseca, alta qualidade extrínseca:</strong> Software funcional mas tecnicamente problemático (debt técnico alto)</p></li>
 </ol>
 <p><em>Sustentabilidade Temporal:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Qualidade Intrínseca Alta] --&gt; B[Manutenibilidade]
     B --&gt; C[Evolução Sustentável]
     C --&gt; D[Qualidade Extrínseca Mantida]
@@ -1606,9 +1600,7 @@ Representa as <strong>características perceptíveis pelos usuários</strong> qu
     style D fill:#ccffcc
     style E fill:#ffcdd2
     style H fill:#ffcdd2
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="estrutura-conceitual-o-modelo-de-qualidade-iso-iec-25010">
 <h4>2.3.2. Estrutura Conceitual: O Modelo de Qualidade ISO/IEC 25010<a class="headerlink" href="#estrutura-conceitual-o-modelo-de-qualidade-iso-iec-25010" title="Link to this heading">#</a></h4>
 <p>A norma <strong>ISO/IEC 25010</strong> representa o <strong>consenso internacional</strong> mais abrangente e rigoroso para a estruturação e avaliação da qualidade de software. Este modelo não é meramente descritivo, mas constitui um <strong>framework operacional</strong> que permite medição, comparação e melhoria sistemática da qualidade.</p>
@@ -1737,7 +1729,8 @@ W = Tempo médio no sistema (latência)
 <li><p><strong>Autenticidade:</strong> Grau em que a identidade de um sujeito ou recurso pode ser provada como sendo aquela alegada</p></li>
 </ul>
 <p><em>Framework de Análise de Ameaças:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Assets] --&gt; B[Threats]
     B --&gt; C[Vulnerabilities]
     C --&gt; D[Risks]
@@ -1747,9 +1740,7 @@ W = Tempo médio no sistema (latência)
     style D fill:#ffcdd2
     style E fill:#ccffcc
     style F fill:#fff3e0
-</pre></div>
-</div>
-<p><strong>6. Compatibilidade (Compatibility)</strong></p>
+    </pre><p><strong>6. Compatibilidade (Compatibility)</strong></p>
 <p><em>Definição Formal:</em> Grau em que um produto, sistema ou componente pode trocar informações com outros produtos, sistemas ou componentes, e/ou executar suas funções requeridas enquanto compartilha o mesmo ambiente de hardware ou software.</p>
 <p><em>Subcaracterísticas:</em></p>
 <ul class="simple">
@@ -1792,7 +1783,8 @@ Representa as <strong>propriedades estruturais e arquiteturais</strong> do softw
 <p><em>Qualidade Percebida (External Quality):</em>
 Refere-se às <strong>características experimentadas pelos usuários</strong> durante a interação com o software. É diretamente observável e impacta imediatamente a satisfação do usuário e o sucesso comercial do produto.</p>
 <p><strong>Análise de Stakeholders e Perspectivas Divergentes</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Stakeholders] --&gt; B[Usuários Finais]
     A --&gt; C[Desenvolvedores]
     A --&gt; D[Gestão de Produto]
@@ -1808,9 +1800,7 @@ Refere-se às <strong>características experimentadas pelos usuários</strong> d
     style G fill:#e3f2fd
     style H fill:#fff3e0
     style I fill:#e8f5e8
-</pre></div>
-</div>
-<p><strong>Cenários de Tensão e Suas Implicações</strong></p>
+    </pre><p><strong>Cenários de Tensão e Suas Implicações</strong></p>
 <p><strong>Cenário 1: Alta Qualidade Intrínseca, Baixa Qualidade Percebida</strong></p>
 <p><em>Características:</em></p>
 <ul class="simple">
@@ -1837,7 +1827,8 @@ Refere-se às <strong>características experimentadas pelos usuários</strong> d
 </ul>
 <p><em>Exemplo Real:</em> Muitas startups de sucesso inicial que posteriormente enfrentam “technical bankruptcy”.</p>
 <p><em>Consequências Temporais:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Sucesso Inicial] --&gt; B[Crescimento Rápido]
     B --&gt; C[Débito Técnico Acumula]
     C --&gt; D[Velocidade Diminui]
@@ -1850,9 +1841,7 @@ Refere-se às <strong>características experimentadas pelos usuários</strong> d
     style D fill:#ffcdd2
     style E fill:#ffcdd2
     style F fill:#ffcdd2
-</pre></div>
-</div>
-<p><em>Fases de Degradação:</em></p>
+    </pre><p><em>Fases de Degradação:</em></p>
 <ol class="arabic simple">
 <li><p><strong>Honeymoon Phase (0-12 meses):</strong> Funcionalidade mascarada problemas técnicos</p></li>
 <li><p><strong>Velocity Decline (12-24 meses):</strong> Novas features levam progressivamente mais tempo</p></li>
@@ -1932,7 +1921,8 @@ Custo_Oportunidade ∝ 1/Qualidade_Percebida
 <li><p><strong>Progressive Enhancement:</strong> Construir base sólida, adicionar camadas de experiência</p></li>
 </ul>
 <p><strong>3. Metrics-Driven Balance:</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Métricas Técnicas] --&gt; C[Dashboard de Qualidade]
     B[Métricas de Usuário] --&gt; C
     C --&gt; D[Decisões Informadas]
@@ -1943,9 +1933,7 @@ Custo_Oportunidade ∝ 1/Qualidade_Percebida
     
     style C fill:#e8f5e8
     style D fill:#e3f2fd
-</pre></div>
-</div>
-<p><strong>Indicadores de Alerta para Desequilíbrio:</strong></p>
+    </pre><p><strong>Indicadores de Alerta para Desequilíbrio:</strong></p>
 <p><em>Sinais de Qualidade Intrínseca Negligenciada:</em></p>
 <ul class="simple">
 <li><p>Tempo para implementar features aumenta consistentemente</p></li>
@@ -2056,7 +2044,8 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
 <li><p><strong>Propagação:</strong> Deploy emergencial, comunicação com usuários, gestão de crise</p></li>
 </ol>
 <p><em>Custo Típico:</em> 50-200x</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Requisitos&lt;br/&gt;Custo: 1x] --&gt; B[Design&lt;br/&gt;Custo: 3-5x]
     B --&gt; C[Codificação&lt;br/&gt;Custo: 10-15x]
     C --&gt; D[Teste Sistema&lt;br/&gt;Custo: 20-40x]
@@ -2067,9 +2056,7 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
     style C fill:#ffe0b2
     style D fill:#ffcdd2
     style E fill:#ffcdd2
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="modelagem-matematica-o-custo-exponencial-do-defeito">
 <h4>2.4.2. Modelagem Matemática: O Custo Exponencial do Defeito<a class="headerlink" href="#modelagem-matematica-o-custo-exponencial-do-defeito" title="Link to this heading">#</a></h4>
 <p><strong>Modelo Matemático Fundamental</strong></p>
@@ -2278,7 +2265,8 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
 <p><em>ROI: (1,200,000 - 550,000) / 550,000 = 118%</em></p>
 <p><strong>Fatores Críticos que Afetam ROI</strong></p>
 <p><strong>1. Timing do Investimento</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Investimento Precoce] --&gt; B[ROI Alto]
     C[Investimento Tardio] --&gt; D[ROI Baixo/Negativo]
     E[Sistema Legacy] --&gt; F[ROI Complexo]
@@ -2288,9 +2276,7 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
     style C fill:#ffcdd2
     style D fill:#ffcdd2
     style F fill:#fff3e0
-</pre></div>
-</div>
-<p><strong>2. Maturidade da Organização</strong></p>
+    </pre><p><strong>2. Maturidade da Organização</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Nível de Maturidade</p></th>
@@ -2395,7 +2381,8 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
 <p><em>Visão Geral do Produto:</em>
 O FoodDash é um aplicativo móvel multiplataforma (iOS/Android) com backend na nuvem que conecta consumidores, restaurantes e entregadores em um <strong>ecossistema digital integrado</strong>. O sistema processa aproximadamente 50.000 pedidos diários, opera em 15 cidades brasileiras e possui base de usuários de 2.5 milhões de pessoas.</p>
 <p><em>Arquitetura Sistêmica:</em></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Aplicativo Cliente] --&gt; B[API Gateway]
     C[Aplicativo Restaurante] --&gt; B
     D[Aplicativo Entregador] --&gt; B
@@ -2414,9 +2401,7 @@ O FoodDash é um aplicativo móvel multiplataforma (iOS/Android) com backend na 
     style C fill:#fff3e0
     style D fill:#e8f5e8
     style B fill:#f3e5f5
-</pre></div>
-</div>
-<p><em>Stakeholders Críticos:</em></p>
+    </pre><p><em>Stakeholders Críticos:</em></p>
 <ol class="arabic simple">
 <li><p><strong>Consumidores:</strong> Buscam conveniência, variedade e confiabilidade</p></li>
 <li><p><strong>Restaurantes:</strong> Necessitam visibilidade, eficiência operacional e pagamentos pontuais</p></li>
@@ -3198,7 +3183,8 @@ Execução repetitiva dos mesmos casos de teste ao longo do tempo, resultando em
 <p><strong>Fundamentação Teórica:</strong>
 Este fenômeno reflete o <strong>Princípio da Diversidade Evolutiva</strong> em sistemas complexos: defeitos tendem a emergir em áreas do código não exercitadas pelos testes existentes, criando uma <strong>seleção natural dos bugs</strong> que sobrevivem ao conjunto de testes atual.</p>
 <p><strong>Análise de Causa Raiz:</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
+<pre  class="mermaid">
+        graph TD
     A[Criação Inicial de Testes] --&gt; B[Detecção de Defeitos]
     B --&gt; C[Correção dos Defeitos]
     C --&gt; D[Execução Repetitiva dos Mesmos Testes]
@@ -3209,9 +3195,7 @@ Este fenômeno reflete o <strong>Princípio da Diversidade Evolutiva</strong> em
     style A fill:#ccffcc
     style F fill:#ffcdd2
     style G fill:#ffcdd2
-</pre></div>
-</div>
-<p><strong>Evidências Empíricas:</strong>
+    </pre><p><strong>Evidências Empíricas:</strong>
 Estudos longitudinais demonstram que suítes de teste sem evolução apresentam <strong>curva de detecção exponencialmente decrescente</strong>:</p>
 <ul class="simple">
 <li><p>Mês 1-3: 80% dos defeitos detectados</p></li>
@@ -4138,7 +4122,8 @@ Shift-Right reconhece que <strong>algumas dimensões da qualidade</strong> só p
 </pre></div>
 </div>
 <p><strong>Análise Comparativa: Shift-Left vs. Shift-Right</strong></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Desenvolvimento] --&gt; B[Teste Tradicional] --&gt; C[Produção]
     
     D[Shift-Left] --&gt; A
@@ -4151,9 +4136,7 @@ Shift-Right reconhece que <strong>algumas dimensões da qualidade</strong> só p
     style F fill:#e3f2fd
     style E fill:#ccffcc
     style G fill:#e3f2fd
-</pre></div>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
+    </pre><div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Aspecto</p></th>
 <th class="head"><p>Shift-Left</p></th>
@@ -5098,7 +5081,8 @@ Sistemas de teste que <strong>evoluem autonomamente</strong>, aprendendo com fal
 </section>
 <section id="mapa-mental-conceitual">
 <h4><strong>Mapa Mental Conceitual</strong><a class="headerlink" href="#mapa-mental-conceitual" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
+<pre  class="mermaid">
+        mindmap
   root((Teste de Software))
     Fundamentos Teóricos
       Terminologia
@@ -5164,9 +5148,7 @@ Sistemas de teste que <strong>evoluem autonomamente</strong>, aprendendo com fal
         Self-Healing Tests
         Production Learning
         Autonomous QA
-</pre></div>
-</div>
-</section>
+    </pre></section>
 </section>
 <section id="referencias-e-leituras-adicionais">
 <h3>5.4. Referências e Leituras Adicionais<a class="headerlink" href="#referencias-e-leituras-adicionais" title="Link to this heading">#</a></h3>
