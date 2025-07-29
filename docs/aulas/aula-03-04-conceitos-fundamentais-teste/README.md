@@ -134,7 +134,7 @@ O teste de software é um processo sistemático e disciplinado que envolve três
 
 A compreensão precisa dos conceitos de erro, defeito, falha e incidente é fundamental para qualquer profissional de teste. Estes conceitos formam uma cadeia causal que explica como problemas humanos se manifestam em impactos no negócio.
 
-```mermaid
+```{mermaid}
 graph LR
     A[Erro<br>Mistake] -->|"Introduz"| B[Defeito<br>Fault/Bug]
     B -->|"Manifesta-se como"| C[Falha<br>Failure]
@@ -197,7 +197,7 @@ graph LR
 
 #### 2.2.2. Análise da Relação Causal
 
-```mermaid
+```{mermaid}
 flowchart TD
     A[Erro Humano] --> B{Defeito Introduzido?}
     B -->|Sim| C[Defeito no Código]
@@ -233,7 +233,7 @@ Embora o termo já fosse usado informalmente para descrever problemas mecânicos
 
 #### 2.3.2. Classificação e Impacto de Bugs
 
-```mermaid
+```{mermaid}
 graph TD
     A[Classificação de Bugs] --> B[Por Severidade]
     A --> C[Por Tipo]
@@ -269,7 +269,7 @@ graph TD
 
 A distinção entre verificação e validação é fundamental para compreender os diferentes objetivos dos testes. Esta separação, conhecida como V&V (Verification and Validation), foi formalizada por Barry Boehm em 1981.
 
-```mermaid
+```{mermaid}
 classDiagram
     class Verificacao {
         +objetivo: "Produto correto"
@@ -381,7 +381,7 @@ $$E = \frac{\text{Defeitos encontrados}}{\text{Total de defeitos existentes}}$$
 
 O SWEBOK (Software Engineering Body of Knowledge) é um guia internacionalmente reconhecido que define e organiza o conhecimento em engenharia de software. O teste de software é uma das 15 áreas de conhecimento fundamentais definidas no SWEBOK v3.0.
 
-```mermaid
+```{mermaid}
 graph TD
     A[SWEBOK v3.0] --> B[Fundamentos de Engenharia]
     A --> C[Requisitos de Software]
@@ -417,7 +417,7 @@ graph TD
 
 O teste de software no SWEBOK interage fortemente com outras áreas de conhecimento, criando um ecossistema integrado de práticas:
 
-```mermaid
+```{mermaid}
 graph TB
     Teste[Teste de Software] --> Requisitos[Requisitos de Software<br>• Validação de requisitos<br>• Critérios de aceitação]
     Teste --> Design[Design de Software<br>• Verificação arquitetural<br>• Testabilidade do design]
@@ -445,7 +445,7 @@ graph TB
 
 #### 2.7.1. Evolução Histórica dos Testes nos Modelos de Desenvolvimento
 
-```mermaid
+```{mermaid}
 timeline
     title Evolução dos Testes nos Modelos de Desenvolvimento
     1970 : Modelo Cascata
@@ -471,7 +471,7 @@ timeline
 #### 2.7.2. Análise Comparativa dos Modelos
 
 ##### Modelo Tradicional (Cascata)
-```mermaid
+```{mermaid}
 graph TB
     A[Análise de Requisitos] --> B[Design do Sistema]
     B --> C[Implementação]
@@ -499,7 +499,7 @@ graph TB
 - Pressão de cronograma leva a testes inadequados
 
 ##### Modelo V
-```mermaid
+```{mermaid}
 graph LR
     A[Requisitos] --> B[Design Sistema]
     B --> C[Design Detalhado]
@@ -524,7 +524,7 @@ graph LR
 - **Validação Antecipada**: Critérios de aceitação definidos desde o início
 
 ##### Modelo Ágil/DevOps
-```mermaid
+```{mermaid}
 graph LR
     A[Plan] --> B[Code]
     B --> C[Build]
@@ -959,7 +959,7 @@ if __name__ == "__main__":
 
 Vamos mapear cada problema encontrado na cadeia causal:
 
-```mermaid
+```{mermaid}
 graph TD
     E1[ERRO 1: Programador não validou ISBN] --> D1[DEFEITO 1: Livros com ISBN inválido aceitos]
     E2[ERRO 2: Confundiu == com != na lógica] --> D2[DEFEITO 2: Condição invertida em pode_emprestar]
@@ -4672,7 +4672,7 @@ Este capítulo estabeleceu as bases conceituais fundamentais para compreensão p
 
 #### Mapa Mental dos Conceitos Fundamentais:
 
-```mermaid
+```{mermaid}
 mindmap
   root((Conceitos Fundamentais<br/>de Teste))
     Fundamentos Teóricos

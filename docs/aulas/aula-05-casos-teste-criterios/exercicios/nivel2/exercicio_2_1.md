@@ -17,7 +17,7 @@ A empresa "TechMart" está lançando uma nova plataforma de e-commerce B2C. Voc�
 
 ### Arquitetura do Sistema
 
-```mermaid
+```{mermaid}
 graph TB
     A[Frontend Web] --> B[API Gateway]
     B --> C[Catálogo de Produtos]

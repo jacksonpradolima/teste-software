@@ -144,7 +144,7 @@ Este é o pilar mais visível e tradicionalmente reconhecido. O teste atua como 
 - **Explosão Combinatorial:** O número de caminhos de execução cresce exponencialmente com a complexidade
 - **Dependência de Oráculo:** Necessidade de um mecanismo confiável para determinar se o resultado está correto
 
-```mermaid
+```{mermaid}
 graph TD
     A[Defeito Latente no Código] --> B[Execução de Teste Específico]
     B --> C[Condições Adequadas]
@@ -208,7 +208,7 @@ O teste é fundamentalmente um **sistema de informação gerencial** que transfo
    - Performance dentro de parâmetros aceitáveis
 
 *Processo de Transformação de Dados em Decisões:*
-```mermaid
+```{mermaid}
 flowchart LR
     A[Execução de Testes] --> B[Coleta de Dados Brutos]
     B --> C[Análise e Agregação]
@@ -252,7 +252,7 @@ Em muitos domínios, o teste não é apenas uma boa prática, mas uma **obrigaç
 
 Os quatro pilares não são independentes; eles formam um **sistema sinérgico** onde o fortalecimento de um pilar beneficia os demais:
 
-```mermaid
+```{mermaid}
 mindmap
   root((Sinergia entre Pilares))
     (Descoberta de Defeitos)
@@ -368,7 +368,7 @@ Onde:
 
 **Framework para Tomada de Decisão: Matriz de Risco-Benefício**
 
-```mermaid
+```{mermaid}
 graph LR
     A[Identificar Stakeholders] --> B[Mapear Riscos por Stakeholder]
     B --> C[Quantificar Impactos]
@@ -496,7 +496,7 @@ O objetivo real do teste é **reduzir o risco de falhas a um nível aceitável p
 - Custos de mitigação vs. custos de impacto
 - Restrições regulatórias
 
-```mermaid
+```{mermaid}
 graph LR
     A[Risco Infinito<br/>Sem Testes] --> B[Risco Alto<br/>Testes Básicos]
     B --> C[Risco Moderado<br/>Testes Abrangentes]
@@ -569,7 +569,7 @@ Este mito reflete uma visão **taylorista obsoleta** de divisão do trabalho que
 - **Contextualização:** Interpretação de resultados em contexto de negócio
 
 *Modelo de Complementaridade:*
-```mermaid
+```{mermaid}
 graph TD
     A[Teste Automatizado] --> B[Execução Rápida]
     A --> C[Regressão Contínua]
@@ -644,7 +644,7 @@ No modelo cascata, o teste é conceptualizado como uma **fase distinta e termina
 - **Responsabilidade Unilateral:** QA é o "gatekeeper" da qualidade
 
 *Fluxo de Trabalho Típico:*
-```mermaid
+```{mermaid}
 graph LR
     A[Requisitos] --> B[Design]
     B --> C[Implementação]
@@ -678,7 +678,7 @@ graph LR
 O Modelo V representa uma **evolução arquitetural** do cascata, estabelecendo correspondência temporal e conceptual entre fases de desenvolvimento e fases de teste. Para cada atividade de desenvolvimento existe uma atividade de verificação planejada em paralelo.
 
 *Mapeamento de Correspondências:*
-```mermaid
+```{mermaid}
 graph TD
     A[Requisitos de Usuário] --> B[Especificação de Sistema]
     B --> C[Design de Arquitetura]
@@ -730,7 +730,7 @@ Os modelos iterativos introduzem o conceito de **desenvolvimento incremental com
 - **Evolução Adaptativa:** Requisitos e design evoluem baseados em aprendizado
 
 *Fluxo de Trabalho por Iteração:*
-```mermaid
+```{mermaid}
 graph TD
     A[Planejamento da Iteração] --> B[Análise e Design]
     B --> C[Implementação]
@@ -783,7 +783,7 @@ Os modelos ágeis representam uma **ruptura fundamental** com a separação trad
 - **Refactoring:** Melhoria contínua da qualidade interna do código
 
 *Transformação do Fluxo de Trabalho:*
-```mermaid
+```{mermaid}
 graph LR
     A[User Story] --> B[Acceptance Criteria]
     B --> C[Test Cases]
@@ -822,7 +822,7 @@ DevOps representa a **convergência completa** entre desenvolvimento, teste e op
 4. **Observability:** Monitoramento e teste continuam em produção
 
 *Arquitetura de Pipeline Típica:*
-```mermaid
+```{mermaid}
 graph LR
     A[Code Commit] --> B[Unit Tests]
     B --> C[Static Analysis]
@@ -875,7 +875,7 @@ A jornada através dos diferentes modelos de processo revela uma **evolução pa
 - Metáfora: "Teste é o sistema imunológico do software"
 
 *Implicações Práticas:*
-```mermaid
+```{mermaid}
 graph TD
     A[Paradigma Clássico] --> B[Teste como Fase]
     A --> C[Feedback Tardio]
@@ -906,7 +906,7 @@ graph TD
 **3. Transformação Organizacional: De Silo para Colaboração**
 
 *Modelo de Separação (QA-Centric):*
-```mermaid
+```{mermaid}
 graph TD
     A[Desenvolvedores] --> B[Código]
     B --> C[Handoff]
@@ -926,7 +926,7 @@ graph TD
 - **Ownership Fragmentado:** Ninguém é responsável pela qualidade end-to-end
 
 *Modelo de Integração (Whole-Team):*
-```mermaid
+```{mermaid}
 graph TD
     A[Equipe Cross-functional] --> B[Planejamento Colaborativo]
     B --> C[Desenvolvimento + Teste]
@@ -1016,7 +1016,7 @@ A norma internacional define qualidade como **"o grau em que um sistema, produto
 Philip Crosby propõe qualidade como **"conformidade com requisitos"**, uma definição aparentemente mais restritiva que enfatiza a prevenção de defeitos e a importância da especificação precisa.
 
 *Síntese Conceitual:*
-```mermaid
+```{mermaid}
 graph TD
     A[Qualidade de Software] --> B[Conformidade com Requisitos]
     A --> C[Adequação ao Uso]
@@ -1103,7 +1103,7 @@ Representa as **características perceptíveis pelos usuários** que determinam 
 2. **Baixa qualidade intrínseca, alta qualidade extrínseca:** Software funcional mas tecnicamente problemático (debt técnico alto)
 
 *Sustentabilidade Temporal:*
-```mermaid
+```{mermaid}
 graph LR
     A[Qualidade Intrínseca Alta] --> B[Manutenibilidade]
     B --> C[Evolução Sustentável]
@@ -1233,7 +1233,7 @@ W = Tempo médio no sistema (latência)
 - **Autenticidade:** Grau em que a identidade de um sujeito ou recurso pode ser provada como sendo aquela alegada
 
 *Framework de Análise de Ameaças:*
-```mermaid
+```{mermaid}
 graph TD
     A[Assets] --> B[Threats]
     B --> C[Vulnerabilities]
@@ -1297,7 +1297,7 @@ Refere-se às **características experimentadas pelos usuários** durante a inte
 
 **Análise de Stakeholders e Perspectivas Divergentes**
 
-```mermaid
+```{mermaid}
 graph TD
     A[Stakeholders] --> B[Usuários Finais]
     A --> C[Desenvolvedores]
@@ -1345,7 +1345,7 @@ graph TD
 *Exemplo Real:* Muitas startups de sucesso inicial que posteriormente enfrentam "technical bankruptcy".
 
 *Consequências Temporais:*
-```mermaid
+```{mermaid}
 graph LR
     A[Sucesso Inicial] --> B[Crescimento Rápido]
     B --> C[Débito Técnico Acumula]
@@ -1437,7 +1437,7 @@ O problema pode ser formalizado como otimização multi-objetivo:
 - **Progressive Enhancement:** Construir base sólida, adicionar camadas de experiência
 
 **3. Metrics-Driven Balance:**
-```mermaid
+```{mermaid}
 graph TD
     A[Métricas Técnicas] --> C[Dashboard de Qualidade]
     B[Métricas de Usuário] --> C
@@ -1561,7 +1561,7 @@ O estudo original de Boehm analisou mais de 60 projetos de software ao longo de 
 
 *Custo Típico:* 50-200x
 
-```mermaid
+```{mermaid}
 graph LR
     A[Requisitos<br/>Custo: 1x] --> B[Design<br/>Custo: 3-5x]
     B --> C[Codificação<br/>Custo: 10-15x]
@@ -1771,7 +1771,7 @@ Onde:
 **Fatores Críticos que Afetam ROI**
 
 **1. Timing do Investimento**
-```mermaid
+```{mermaid}
 graph LR
     A[Investimento Precoce] --> B[ROI Alto]
     C[Investimento Tardio] --> D[ROI Baixo/Negativo]
@@ -1864,7 +1864,7 @@ Para consolidar os conceitos teóricos apresentados na Seção 2, desenvolveremo
 O FoodDash é um aplicativo móvel multiplataforma (iOS/Android) com backend na nuvem que conecta consumidores, restaurantes e entregadores em um **ecossistema digital integrado**. O sistema processa aproximadamente 50.000 pedidos diários, opera em 15 cidades brasileiras e possui base de usuários de 2.5 milhões de pessoas.
 
 *Arquitetura Sistêmica:*
-```mermaid
+```{mermaid}
 graph TD
     A[Aplicativo Cliente] --> B[API Gateway]
     C[Aplicativo Restaurante] --> B
@@ -2679,7 +2679,7 @@ Execução repetitiva dos mesmos casos de teste ao longo do tempo, resultando em
 Este fenômeno reflete o **Princípio da Diversidade Evolutiva** em sistemas complexos: defeitos tendem a emergir em áreas do código não exercitadas pelos testes existentes, criando uma **seleção natural dos bugs** que sobrevivem ao conjunto de testes atual.
 
 **Análise de Causa Raiz:**
-```mermaid
+```{mermaid}
 graph TD
     A[Criação Inicial de Testes] --> B[Detecção de Defeitos]
     B --> C[Correção dos Defeitos]
@@ -3656,7 +3656,7 @@ chaos_experiment = {
 
 **Análise Comparativa: Shift-Left vs. Shift-Right**
 
-```mermaid
+```{mermaid}
 graph LR
     A[Desenvolvimento] --> B[Teste Tradicional] --> C[Produção]
     
@@ -4616,7 +4616,7 @@ Este capítulo apresentou uma **exploração sistemática e abrangente** dos fun
 
 #### **Mapa Mental Conceitual**
 
-```mermaid
+```{mermaid}
 mindmap
   root((Teste de Software))
     Fundamentos Teóricos

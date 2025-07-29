@@ -107,7 +107,7 @@ A estrutura de um caso de teste segue um modelo conceitual baseado em **entrada-
 - **Resultado obtido**: Registro do comportamento real observado
 - **Status final**: Classificação do teste (passou, falhou, bloqueado, não executado)
 
-```mermaid
+```{mermaid}
 graph TD
     A[Pré-condições] --> B[Dados de Entrada]
     B --> C[Execução dos Passos]
@@ -253,7 +253,7 @@ Estratégias de seleção:
 - **Test case prioritization**: Ordenação por probabilidade de detectar defeitos
 - **Hybrid approaches**: Combinação de estratégias baseada em contexto
 
-```mermaid
+```{mermaid}
 graph TB
     A[Requisito do Sistema] --> B{Tipo de Validação}
     B -->|Funcionamento Normal| C[Teste Positivo]
@@ -405,7 +405,7 @@ Os critérios de saída determinam quando uma fase de teste pode ser considerada
 - Recursos de teste esgotados
 - Decisão de negócio para release
 
-```mermaid
+```{mermaid}
 graph TD
     A[Critérios de Entrada] --> B[Fase de Teste]
     B --> C[Aplicação de Critérios de Cobertura]
@@ -514,7 +514,7 @@ A matriz de rastreabilidade é o artefato central que documenta os relacionament
 
 **Hierarquia de Rastreabilidade:**
 
-```mermaid
+```{mermaid}
 graph TD
     A[Requisitos de Negócio] --> B[Requisitos Funcionais]
     A --> C[Requisitos Não-Funcionais]
@@ -2956,7 +2956,7 @@ A crescente preocupação com sustentabilidade ambiental está criando uma nova 
 
 #### 5.3.2. Mapa Mental dos Conceitos
 
-```mermaid
+```{mermaid}
 mindmap
   root((Casos de Teste e Critérios))
     Fundamentos Teóricos
