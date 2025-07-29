@@ -16,7 +16,7 @@ language: "pt-BR"
 tone: "profissional e didático"
 ---
 
-# Aulas 1-2: Introdução ao Teste de Software e Qualidade de Software
+# Introdução ao Teste de Software e Qualidade de Software
 
 ## Sumário Completo
 
