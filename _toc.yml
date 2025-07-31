@@ -8,13 +8,15 @@ parts:
       - file: docs/aulas/aula-05-casos-teste-criterios/README.md
       - file: docs/aulas/aula-06-08-tecnicas-teste-funcional-caixa-preta/README.md
 
-  # - caption: Exercícios
-  #   chapters:
-  #     - file: docs/aulas/aula-01-02-introducao-teste-software-qualidade/exercicios/README.md
-  #     - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/README.md
+  - caption: Exercícios
+    chapters:
+      - file: docs/aulas/aula-01-02-introducao-teste-software-qualidade/exercicios/README.md
+      - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/README.md
+      - file: docs/aulas/aula-05-casos-teste-criterios/exercicios/README.md
   
-  # - caption: Soluções dos Exercícios
-  #   chapters:
-  #     - file: docs/aulas/aula-01-02-introducao-teste-software-qualidade/solucoes/README.md
-  #     - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/solucoes/README.md
+  - caption: Soluções dos Exercícios
+    chapters:
+      - file: docs/aulas/aula-01-02-introducao-teste-software-qualidade/solucoes/README.md
+      - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/solucoes/README.md
+      - file: docs/aulas/aula-05-casos-teste-criterios/solucoes/README.md
       
