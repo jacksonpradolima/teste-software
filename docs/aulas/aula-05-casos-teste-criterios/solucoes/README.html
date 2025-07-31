@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Soluções dos Exercícios - Aula 05 📚 &#8212; Teste de Software</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=a8e58a58"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-05-casos-teste-criterios/solucoes/README';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="prev" title="Soluções dos Exercícios" href="../../aula-03-04-conceitos-fundamentais-teste/solucoes/README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Teste de Software</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../README.html">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aulas da Disciplina</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-01-02-introducao-teste-software-qualidade/README.html">Introdução ao Teste de Software e Qualidade de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/README.html">Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Casos de Teste e Critérios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-06-08-tecnicas-teste-funcional-caixa-preta/README.html">Técnicas de Teste Funcional (Caixa-Preta)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercícios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/exercicios/README.html">Exercícios - Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercicios/README.html">Exercícios Práticos - Casos de Teste e Critérios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Soluções dos Exercícios</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/solucoes/README.html">Soluções dos Exercícios</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Soluções dos Exercícios - Aula 05 📚</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Soluções dos Exercícios - Aula 05 📚</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-de-organizacao">📁 Estrutura de Organização</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposito-das-solucoes">🎯 Propósito das Soluções</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-professores">📚 <strong>Para Professores:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-alunos">🎓 <strong>Para Alunos:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#niveis-de-detalhamento">📊 Níveis de Detalhamento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-solucoes-diretas">🔵 <strong>Nível 1 - Soluções Diretas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-solucoes-colaborativas">🟡 <strong>Nível 2 - Soluções Colaborativas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-solucoes-arquiteturais">🔴 <strong>Nível 3 - Soluções Arquiteturais</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">⚖️ Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#framework-de-correcao">📋 <strong>Framework de Correção</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pesos-por-nivel">🎯 <strong>Pesos por Nível:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientacoes-de-uso">📝 Orientações de Uso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">👨‍🏫 <strong>Para Professores:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">👨‍🎓 <strong>Para Alunos:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#versionamento-e-atualizacoes">🔄 Versionamento e Atualizações</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historico-de-versoes">📅 <strong>Histórico de Versões:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processo-de-melhoria">🔄 <strong>Processo de Melhoria:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-de-eficacia">📊 Métricas de Eficácia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indicadores-monitorados">📈 <strong>Indicadores Monitorados:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metas-de-qualidade">🎯 <strong>Metas de Qualidade:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-de-implementacao">💡 Dicas de Implementação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-maximizar-aprendizado">🎯 <strong>Para Maximizar Aprendizado:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-adaptacao">🔧 <strong>Para Adaptação:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suporte-e-recursos">📞 Suporte e Recursos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#como-obter-ajuda">🆘 <strong>Como Obter Ajuda:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursos-complementares">🌐 <strong>Recursos Complementares:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-passos">🚀 Próximos Passos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="solucoes-dos-exercicios-aula-05">
+<h1>Soluções dos Exercícios - Aula 05 📚<a class="headerlink" href="#solucoes-dos-exercicios-aula-05" title="Link to this heading">#</a></h1>
+<p>Este diretório contém as soluções detalhadas e gabaritos para todos os exercícios da <strong>Aula 05 - Casos de Teste e Critérios</strong>. As soluções servem como referência para professores e material de estudo para alunos após tentativa individual.</p>
+<hr class="docutils" />
+<section id="estrutura-de-organizacao">
+<h2>📁 Estrutura de Organização<a class="headerlink" href="#estrutura-de-organizacao" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>solucoes/
+├── README.md                    # Este arquivo
+├── nivel1/                      # Soluções básicas (individuais)
+│   ├── README.md                # Orientações para soluções básicas
+│   ├── solucao_1_1.md          # Sistema de Login
+│   ├── solucao_1_2.md          # Calculadora Online
+│   └── solucao_1_3.md          # Formulário de Contato
+├── nivel2/                      # Soluções intermediárias (duplas)
+│   ├── README.md                # Orientações para soluções colaborativas
+│   ├── solucao_2_1.md          # E-commerce System
+│   └── solucao_2_2.md          # Mobile Banking
+└── nivel3/                      # Soluções avançadas (grupos)
+    ├── README.md                # Orientações para soluções complexas
+    ├── solucao_3_1.md          # Sistema Hospitalar
+    ├── solucao_3_2.md          # IoT Industrial
+    └── solucao_3_3.md          # Plataforma Educacional
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="proposito-das-solucoes">
+<h2>🎯 Propósito das Soluções<a class="headerlink" href="#proposito-das-solucoes" title="Link to this heading">#</a></h2>
+<section id="para-professores">
+<h3>📚 <strong>Para Professores:</strong><a class="headerlink" href="#para-professores" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Gabarito de referência</strong> para avaliação consistente</p></li>
+<li><p><strong>Critérios de correção</strong> detalhados por exercício</p></li>
+<li><p><strong>Variações aceitáveis</strong> e pontos de flexibilidade</p></li>
+<li><p><strong>Sugestões de feedback</strong> para diferentes níveis de resposta</p></li>
+</ul>
+</section>
+<section id="para-alunos">
+<h3>🎓 <strong>Para Alunos:</strong><a class="headerlink" href="#para-alunos" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Modelo de qualidade</strong> após tentativa própria</p></li>
+<li><p><strong>Comparação</strong> entre solução desenvolvida e referência</p></li>
+<li><p><strong>Aprendizado</strong> de técnicas avançadas</p></li>
+<li><p><strong>Preparação</strong> para exercícios similares</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="niveis-de-detalhamento">
+<h2>📊 Níveis de Detalhamento<a class="headerlink" href="#niveis-de-detalhamento" title="Link to this heading">#</a></h2>
+<section id="nivel-1-solucoes-diretas">
+<h3>🔵 <strong>Nível 1 - Soluções Diretas</strong><a class="headerlink" href="#nivel-1-solucoes-diretas" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Casos de teste completos e executáveis</p></li>
+<li><p>Justificativa para cada decisão</p></li>
+<li><p>Variações comuns e alternativas válidas</p></li>
+<li><p>Tempo esperado de solução</p></li>
+</ul>
+</section>
+<section id="nivel-2-solucoes-colaborativas">
+<h3>🟡 <strong>Nível 2 - Soluções Colaborativas</strong><a class="headerlink" href="#nivel-2-solucoes-colaborativas" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Divisão de trabalho recomendada</p></li>
+<li><p>Processo de integração entre especialistas</p></li>
+<li><p>Matriz de rastreabilidade exemplar</p></li>
+<li><p>Pontos de sincronização críticos</p></li>
+</ul>
+</section>
+<section id="nivel-3-solucoes-arquiteturais">
+<h3>🔴 <strong>Nível 3 - Soluções Arquiteturais</strong><a class="headerlink" href="#nivel-3-solucoes-arquiteturais" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Estratégia completa documentada</p></li>
+<li><p>Análise de trade-offs e decisões</p></li>
+<li><p>Apresentação modelo para stakeholders</p></li>
+<li><p>Implementação em contexto organizacional</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="criterios-de-avaliacao">
+<h2>⚖️ Critérios de Avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Link to this heading">#</a></h2>
+<section id="framework-de-correcao">
+<h3>📋 <strong>Framework de Correção</strong><a class="headerlink" href="#framework-de-correcao" title="Link to this heading">#</a></h3>
+<p>Cada solução inclui:</p>
+<p><strong>✅ Elementos Obrigatórios (70% da nota):</strong></p>
+<ul class="simple">
+<li><p>Completude dos entregáveis solicitados</p></li>
+<li><p>Aderência aos templates e estruturas</p></li>
+<li><p>Qualidade técnica dos casos de teste</p></li>
+<li><p>Alinhamento com objetivos de aprendizagem</p></li>
+</ul>
+<p><strong>🌟 Elementos de Excelência (20% da nota):</strong></p>
+<ul class="simple">
+<li><p>Inovação na abordagem</p></li>
+<li><p>Profundidade de análise</p></li>
+<li><p>Consideração de aspectos não explícitos</p></li>
+<li><p>Qualidade de comunicação</p></li>
+</ul>
+<p><strong>🤝 Elementos Colaborativos (10% da nota):</strong></p>
+<ul class="simple">
+<li><p>Evidência de trabalho em equipe (Níveis 2 e 3)</p></li>
+<li><p>Divisão eficiente de responsabilidades</p></li>
+<li><p>Integração bem-sucedida entre partes</p></li>
+<li><p>Gestão de conflitos e decisões</p></li>
+</ul>
+</section>
+<section id="pesos-por-nivel">
+<h3>🎯 <strong>Pesos por Nível:</strong><a class="headerlink" href="#pesos-por-nivel" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Critério</strong></p></th>
+<th class="head"><p><strong>Nível 1</strong></p></th>
+<th class="head"><p><strong>Nível 2</strong></p></th>
+<th class="head"><p><strong>Nível 3</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Completude</strong></p></td>
+<td><p>40%</p></td>
+<td><p>30%</p></td>
+<td><p>25%</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Qualidade Técnica</strong></p></td>
+<td><p>35%</p></td>
+<td><p>30%</p></td>
+<td><p>30%</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Inovação</strong></p></td>
+<td><p>15%</p></td>
+<td><p>20%</p></td>
+<td><p>25%</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Colaboração</strong></p></td>
+<td><p>10%</p></td>
+<td><p>20%</p></td>
+<td><p>20%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="orientacoes-de-uso">
+<h2>📝 Orientações de Uso<a class="headerlink" href="#orientacoes-de-uso" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>👨‍🏫 <strong>Para Professores:</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Antes da Correção:</strong></p>
+<ul class="simple">
+<li><p>Revisar solução de referência</p></li>
+<li><p>Identificar pontos de flexibilidade</p></li>
+<li><p>Preparar feedback específico por critério</p></li>
+</ul>
+</li>
+<li><p><strong>Durante a Correção:</strong></p>
+<ul class="simple">
+<li><p>Usar rubrica detalhada fornecida</p></li>
+<li><p>Considerar contexto e restrições do exercício</p></li>
+<li><p>Valorizar criatividade dentro dos parâmetros</p></li>
+</ul>
+</li>
+<li><p><strong>Após a Correção:</strong></p>
+<ul class="simple">
+<li><p>Disponibilizar soluções para estudo</p></li>
+<li><p>Facilitar discussão sobre alternativas</p></li>
+<li><p>Coletar feedback para melhoria dos exercícios</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id2">
+<h3>👨‍🎓 <strong>Para Alunos:</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Timing Recomendado:</strong></p>
+<ul class="simple">
+<li><p><strong>Nível 1:</strong> Consultar após 2-3 tentativas próprias</p></li>
+<li><p><strong>Nível 2:</strong> Comparar após entrega do exercício</p></li>
+<li><p><strong>Nível 3:</strong> Usar para preparação de apresentação</p></li>
+</ul>
+</li>
+<li><p><strong>Forma de Estudo:</strong></p>
+<ul class="simple">
+<li><p>Compare seção por seção com sua solução</p></li>
+<li><p>Identifique pontos de melhoria específicos</p></li>
+<li><p>Pratique elementos que não domina</p></li>
+<li><p>Adapte técnicas para outros contextos</p></li>
+</ul>
+</li>
+<li><p><strong>Uso Ético:</strong></p>
+<ul class="simple">
+<li><p>⚠️ <strong>Não copie</strong> soluções antes de tentar</p></li>
+<li><p>✅ <strong>Use</strong> como referência para aprendizado</p></li>
+<li><p>✅ <strong>Adapte</strong> técnicas para novos problemas</p></li>
+<li><p>✅ <strong>Discuta</strong> diferenças com colegas e professores</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="versionamento-e-atualizacoes">
+<h2>🔄 Versionamento e Atualizações<a class="headerlink" href="#versionamento-e-atualizacoes" title="Link to this heading">#</a></h2>
+<section id="historico-de-versoes">
+<h3>📅 <strong>Histórico de Versões:</strong><a class="headerlink" href="#historico-de-versoes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>v1.0 (2025-01-28):</strong> Versão inicial com soluções completas</p></li>
+<li><p><strong>v1.1 (planejada):</strong> Inclusão de feedback dos primeiros usos</p></li>
+<li><p><strong>v1.2 (planejada):</strong> Adaptações baseadas em resultados</p></li>
+</ul>
+</section>
+<section id="processo-de-melhoria">
+<h3>🔄 <strong>Processo de Melhoria:</strong><a class="headerlink" href="#processo-de-melhoria" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Coleta de Feedback:</strong> Professores e alunos reportam dificuldades</p></li>
+<li><p><strong>Análise:</strong> Identificação de padrões e oportunidades</p></li>
+<li><p><strong>Refinamento:</strong> Ajustes nas soluções e critérios</p></li>
+<li><p><strong>Validação:</strong> Teste com nova turma antes da adoção</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="metricas-de-eficacia">
+<h2>📊 Métricas de Eficácia<a class="headerlink" href="#metricas-de-eficacia" title="Link to this heading">#</a></h2>
+<section id="indicadores-monitorados">
+<h3>📈 <strong>Indicadores Monitorados:</strong><a class="headerlink" href="#indicadores-monitorados" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Taxa de conclusão</strong> por nível de exercício</p></li>
+<li><p><strong>Tempo médio</strong> de resolução por exercício</p></li>
+<li><p><strong>Qualidade média</strong> das entregas</p></li>
+<li><p><strong>Satisfação</strong> dos alunos com exercícios</p></li>
+<li><p><strong>Feedback</strong> dos professores sobre adequação</p></li>
+</ul>
+</section>
+<section id="metas-de-qualidade">
+<h3>🎯 <strong>Metas de Qualidade:</strong><a class="headerlink" href="#metas-de-qualidade" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>≥85% dos alunos completam Nível 1</p></li>
+<li><p>≥70% dos alunos completam Nível 2</p></li>
+<li><p>≥50% dos alunos completam Nível 3</p></li>
+<li><p>Nota média ≥7.0 em todos os níveis</p></li>
+<li><p>≥90% de satisfação com clareza dos exercícios</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="dicas-de-implementacao">
+<h2>💡 Dicas de Implementação<a class="headerlink" href="#dicas-de-implementacao" title="Link to this heading">#</a></h2>
+<section id="para-maximizar-aprendizado">
+<h3>🎯 <strong>Para Maximizar Aprendizado:</strong><a class="headerlink" href="#para-maximizar-aprendizado" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Sequenciamento:</strong> Complete níveis em ordem crescente</p></li>
+<li><p><strong>Reflexão:</strong> Documente aprendizados após cada exercício</p></li>
+<li><p><strong>Aplicação:</strong> Use técnicas em projetos pessoais/profissionais</p></li>
+<li><p><strong>Discussão:</strong> Forme grupos de estudo para debate</p></li>
+</ol>
+</section>
+<section id="para-adaptacao">
+<h3>🔧 <strong>Para Adaptação:</strong><a class="headerlink" href="#para-adaptacao" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Contextos Diferentes:</strong> Adapte casos para domínios familiares</p></li>
+<li><p><strong>Ferramentas:</strong> Use tecnologias disponíveis na organização</p></li>
+<li><p><strong>Tempo:</strong> Ajuste duração conforme disponibilidade</p></li>
+<li><p><strong>Complexidade:</strong> Modifique baseado no nível da turma</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="suporte-e-recursos">
+<h2>📞 Suporte e Recursos<a class="headerlink" href="#suporte-e-recursos" title="Link to this heading">#</a></h2>
+<section id="como-obter-ajuda">
+<h3>🆘 <strong>Como Obter Ajuda:</strong><a class="headerlink" href="#como-obter-ajuda" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Dúvidas Técnicas:</strong> Issues no repositório do curso</p></li>
+<li><p><strong>Questões Pedagógicas:</strong> Email direto ao professor</p></li>
+<li><p><strong>Discussões:</strong> Fórum do curso ou grupos de estudo</p></li>
+<li><p><strong>Melhorias:</strong> Pull requests com sugestões</p></li>
+</ul>
+</section>
+<section id="recursos-complementares">
+<h3>🌐 <strong>Recursos Complementares:</strong><a class="headerlink" href="#recursos-complementares" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Documentação oficial</strong> das ferramentas mencionadas</p></li>
+<li><p><strong>Artigos acadêmicos</strong> sobre técnicas avançadas</p></li>
+<li><p><strong>Vídeos</strong> demonstrando técnicas específicas</p></li>
+<li><p><strong>Templates</strong> adicionais para casos complexos</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="proximos-passos">
+<h2>🚀 Próximos Passos<a class="headerlink" href="#proximos-passos" title="Link to this heading">#</a></h2>
+<p>Após dominar os exercícios desta aula, os alunos estarão preparados para:</p>
+<ol class="arabic simple">
+<li><p><strong>Técnicas Avançadas de Teste</strong> (Aulas 06-10)</p></li>
+<li><p><strong>Automação de Testes</strong> (Aulas 12-14)</p></li>
+<li><p><strong>Gestão de Qualidade</strong> (Aulas 19-22)</p></li>
+<li><p><strong>Projeto Integrador</strong> (Aulas 31-35)</p></li>
+</ol>
+<p><strong>Continue sua jornada em teste de software com confiança e competência!</strong> 🎓✨</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/aulas/aula-05-casos-teste-criterios/solucoes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../aula-03-04-conceitos-fundamentais-teste/solucoes/README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Soluções dos Exercícios</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-de-organizacao">📁 Estrutura de Organização</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposito-das-solucoes">🎯 Propósito das Soluções</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-professores">📚 <strong>Para Professores:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-alunos">🎓 <strong>Para Alunos:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#niveis-de-detalhamento">📊 Níveis de Detalhamento</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-solucoes-diretas">🔵 <strong>Nível 1 - Soluções Diretas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-solucoes-colaborativas">🟡 <strong>Nível 2 - Soluções Colaborativas</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-solucoes-arquiteturais">🔴 <strong>Nível 3 - Soluções Arquiteturais</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">⚖️ Critérios de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#framework-de-correcao">📋 <strong>Framework de Correção</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pesos-por-nivel">🎯 <strong>Pesos por Nível:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orientacoes-de-uso">📝 Orientações de Uso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">👨‍🏫 <strong>Para Professores:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">👨‍🎓 <strong>Para Alunos:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#versionamento-e-atualizacoes">🔄 Versionamento e Atualizações</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historico-de-versoes">📅 <strong>Histórico de Versões:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processo-de-melhoria">🔄 <strong>Processo de Melhoria:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metricas-de-eficacia">📊 Métricas de Eficácia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indicadores-monitorados">📈 <strong>Indicadores Monitorados:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metas-de-qualidade">🎯 <strong>Metas de Qualidade:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-de-implementacao">💡 Dicas de Implementação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-maximizar-aprendizado">🎯 <strong>Para Maximizar Aprendizado:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-adaptacao">🔧 <strong>Para Adaptação:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suporte-e-recursos">📞 Suporte e Recursos</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#como-obter-ajuda">🆘 <strong>Como Obter Ajuda:</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recursos-complementares">🌐 <strong>Recursos Complementares:</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-passos">🚀 Próximos Passos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jackson Antonio do Prado Lima
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

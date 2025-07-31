@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercícios - Conceitos Fundamentais de Teste &#8212; Teste de Software</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=a8e58a58"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios/README';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Exercícios Práticos - Casos de Teste e Critérios" href="../../aula-05-casos-teste-criterios/exercicios/README.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../../aula-01-02-introducao-teste-software-qualidade/exercicios/README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Teste de Software</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../README.html">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aulas da Disciplina</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-01-02-introducao-teste-software-qualidade/README.html">Introdução ao Teste de Software e Qualidade de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-05-casos-teste-criterios/README.html">Casos de Teste e Critérios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-06-08-tecnicas-teste-funcional-caixa-preta/README.html">Técnicas de Teste Funcional (Caixa-Preta)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercícios</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercícios - Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-05-casos-teste-criterios/exercicios/README.html">Exercícios Práticos - Casos de Teste e Critérios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Soluções dos Exercícios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../solucoes/README.html">Soluções dos Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-05-casos-teste-criterios/solucoes/README.html">Soluções dos Exercícios - Aula 05 📚</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercícios - Conceitos Fundamentais de Teste</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-pedagogicos">🎯 Objetivos Pedagógicos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-dos-niveis">📊 Estrutura dos Níveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-basico-tempo-estimado-15-30-minutos">🔵 Nível 1 - Básico (Tempo estimado: 15-30 minutos)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-intermediario-tempo-estimado-45-90-minutos">🟡 Nível 2 - Intermediário (Tempo estimado: 45-90 minutos)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-avancado-tempo-estimado-2-4-horas">🔴 Nível 3 - Avançado (Tempo estimado: 2-4 horas)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guia-de-utilizacao">🧭 Guia de Utilização</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-estudantes">Para Estudantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-instrutores">Para Instrutores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracao-do-ambiente">🛠️ Configuração do Ambiente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-tecnicos">Requisitos Técnicos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-recomendada">Estrutura Recomendada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filosofia-dos-exercicios">🎨 Filosofia dos Exercícios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contextos-realistas">Contextos Realistas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressao-conceitual">Progressão Conceitual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aprendizado-pratico">Aprendizado Prático</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-avaliacao">🔍 Metodologia de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-transversais-todos-os-niveis">Critérios Transversais (Todos os Níveis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubricas-especificas-por-nivel">Rubricas Específicas por Nível</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-criterios-basicos">Nível 1 - Critérios Básicos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-criterios-intermediarios">Nível 2 - Critérios Intermediários</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-criterios-avancados">Nível 3 - Critérios Avançados</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursos-de-apoio">📚 Recursos de Apoio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#durante-os-exercicios">Durante os Exercícios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-aprofundamento">Para Aprofundamento</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-de-sucesso">⚡ Dicas de Sucesso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategias-eficazes">🎯 Estratégias Eficazes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#armadilhas-comuns">🚫 Armadilhas Comuns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-eficaz">🔧 Debugging Eficaz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-passos">🚀 Próximos Passos</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercicios-conceitos-fundamentais-de-teste">
+<h1>Exercícios - Conceitos Fundamentais de Teste<a class="headerlink" href="#exercicios-conceitos-fundamentais-de-teste" title="Link to this heading">#</a></h1>
+<p>Este conjunto de exercícios foi cuidadosamente elaborado para consolidar os conceitos fundamentais de teste de software estudados na aula. Os exercícios estão organizados em três níveis progressivos de dificuldade, permitindo uma jornada de aprendizado estruturada e incremental.</p>
+<section id="objetivos-pedagogicos">
+<h2>🎯 Objetivos Pedagógicos<a class="headerlink" href="#objetivos-pedagogicos" title="Link to this heading">#</a></h2>
+<p>Ao completar estes exercícios, você será capaz de:</p>
+<ol class="arabic simple">
+<li><p><strong>Aplicar a cadeia causal</strong> erro → defeito → falha → incidente em cenários reais</p></li>
+<li><p><strong>Distinguir precisamente</strong> entre verificação e validação em contextos práticos</p></li>
+<li><p><strong>Implementar sistemas resilientes</strong> baseados nos conceitos fundamentais</p></li>
+<li><p><strong>Analisar e otimizar</strong> métricas de qualidade e performance de teste</p></li>
+<li><p><strong>Projetar arquiteturas</strong> que incorporem princípios preventivos de qualidade</p></li>
+</ol>
+</section>
+<section id="estrutura-dos-niveis">
+<h2>📊 Estrutura dos Níveis<a class="headerlink" href="#estrutura-dos-niveis" title="Link to this heading">#</a></h2>
+<section id="nivel-1-basico-tempo-estimado-15-30-minutos">
+<h3>🔵 Nível 1 - Básico (Tempo estimado: 15-30 minutos)<a class="headerlink" href="#nivel-1-basico-tempo-estimado-15-30-minutos" title="Link to this heading">#</a></h3>
+<p><strong>Foco</strong>: Aplicação direta de conceitos individuais</p>
+<ul class="simple">
+<li><p>Identificação e classificação de problemas</p></li>
+<li><p>Implementação de validações básicas</p></li>
+<li><p>Análise de cenários simples</p></li>
+</ul>
+</section>
+<section id="nivel-2-intermediario-tempo-estimado-45-90-minutos">
+<h3>🟡 Nível 2 - Intermediário (Tempo estimado: 45-90 minutos)<a class="headerlink" href="#nivel-2-intermediario-tempo-estimado-45-90-minutos" title="Link to this heading">#</a></h3>
+<p><strong>Foco</strong>: Integração de múltiplos conceitos</p>
+<ul class="simple">
+<li><p>Sistemas com interações entre componentes</p></li>
+<li><p>Análise de trade-offs e métricas</p></li>
+<li><p>Design de soluções robustas</p></li>
+</ul>
+</section>
+<section id="nivel-3-avancado-tempo-estimado-2-4-horas">
+<h3>🔴 Nível 3 - Avançado (Tempo estimado: 2-4 horas)<a class="headerlink" href="#nivel-3-avancado-tempo-estimado-2-4-horas" title="Link to this heading">#</a></h3>
+<p><strong>Foco</strong>: Design complexo e tomada de decisões arquiteturais</p>
+<ul class="simple">
+<li><p>Sistemas distribuídos e microsserviços</p></li>
+<li><p>Análise de performance e otimização</p></li>
+<li><p>Integração com tecnologias emergentes</p></li>
+</ul>
+</section>
+</section>
+<section id="guia-de-utilizacao">
+<h2>🧭 Guia de Utilização<a class="headerlink" href="#guia-de-utilizacao" title="Link to this heading">#</a></h2>
+<section id="para-estudantes">
+<h3>Para Estudantes<a class="headerlink" href="#para-estudantes" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Comece sempre pelo Nível 1</strong> - mesmo que se sinta confiante</p></li>
+<li><p><strong>Leia completamente</strong> o enunciado antes de começar a implementar</p></li>
+<li><p><strong>Teste sua solução</strong> em diferentes cenários</p></li>
+<li><p><strong>Compare</strong> sua abordagem com as soluções fornecidas</p></li>
+<li><p><strong>Reflita</strong> sobre os trade-offs de sua implementação</p></li>
+</ol>
+</section>
+<section id="para-instrutores">
+<h3>Para Instrutores<a class="headerlink" href="#para-instrutores" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Os exercícios incluem <strong>critérios de avaliação claros</strong></p></li>
+<li><p>Cada nível possui <strong>rubricas específicas</strong> de avaliação</p></li>
+<li><p><strong>Soluções comentadas</strong> estão disponíveis na pasta <code class="docutils literal notranslate"><span class="pre">solucoes/</span></code></p></li>
+<li><p><strong>Variações dos exercícios</strong> podem ser criadas alterando parâmetros específicos</p></li>
+</ul>
+</section>
+</section>
+<section id="configuracao-do-ambiente">
+<h2>🛠️ Configuração do Ambiente<a class="headerlink" href="#configuracao-do-ambiente" title="Link to this heading">#</a></h2>
+<section id="requisitos-tecnicos">
+<h3>Requisitos Técnicos<a class="headerlink" href="#requisitos-tecnicos" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python 3.12+ obrigatório</span>
+python<span class="w"> </span>--version<span class="w">  </span><span class="c1"># Deve ser &gt;= 3.12</span>
+
+<span class="c1"># Dependências (apenas bibliotecas nativas do Python)</span>
+<span class="c1"># Não há dependências externas - conceitos fundamentais usam apenas Python puro</span>
+</pre></div>
+</div>
+</section>
+<section id="estrutura-recomendada">
+<h3>Estrutura Recomendada<a class="headerlink" href="#estrutura-recomendada" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>meu_trabalho/
+├── nivel1/
+│   ├── exercicio1.py
+│   ├── exercicio2.py
+│   └── testes_nivel1.py
+├── nivel2/
+│   ├── sistema_pedidos.py
+│   ├── metricas_qualidade.py
+│   └── testes_nivel2.py
+└── nivel3/
+    ├── arquitetura_distribuida/
+    ├── analise_performance/
+    └── testes_nivel3.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="filosofia-dos-exercicios">
+<h2>🎨 Filosofia dos Exercícios<a class="headerlink" href="#filosofia-dos-exercicios" title="Link to this heading">#</a></h2>
+<section id="contextos-realistas">
+<h3>Contextos Realistas<a class="headerlink" href="#contextos-realistas" title="Link to this heading">#</a></h3>
+<p>Todos os exercícios são baseados em <strong>cenários do mundo real</strong>:</p>
+<ul class="simple">
+<li><p>Sistema de e-commerce (pedidos, pagamentos, estoque)</p></li>
+<li><p>Plataforma bancária (transações, autenticação, auditoria)</p></li>
+<li><p>Sistema de saúde (prontuários, agendamentos, prescrições)</p></li>
+</ul>
+</section>
+<section id="progressao-conceitual">
+<h3>Progressão Conceitual<a class="headerlink" href="#progressao-conceitual" title="Link to this heading">#</a></h3>
+<p>Cada exercício <strong>constrói sobre o anterior</strong>:</p>
+<ul class="simple">
+<li><p><strong>Nível 1</strong>: Conceitos isolados</p></li>
+<li><p><strong>Nível 2</strong>: Integração e interações</p></li>
+<li><p><strong>Nível 3</strong>: Sistemas complexos e otimização</p></li>
+</ul>
+</section>
+<section id="aprendizado-pratico">
+<h3>Aprendizado Prático<a class="headerlink" href="#aprendizado-pratico" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Código real</strong>: Implementações funcionais, não pseudo-código</p></li>
+<li><p><strong>Testes incluídos</strong>: Cada exercício vem com casos de teste</p></li>
+<li><p><strong>Reflexão guiada</strong>: Perguntas que estimulam pensamento crítico</p></li>
+</ul>
+</section>
+</section>
+<section id="metodologia-de-avaliacao">
+<h2>🔍 Metodologia de Avaliação<a class="headerlink" href="#metodologia-de-avaliacao" title="Link to this heading">#</a></h2>
+<section id="criterios-transversais-todos-os-niveis">
+<h3>Critérios Transversais (Todos os Níveis)<a class="headerlink" href="#criterios-transversais-todos-os-niveis" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Correção funcional</strong> (25%)</p></li>
+<li><p><strong>Qualidade do código</strong> (25%)</p></li>
+<li><p><strong>Aplicação dos conceitos</strong> (25%)</p></li>
+<li><p><strong>Análise reflexiva</strong> (25%)</p></li>
+</ol>
+</section>
+<section id="rubricas-especificas-por-nivel">
+<h3>Rubricas Específicas por Nível<a class="headerlink" href="#rubricas-especificas-por-nivel" title="Link to this heading">#</a></h3>
+<section id="nivel-1-criterios-basicos">
+<h4>Nível 1 - Critérios Básicos<a class="headerlink" href="#nivel-1-criterios-basicos" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>✅ <strong>Excelente</strong>: Implementa corretamente todos os conceitos</p></li>
+<li><p>✓ <strong>Bom</strong>: Implementa a maioria dos conceitos com pequenos erros</p></li>
+<li><p>⚠️ <strong>Satisfatório</strong>: Implementa conceitos básicos, mas falta profundidade</p></li>
+<li><p>❌ <strong>Insuficiente</strong>: Não demonstra compreensão dos conceitos</p></li>
+</ul>
+</section>
+<section id="nivel-2-criterios-intermediarios">
+<h4>Nível 2 - Critérios Intermediários<a class="headerlink" href="#nivel-2-criterios-intermediarios" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>✅ <strong>Excelente</strong>: Integra múltiplos conceitos com trade-offs bem analisados</p></li>
+<li><p>✓ <strong>Bom</strong>: Boa integração com análise adequada de métricas</p></li>
+<li><p>⚠️ <strong>Satisfatório</strong>: Integração básica sem análise profunda</p></li>
+<li><p>❌ <strong>Insuficiente</strong>: Falha na integração ou análise de conceitos</p></li>
+</ul>
+</section>
+<section id="nivel-3-criterios-avancados">
+<h4>Nível 3 - Critérios Avançados<a class="headerlink" href="#nivel-3-criterios-avancados" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>✅ <strong>Excelente</strong>: Design arquitetural robusto com otimizações justificadas</p></li>
+<li><p>✓ <strong>Bom</strong>: Arquitetura sólida com considerações de performance</p></li>
+<li><p>⚠️ <strong>Satisfatório</strong>: Arquitetura funcional mas sem otimizações</p></li>
+<li><p>❌ <strong>Insuficiente</strong>: Problemas fundamentais de design</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="recursos-de-apoio">
+<h2>📚 Recursos de Apoio<a class="headerlink" href="#recursos-de-apoio" title="Link to this heading">#</a></h2>
+<section id="durante-os-exercicios">
+<h3>Durante os Exercícios<a class="headerlink" href="#durante-os-exercicios" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Documentação Python</strong>: <a class="reference external" href="https://docs.python.org/3/">https://docs.python.org/3/</a></p></li>
+<li><p><strong>PEP 8 Style Guide</strong>: <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">https://www.python.org/dev/peps/pep-0008/</a></p></li>
+<li><p><strong>Material da Aula</strong>: Sempre consulte o <a class="reference external" href="http://README.md">README.md</a> principal</p></li>
+</ul>
+</section>
+<section id="para-aprofundamento">
+<h3>Para Aprofundamento<a class="headerlink" href="#para-aprofundamento" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>SWEBOK v3.0</strong>: Referência oficial para engenharia de software</p></li>
+<li><p><strong>IEEE 829</strong>: Padrão para documentação de teste</p></li>
+<li><p><strong>ISO/IEC 25010</strong>: Modelo de qualidade de software</p></li>
+</ul>
+</section>
+</section>
+<section id="dicas-de-sucesso">
+<h2>⚡ Dicas de Sucesso<a class="headerlink" href="#dicas-de-sucesso" title="Link to this heading">#</a></h2>
+<section id="estrategias-eficazes">
+<h3>🎯 Estratégias Eficazes<a class="headerlink" href="#estrategias-eficazes" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Leia duas vezes</strong> antes de codificar</p></li>
+<li><p><strong>Comece simples</strong> e refine iterativamente</p></li>
+<li><p><strong>Teste frequentemente</strong> durante o desenvolvimento</p></li>
+<li><p><strong>Documente decisões</strong> de design importantes</p></li>
+<li><p><strong>Busque feedback</strong> de colegas ou instrutores</p></li>
+</ol>
+</section>
+<section id="armadilhas-comuns">
+<h3>🚫 Armadilhas Comuns<a class="headerlink" href="#armadilhas-comuns" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Não pular</strong> a fase de análise conceitual</p></li>
+<li><p><strong>Não ignorar</strong> casos extremos (edge cases)</p></li>
+<li><p><strong>Não subestimar</strong> a importância da documentação</p></li>
+<li><p><strong>Não copiar</strong> soluções sem compreender os conceitos</p></li>
+</ul>
+</section>
+<section id="debugging-eficaz">
+<h3>🔧 Debugging Eficaz<a class="headerlink" href="#debugging-eficaz" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use <strong>print statements</strong> para rastrear fluxo de execução</p></li>
+<li><p>Implemente <strong>logs estruturados</strong> para análise posterior</p></li>
+<li><p>Teste <strong>uma funcionalidade por vez</strong> antes de integrar</p></li>
+<li><p><strong>Valide entradas</strong> antes de processar</p></li>
+</ul>
+</section>
+</section>
+<section id="proximos-passos">
+<h2>🚀 Próximos Passos<a class="headerlink" href="#proximos-passos" title="Link to this heading">#</a></h2>
+<p>Após completar todos os exercícios:</p>
+<ol class="arabic simple">
+<li><p><strong>Auto-avaliação</strong>: Use as rubricas para avaliar seu trabalho</p></li>
+<li><p><strong>Revisão de pares</strong>: Troque soluções com colegas</p></li>
+<li><p><strong>Reflexão</strong>: Escreva um resumo dos aprendizados principais</p></li>
+<li><p><strong>Extensão</strong>: Considere variações dos exercícios para prática adicional</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Lembre-se</strong>: O objetivo não é apenas “fazer funcionar”, mas <strong>compreender profundamente</strong> os conceitos fundamentais que tornarão você um profissional mais eficaz na área de qualidade de software.</p>
+<p><strong>Boa jornada de aprendizado!</strong> 🎓</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/aulas/aula-03-04-conceitos-fundamentais-teste/exercicios"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../aula-01-02-introducao-teste-software-qualidade/exercicios/README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../aula-05-casos-teste-criterios/exercicios/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercícios Práticos - Casos de Teste e Critérios</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-pedagogicos">🎯 Objetivos Pedagógicos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-dos-niveis">📊 Estrutura dos Níveis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-basico-tempo-estimado-15-30-minutos">🔵 Nível 1 - Básico (Tempo estimado: 15-30 minutos)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-intermediario-tempo-estimado-45-90-minutos">🟡 Nível 2 - Intermediário (Tempo estimado: 45-90 minutos)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-avancado-tempo-estimado-2-4-horas">🔴 Nível 3 - Avançado (Tempo estimado: 2-4 horas)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guia-de-utilizacao">🧭 Guia de Utilização</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-estudantes">Para Estudantes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-instrutores">Para Instrutores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuracao-do-ambiente">🛠️ Configuração do Ambiente</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requisitos-tecnicos">Requisitos Técnicos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-recomendada">Estrutura Recomendada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filosofia-dos-exercicios">🎨 Filosofia dos Exercícios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contextos-realistas">Contextos Realistas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#progressao-conceitual">Progressão Conceitual</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aprendizado-pratico">Aprendizado Prático</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia-de-avaliacao">🔍 Metodologia de Avaliação</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-transversais-todos-os-niveis">Critérios Transversais (Todos os Níveis)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rubricas-especificas-por-nivel">Rubricas Específicas por Nível</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-criterios-basicos">Nível 1 - Critérios Básicos</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-criterios-intermediarios">Nível 2 - Critérios Intermediários</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-criterios-avancados">Nível 3 - Critérios Avançados</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursos-de-apoio">📚 Recursos de Apoio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#durante-os-exercicios">Durante os Exercícios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#para-aprofundamento">Para Aprofundamento</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-de-sucesso">⚡ Dicas de Sucesso</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrategias-eficazes">🎯 Estratégias Eficazes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#armadilhas-comuns">🚫 Armadilhas Comuns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-eficaz">🔧 Debugging Eficaz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proximos-passos">🚀 Próximos Passos</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jackson Antonio do Prado Lima
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
