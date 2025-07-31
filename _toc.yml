@@ -5,6 +5,8 @@ parts:
     chapters:
       - file: docs/aulas/aula-01-02-introducao-teste-software-qualidade/README.md
       - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/README.md
+      - file: docs/aulas/aula-05-casos-teste-criterios/README.md
+      - file: docs/aulas/aula-06-08-tecnicas-teste-funcional-caixa-preta/README.md
 
   # - caption: Exercícios
   #   chapters:
