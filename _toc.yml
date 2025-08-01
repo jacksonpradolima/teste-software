@@ -7,6 +7,8 @@ parts:
       - file: docs/aulas/aula-03-04-conceitos-fundamentais-teste/README.md
       - file: docs/aulas/aula-05-casos-teste-criterios/README.md
       - file: docs/aulas/aula-06-08-tecnicas-teste-funcional-caixa-preta/README.md
+      - file: docs/aulas/aula-09-10-tecnicas-teste-estrutural-caixa-branca/README.md
+      - file: docs/aulas/aula-11-criterios-parada-metricas-teste/README.md
 
   - caption: Exercícios
     chapters:
