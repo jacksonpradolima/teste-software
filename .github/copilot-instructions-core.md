@@ -112,7 +112,7 @@ Cada aula (capítulo do livro) deve seguir rigorosamente o plano de aula. Sempre
 
 - Idioma: Português do Brasil (pt-BR).
 - Linguagem-alvo: **Python** (v3.12+), não utilizar Java ou C++.
-- Formatação: Markdown (títulos, listas, negrito), LaTeX delimitado por `$` para todas as notações matemáticas, e Mermaid para diagramas.
+- Formatação: Markdown (títulos, listas, negrito), LaTeX delimitado por `$` para todas as notações matemáticas, e Mermaid (use ```{mermaid} ao invés de ```mermaid) para diagramas.
 
 #### Estrutura e Tom
 
@@ -278,7 +278,7 @@ tone: "profissional e didático"
 - **Estados**: Para objetos com ciclo de vida importante
 
 #### Ferramentas Recomendadas
-- **Mermaid**: Para diagramas simples em Markdown
+- **Mermaid**: Para diagramas simples em Markdown (use ```{mermaid} ao invés de ```mermaid)
 
 #### Convenções Visuais
 - **Cores**: Usar esquema consistente (classes = azul, interfaces = verde, etc.)
@@ -501,7 +501,7 @@ Com base na análise, você irá construir a "Seção 2" de forma iterativa, pro
     * Dê um título claro.
     * Explique a teoria detalhadamente.
     * Use pseudocódigo ou um fluxograma descritivo para ilustrar o processo.
-    * Crie um diagrama simples (usando mermaid, descrito em texto ou usando ASCII art) para visualização.
+    * Crie um diagrama simples (usando mermaid (use ```{mermaid} ao invés de ```mermaid), descrito em texto ou usando ASCII art) para visualização.
     * Para conceitos de POO ou arquitetura, inclua diagramas de classe UML.
 * **2.3. Modelagem Matemática:** Apresente a matemática essencial por trás do pilar mais importante. Formate todas as equações usando LaTeX. Para cada equação, explique o que cada variável e símbolo representa no contexto do problema.
 * **2.3. Análise Quantitativa ou de Consequências:**
@@ -544,6 +544,6 @@ Antes de finalizar, execute esta verificação interna de completude:
 
 * **5.1. Conexões com Outras Áreas da Computação:** Relacione o tópico central da aula com pelo menos duas outras áreas (ex: "Big Data", "Segurança da Informação", "Engenharia de Software"), explicando a interdependência.
 * **5.2. A Fronteira da Pesquisa e o Futuro:** Pesquise e descreva 1 ou 2 tendências atuais ou futuras relacionadas ao tópico. O que está sendo pesquisado ativamente? Quais os próximos grandes avanços esperados?
-* **5.3. Resumo do Capítulo e Mapa Mental:** Crie um resumo final em uma lista de *bullet points* com os 5-7 pontos mais importantes do capítulo. Em seguida, crie um mapa mental em Mermaid, conectando os principais conceitos abordados.
+* **5.3. Resumo do Capítulo e Mapa Mental:** Crie um resumo final em uma lista de *bullet points* com os 5-7 pontos mais importantes do capítulo. Em seguida, crie um mapa mental em Mermaid (use ```{mermaid} ao invés de ```mermaid), conectando os principais conceitos abordados.
 * **5.4. Referências e Leituras Adicionais:** Liste livros, artigos, sites e outros recursos relevantes para aprofundamento. Inclua links diretos para materiais online quando possível.
 
