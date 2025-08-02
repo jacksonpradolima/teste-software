@@ -1968,7 +1968,7 @@ class ArchitecturalQualityValidator:
 
 Os critérios de parada são componentes essenciais dos **pipelines de entrega contínua**, funcionando como **gates de qualidade** que determinam automaticamente se uma versão pode prosseguir para o próximo estágio do pipeline.
 
-```mermaid
+```{mermaid}
 graph LR
     A[Code Commit] --> B[Unit Tests]
     B --> C{Coverage ≥ 85%?}
@@ -2390,7 +2390,7 @@ Esta seção consolida os conhecimentos fundamentais apresentados ao longo do ca
 
 #### **Mapa Mental Conceitual**
 
-```mermaid
+```{mermaid}
 mindmap
   root((Critérios de Parada e Métricas))
     
