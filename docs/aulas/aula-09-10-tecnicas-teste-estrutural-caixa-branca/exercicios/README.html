@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercícios Práticos - Técnicas de Teste Estrutural (Caixa-Branca) &#8212; Teste de Software</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=a8e58a58"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="https://wavedrom.com/skins/default.js"></script>
+    <script src="https://wavedrom.com/wavedrom.min.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/aulas/aula-09-10-tecnicas-teste-estrutural-caixa-branca/exercicios/README';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.9.0/dist/mermaid.min.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Exercícios - Critérios de Parada e Métricas de Teste" href="../../aula-11-criterios-parada-metricas-teste/exercicios/README.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../../aula-06-08-tecnicas-teste-funcional-caixa-preta/exercicios/README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Teste de Software</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../README.html">
+                    Teste de Software I
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aulas da Disciplina</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-01-02-introducao-teste-software-qualidade/README.html">Introdução ao Teste de Software e Qualidade de Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/README.html">Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-05-casos-teste-criterios/README.html">Casos de Teste e Critérios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-06-08-tecnicas-teste-funcional-caixa-preta/README.html">Técnicas de Teste Funcional (Caixa-Preta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Técnicas de Teste Estrutural (Caixa-Branca)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-11-criterios-parada-metricas-teste/README.html">Critérios de Parada e Métricas de Teste</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercícios</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/exercicios/README.html">Exercícios - Conceitos Fundamentais de Teste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-05-casos-teste-criterios/exercicios/README.html">Exercícios Práticos - Casos de Teste e Critérios</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercícios Práticos - Técnicas de Teste Estrutural (Caixa-Branca)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-11-criterios-parada-metricas-teste/exercicios/README.html">Exercícios - Critérios de Parada e Métricas de Teste</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Soluções dos Exercícios</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../aula-03-04-conceitos-fundamentais-teste/solucoes/README.html">Soluções dos Exercícios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../aula-11-criterios-parada-metricas-teste/solucoes/README.html">Soluções dos Exercícios - Aula 11</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercícios Práticos - Técnicas de Teste Estrutural (Caixa-Branca)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instrucoes-gerais">Instruções Gerais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-dos-exercicios">📋 Objetivos dos Exercícios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-de-dificuldade">🎯 Estrutura de Dificuldade</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-basico">🔵 Nível 1 - Básico</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-intermediario">🟡 Nível 2 - Intermediário</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-avancado">🔴 Nível 3 - Avançado</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">📝 Critérios de Avaliação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ferramentas-recomendadas">🛠️ Ferramentas Recomendadas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-para-sucesso">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#material-de-apoio">📚 Material de Apoio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizacao-dos-exercicios">📂 Organização dos Exercícios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="xref myst">🔵 Nível 1 - Básico</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="xref myst">🟡 Nível 2 - Intermediário</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="xref myst">🔴 Nível 3 - Avançado</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-comecar">🚀 Como Começar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-de-validacao">📋 Checklist de Validação</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercicios-praticos-tecnicas-de-teste-estrutural-caixa-branca">
+<h1>Exercícios Práticos - Técnicas de Teste Estrutural (Caixa-Branca)<a class="headerlink" href="#exercicios-praticos-tecnicas-de-teste-estrutural-caixa-branca" title="Link to this heading">#</a></h1>
+<section id="instrucoes-gerais">
+<h2>Instruções Gerais<a class="headerlink" href="#instrucoes-gerais" title="Link to this heading">#</a></h2>
+<p>Os exercícios estão organizados em três níveis de dificuldade progressiva, cada um focando em aspectos específicos das técnicas de teste estrutural. <strong>Leia atentamente</strong> os enunciados e <strong>implemente as soluções completamente</strong> antes de consultar os gabaritos.</p>
+<section id="objetivos-dos-exercicios">
+<h3>📋 Objetivos dos Exercícios<a class="headerlink" href="#objetivos-dos-exercicios" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Aplicar critérios de cobertura estrutural</strong> em cenários realistas</p></li>
+<li><p><strong>Calcular complexidade ciclomática</strong> e derivar casos de teste</p></li>
+<li><p><strong>Analisar fluxo de controle e fluxo de dados</strong> sistematicamente</p></li>
+<li><p><strong>Identificar DU-pairs</strong> e implementar cobertura completa</p></li>
+<li><p><strong>Desenvolver intuição prática</strong> para análise estrutural de código</p></li>
+</ul>
+</section>
+<section id="estrutura-de-dificuldade">
+<h3>🎯 Estrutura de Dificuldade<a class="headerlink" href="#estrutura-de-dificuldade" title="Link to this heading">#</a></h3>
+<section id="nivel-1-basico">
+<h4>🔵 Nível 1 - Básico<a class="headerlink" href="#nivel-1-basico" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: Aplicação direta de conceitos fundamentais</p></li>
+<li><p><strong>Complexidade</strong>: Uma única funcionalidade por exercício</p></li>
+<li><p><strong>Tempo Estimado</strong>: 15-30 minutos por exercício</p></li>
+<li><p><strong>Foco</strong>: Cobertura de instruções, decisões básicas, cálculo de complexidade</p></li>
+</ul>
+</section>
+<section id="nivel-2-intermediario">
+<h4>🟡 Nível 2 - Intermediário<a class="headerlink" href="#nivel-2-intermediario" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: Integração de múltiplos conceitos</p></li>
+<li><p><strong>Complexidade</strong>: Sistema pequeno com 2-4 classes/funções</p></li>
+<li><p><strong>Tempo Estimado</strong>: 45-90 minutos por exercício</p></li>
+<li><p><strong>Foco</strong>: DU-pairs, critérios de fluxo de dados, condições combinadas</p></li>
+</ul>
+</section>
+<section id="nivel-3-avancado">
+<h4>🔴 Nível 3 - Avançado<a class="headerlink" href="#nivel-3-avancado" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Objetivo</strong>: Design complexo e tomada de decisões arquiteturais</p></li>
+<li><p><strong>Complexidade</strong>: Sistema completo com múltiplas responsabilidades</p></li>
+<li><p><strong>Tempo Estimado</strong>: 2-4 horas por exercício</p></li>
+<li><p><strong>Foco</strong>: Análise estrutural completa, otimização de casos de teste, cenários reais</p></li>
+</ul>
+</section>
+</section>
+<section id="criterios-de-avaliacao">
+<h3>📝 Critérios de Avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Link to this heading">#</a></h3>
+<p>Para cada exercício, sua solução será avaliada nos seguintes aspectos:</p>
+<ol class="arabic simple">
+<li><p><strong>Correção Funcional</strong> (25%): O código funciona conforme especificado</p></li>
+<li><p><strong>Análise Estrutural</strong> (35%): Identificação correta de CFG, complexidade, DU-pairs</p></li>
+<li><p><strong>Qualidade dos Casos de Teste</strong> (25%): Cobertura adequada e casos bem escolhidos</p></li>
+<li><p><strong>Documentação e Comentários</strong> (15%): Explicação clara do processo de análise</p></li>
+</ol>
+</section>
+<section id="ferramentas-recomendadas">
+<h3>🛠️ Ferramentas Recomendadas<a class="headerlink" href="#ferramentas-recomendadas" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Python 3.12+</strong>: Linguagem base para implementação</p></li>
+<li><p><strong>pytest</strong>: Framework de testes (instalar com <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pytest</span></code>)</p></li>
+<li><p><strong><a class="reference external" href="http://coverage.py">coverage.py</a></strong>: Medição de cobertura (instalar com <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">coverage</span></code>)</p></li>
+<li><p><strong>Papel e caneta</strong>: Para desenhar grafos de fluxo de controle manualmente</p></li>
+</ul>
+</section>
+<section id="dicas-para-sucesso">
+<h3>💡 Dicas para Sucesso<a class="headerlink" href="#dicas-para-sucesso" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Leia o enunciado completo</strong> antes de começar a implementar</p></li>
+<li><p><strong>Desenhe o grafo de fluxo de controle</strong> no papel antes de codificar</p></li>
+<li><p><strong>Calcule a complexidade ciclomática</strong> para guiar o número de casos de teste</p></li>
+<li><p><strong>Identifique DU-pairs sistematicamente</strong> para cada variável</p></li>
+<li><p><strong>Execute os testes</strong> para verificar a cobertura real</p></li>
+<li><p><strong>Documente sua análise</strong> passo a passo nos comentários</p></li>
+</ol>
+</section>
+<section id="material-de-apoio">
+<h3>📚 Material de Apoio<a class="headerlink" href="#material-de-apoio" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Capítulo principal</strong>: Consulte as seções 2 e 3 do <a class="reference external" href="http://README.md">README.md</a> da aula</p></li>
+<li><p><strong>Exemplos de referência</strong>: Use os códigos demonstrativos como modelo</p></li>
+<li><p><strong>Fórmulas importantes</strong>:</p>
+<ul>
+<li><p>Complexidade Ciclomática: M = E - N + 2P ou M = D + 1</p></li>
+<li><p>Cobertura de Instruções: (Instruções Executadas / Total) × 100%</p></li>
+<li><p>Cobertura de Decisões: (Decisões Completamente Testadas / Total) × 100%</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="organizacao-dos-exercicios">
+<h2>📂 Organização dos Exercícios<a class="headerlink" href="#organizacao-dos-exercicios" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3><a class="reference internal" href="#./nivel1/"><span class="xref myst">🔵 Nível 1 - Básico</span></a><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Exercício 1.1</strong>: Análise de Função Simples com Condicionais</p></li>
+<li><p><strong>Exercício 1.2</strong>: Cálculo de Complexidade Ciclomática</p></li>
+<li><p><strong>Exercício 1.3</strong>: Cobertura de Instruções e Decisões</p></li>
+<li><p><strong>Exercício 1.4</strong>: Identificação Básica de DU-Pairs</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3><a class="reference internal" href="#./nivel2/"><span class="xref myst">🟡 Nível 2 - Intermediário</span></a><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Exercício 2.1</strong>: Sistema de Validação de Formulários</p></li>
+<li><p><strong>Exercício 2.2</strong>: Analisador de Logs com Múltiplos Critérios</p></li>
+<li><p><strong>Exercício 2.3</strong>: Calculadora com Operações Complexas</p></li>
+<li><p><strong>Exercício 2.4</strong>: Fluxo de Dados em Sistema de Estoque</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><a class="reference internal" href="#./nivel3/"><span class="xref myst">🔴 Nível 3 - Avançado</span></a><a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Exercício 3.1</strong>: Sistema de Gerenciamento de Biblioteca</p></li>
+<li><p><strong>Exercício 3.2</strong>: Processador de Transações Bancárias</p></li>
+<li><p><strong>Exercício 3.3</strong>: Motor de Regras de Negócio Configurável</p></li>
+<li><p><strong>Exercício 3.4</strong>: Análise Estrutural de Sistema Legacy</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="como-comecar">
+<h2>🚀 Como Começar<a class="headerlink" href="#como-comecar" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Escolha seu nível</strong>: Comece pelo Nível 1 se é iniciante, ou vá direto ao seu nível de conforto</p></li>
+<li><p><strong>Leia as instruções específicas</strong> na pasta do nível escolhido</p></li>
+<li><p><strong>Implemente as soluções</strong> seguindo as especificações</p></li>
+<li><p><strong>Execute os testes</strong> para verificar funcionalidade e cobertura</p></li>
+<li><p><strong>Compare com os gabaritos</strong> disponíveis na pasta <code class="docutils literal notranslate"><span class="pre">../solucoes/</span></code></p></li>
+<li><p><strong>Reflita sobre alternativas</strong> e otimizações possíveis</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="checklist-de-validacao">
+<h2>📋 Checklist de Validação<a class="headerlink" href="#checklist-de-validacao" title="Link to this heading">#</a></h2>
+<p>Antes de considerar um exercício completo, verifique:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Código implementado funciona corretamente</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Grafo de fluxo de controle desenhado e documentado</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Complexidade ciclomática calculada e verificada</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> DU-pairs identificados para todas as variáveis relevantes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Casos de teste derivados sistematicamente da análise</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Cobertura medida e documentada (instruções, decisões, caminhos)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Código comentado pedagogicamente</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Testes executam sem erros</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Boa sorte e aproveite a jornada de aprendizado! 🎓</strong></p>
+<p><em>Lembre-se: o objetivo não é apenas “fazer funcionar”, mas compreender profundamente como as técnicas de teste estrutural garantem qualidade e confiabilidade do software.</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs/aulas/aula-09-10-tecnicas-teste-estrutural-caixa-branca/exercicios"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+    <script type="text/javascript">
+        function init() {
+            WaveDrom.ProcessAll();
+        }
+        window.onload = init;
+    </script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../aula-06-08-tecnicas-teste-funcional-caixa-preta/exercicios/README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../aula-11-criterios-parada-metricas-teste/exercicios/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercícios - Critérios de Parada e Métricas de Teste</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instrucoes-gerais">Instruções Gerais</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivos-dos-exercicios">📋 Objetivos dos Exercícios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estrutura-de-dificuldade">🎯 Estrutura de Dificuldade</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-1-basico">🔵 Nível 1 - Básico</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-2-intermediario">🟡 Nível 2 - Intermediário</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nivel-3-avancado">🔴 Nível 3 - Avançado</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-avaliacao">📝 Critérios de Avaliação</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ferramentas-recomendadas">🛠️ Ferramentas Recomendadas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dicas-para-sucesso">💡 Dicas para Sucesso</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#material-de-apoio">📚 Material de Apoio</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizacao-dos-exercicios">📂 Organização dos Exercícios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="xref myst">🔵 Nível 1 - Básico</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="xref myst">🟡 Nível 2 - Intermediário</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="xref myst">🔴 Nível 3 - Avançado</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#como-comecar">🚀 Como Começar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-de-validacao">📋 Checklist de Validação</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jackson Antonio do Prado Lima
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

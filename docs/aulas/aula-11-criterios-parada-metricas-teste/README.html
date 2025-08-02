@@ -200,11 +200,13 @@ window.addEventListener("load", () => mermaid.run());
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../aula-03-04-conceitos-fundamentais-teste/exercicios/README.html">Exercícios - Conceitos Fundamentais de Teste</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../aula-05-casos-teste-criterios/exercicios/README.html">Exercícios Práticos - Casos de Teste e Critérios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../aula-09-10-tecnicas-teste-estrutural-caixa-branca/exercicios/README.html">Exercícios Práticos - Técnicas de Teste Estrutural (Caixa-Branca)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercicios/README.html">Exercícios - Critérios de Parada e Métricas de Teste</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Soluções dos Exercícios</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../aula-03-04-conceitos-fundamentais-teste/solucoes/README.html">Soluções dos Exercícios</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../aula-05-casos-teste-criterios/solucoes/README.html">Soluções dos Exercícios - Aula 05 📚</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solucoes/README.html">Soluções dos Exercícios - Aula 11</a></li>
 </ul>
 
     </div>
@@ -2457,7 +2459,8 @@ Baseado em correlação histórica entre métricas técnicas e NPS/CSAT.</p></li
 </div>
 <p><strong>Integração com DevOps e CI/CD:</strong></p>
 <p>Os critérios de parada são componentes essenciais dos <strong>pipelines de entrega contínua</strong>, funcionando como <strong>gates de qualidade</strong> que determinam automaticamente se uma versão pode prosseguir para o próximo estágio do pipeline.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+<pre  class="mermaid">
+        graph LR
     A[Code Commit] --&gt; B[Unit Tests]
     B --&gt; C{Coverage ≥ 85%?}
     C --&gt;|Yes| D[Integration Tests]
@@ -2469,9 +2472,7 @@ Baseado em correlação histórica entre métricas técnicas e NPS/CSAT.</p></li
     H --&gt; I{All Criteria Met?}
     I --&gt;|Yes| J[Deploy to Production]
     I --&gt;|No| E
-</pre></div>
-</div>
-</section>
+    </pre></section>
 <section id="conexao-com-inteligencia-artificial-e-machine-learning">
 <h4><strong>Conexão com Inteligência Artificial e Machine Learning</strong><a class="headerlink" href="#conexao-com-inteligencia-artificial-e-machine-learning" title="Link to this heading">#</a></h4>
 <p>A intersecção entre critérios de parada e IA/ML representa uma das fronteiras mais promissoras da engenharia de software moderna. Esta conexão manifesta-se em múltiplas dimensões:</p>
@@ -2852,7 +2853,8 @@ Baseado em correlação histórica entre métricas técnicas e NPS/CSAT.</p></li
 </section>
 <section id="mapa-mental-conceitual">
 <h4><strong>Mapa Mental Conceitual</strong><a class="headerlink" href="#mapa-mental-conceitual" title="Link to this heading">#</a></h4>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>mindmap
+<pre  class="mermaid">
+        mindmap
   root((Critérios de Parada e Métricas))
     
     Fundamentos Teóricos
@@ -2928,9 +2930,7 @@ Baseado em correlação histórica entre métricas técnicas e NPS/CSAT.</p></li
         Security-first
         Compliance
         Threat coverage
-</pre></div>
-</div>
-</section>
+    </pre></section>
 </section>
 <section id="referencias-e-leituras-adicionais">
 <h3>5.4. Referências e Leituras Adicionais<a class="headerlink" href="#referencias-e-leituras-adicionais" title="Link to this heading">#</a></h3>
