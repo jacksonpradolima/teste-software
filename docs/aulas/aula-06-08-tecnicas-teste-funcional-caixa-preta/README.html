@@ -533,7 +533,7 @@ document.write(`
 <section id="problema-motivador-o-desafio-da-validacao-em-sistemas-criticos">
 <h3>1.1. Problema Motivador: O Desafio da Validação em Sistemas Críticos<a class="headerlink" href="#problema-motivador-o-desafio-da-validacao-em-sistemas-criticos" title="Link to this heading">#</a></h3>
 <p>Imagine que você é o engenheiro de qualidade responsável por validar o sistema de transferência bancária do maior banco digital do país. Milhões de transações são processadas diariamente, envolvendo transferências que variam desde R$ 0,01 até valores da ordem de milhões de reais. O sistema deve verificar limites por tipo de conta, aplicar diferentes taxas conforme horários e valores, validar dados dos beneficiários e ainda considerar regras especiais para feriados e finais de semana.</p>
-<p>Como você garantiria que todas as possíveis combinações de entrada foram testadas adequadamente? Como ter certeza de que o sistema comporta-se corretamente tanto para um PIX de R<span class="math notranslate nohighlight">\( 10,00 quanto para uma TED de R\)</span> 500.000,00? E mais importante: como fazer isso de forma eficiente, sem precisar testar literalmente todos os valores possíveis - o que seria matematicamente inviável?</p>
+<p>Como você garantiria que todas as possíveis combinações de entrada foram testadas adequadamente? Como ter certeza de que o sistema comporta-se corretamente tanto para um PIX de R$ 10,00 quanto para uma TED de R$ 500.000,00? E mais importante: como fazer isso de forma eficiente, sem precisar testar literalmente todos os valores possíveis - o que seria matematicamente inviável?</p>
 <p>Este cenário ilustra perfeitamente o desafio central que as técnicas de teste funcional (caixa-preta) foram desenvolvidas para resolver: <strong>como validar sistematicamente o comportamento de um sistema complexo focando nas suas especificações e requisitos, sem depender do conhecimento da implementação interna, e fazendo isso de forma eficiente e abrangente</strong>.</p>
 <p>As técnicas que estudaremos nesta aula - Particionamento de Equivalência, Análise do Valor Limite, Tabelas de Decisão, Máquinas de Estado e Testes Baseados em Casos de Uso - são ferramentas fundamentais que permitem aos engenheiros de software construir estratégias de teste rigorosas, sistemáticas e economicamente viáveis para sistemas críticos como este.</p>
 </section>
@@ -764,8 +764,8 @@ A: Use conhecimento do domínio para criar partições representativas. Por exem
 <p>A eficácia da análise do valor limite baseia-se em evidências empíricas coletadas ao longo de décadas de desenvolvimento de software. Estudos mostram que aproximadamente 16% de todos os defeitos de software ocorrem nos valores limite, apesar destes representarem uma fração mínima do domínio total de entrada.</p>
 <pre  class="mermaid">
         graph LR
-    A[Domínio de Entrada] --&gt; B[Interior da Partição&lt;br/&gt;~84% dos valores&lt;br/&gt;~16% dos defeitos]
-    A --&gt; C[Valores Limite&lt;br/&gt;~1% dos valores&lt;br/&gt;~84% dos defeitos]
+    A[Domínio de Entrada] --&gt; B[Interior da Partição: ~84% dos valores / ~16% dos defeitos]
+    A --&gt; C[Valores Limite: ~1% dos valores / ~84% dos defeitos]
     
     style C fill:#ff9999
     style B fill:#99ff99
