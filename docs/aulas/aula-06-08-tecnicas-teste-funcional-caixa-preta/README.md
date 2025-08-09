@@ -53,9 +53,9 @@ tone: "profissional e didático"
 
 ### 1.1. Problema Motivador: O Desafio da Validação em Sistemas Críticos
 
-Imagine que você é o engenheiro de qualidade responsável por validar o sistema de transferência bancária do maior banco digital do país. Milhões de transações são processadas diariamente, envolvendo transferências que variam desde R$ 0,01 até valores da ordem de milhões de reais. O sistema deve verificar limites por tipo de conta, aplicar diferentes taxas conforme horários e valores, validar dados dos beneficiários e ainda considerar regras especiais para feriados e finais de semana.
+Imagine que você é o engenheiro de qualidade responsável por validar o sistema de transferência bancária do maior banco digital do país. Milhões de transações são processadas diariamente, envolvendo transferências que variam desde R\$ 0,01 até valores da ordem de milhões de reais. O sistema deve verificar limites por tipo de conta, aplicar diferentes taxas conforme horários e valores, validar dados dos beneficiários e ainda considerar regras especiais para feriados e finais de semana.
 
-Como você garantiria que todas as possíveis combinações de entrada foram testadas adequadamente? Como ter certeza de que o sistema comporta-se corretamente tanto para um PIX de R$ 10,00 quanto para uma TED de R$ 500.000,00? E mais importante: como fazer isso de forma eficiente, sem precisar testar literalmente todos os valores possíveis - o que seria matematicamente inviável?
+Como você garantiria que todas as possíveis combinações de entrada foram testadas adequadamente? Como ter certeza de que o sistema comporta-se corretamente tanto para um PIX de R\$ 10,00 quanto para uma TED de R\$ 500.000,00? E mais importante: como fazer isso de forma eficiente, sem precisar testar literalmente todos os valores possíveis - o que seria matematicamente inviável?
 
 Este cenário ilustra perfeitamente o desafio central que as técnicas de teste funcional (caixa-preta) foram desenvolvidas para resolver: **como validar sistematicamente o comportamento de um sistema complexo focando nas suas especificações e requisitos, sem depender do conhecimento da implementação interna, e fazendo isso de forma eficiente e abrangente**.
 
@@ -243,8 +243,8 @@ A eficácia da análise do valor limite baseia-se em evidências empíricas cole
 
 ```{mermaid}
 graph LR
-    A[Domínio de Entrada] --> B[Interior da Partição<br/>~84% dos valores<br/>~16% dos defeitos]
-    A --> C[Valores Limite<br/>~1% dos valores<br/>~84% dos defeitos]
+    A[Domínio de Entrada] --> B[Interior da Partição: ~84% dos valores / ~16% dos defeitos]
+    A --> C[Valores Limite: ~1% dos valores / ~84% dos defeitos]
     
     style C fill:#ff9999
     style B fill:#99ff99
