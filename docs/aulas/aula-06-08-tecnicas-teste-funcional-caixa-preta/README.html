@@ -563,10 +563,10 @@ document.write(`
 <section id="terminologia-essencial-e-definicoes-formais">
 <h4>Terminologia Essencial e Definições Formais<a class="headerlink" href="#terminologia-essencial-e-definicoes-formais" title="Link to this heading">#</a></h4>
 <p><strong>Particionamento de Equivalência</strong> é uma técnica de teste funcional que divide o domínio de entrada de um programa em classes ou partições, onde todos os valores dentro de uma mesma classe devem ser tratados de forma equivalente pelo sistema sob teste. Formalmente, dado um domínio de entrada <span class="math notranslate nohighlight">\(D\)</span> e uma função de software <span class="math notranslate nohighlight">\(f\)</span>, uma partição de equivalência <span class="math notranslate nohighlight">\(P_i \subseteq D\)</span> é um subconjunto do domínio onde <span class="math notranslate nohighlight">\(\forall x, y \in P_i\)</span>, o comportamento de <span class="math notranslate nohighlight">\(f(x)\)</span> é equivalente ao comportamento de <span class="math notranslate nohighlight">\(f(y)\)</span>.</p>
-<p><strong>Analogia para Entender</strong></p>
-<blockquote>
-<div><p>Imagine que você está organizando uma festa e precisa definir faixas etárias para diferentes atividades. Você não precisa testar cada idade individualmente (16, 17, 18, 19…), mas pode criar grupos: “menores de 18”, “18-65” e “maiores de 65”. Todos dentro de cada grupo têm o mesmo tratamento. O particionamento de equivalência funciona da mesma forma: agrupa valores que o sistema trata de maneira idêntica.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Analogia:</strong> Imagine que você está organizando uma festa e precisa definir faixas etárias para diferentes atividades. Você não precisa testar cada idade individualmente (16, 17, 18, 19…), mas pode criar grupos: “menores de 18”, “18-65” e “maiores de 65”. Todos dentro de cada grupo têm o mesmo tratamento. O particionamento de equivalência funciona da mesma forma: agrupa valores que o sistema trata de maneira idêntica.</p>
+</div>
 </section>
 <section id="estrutura-conceitual">
 <h4>Estrutura Conceitual<a class="headerlink" href="#estrutura-conceitual" title="Link to this heading">#</a></h4>
@@ -752,10 +752,10 @@ A: Use conhecimento do domínio para criar partições representativas. Por exem
 <h4>Terminologia Essencial e Definições Formais<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <p><strong>Análise do Valor Limite</strong> (Boundary Value Analysis - BVA) é uma técnica de teste funcional que se concentra especificamente nos valores que estão nos limites ou fronteiras das classes de equivalência. Esta técnica é baseada na observação empírica de que um número desproporcional de defeitos ocorre nos limites dos domínios de entrada, rather than no interior das partições.</p>
 <p>Formalmente, dado um intervalo <span class="math notranslate nohighlight">\([a, b]\)</span>, os valores limite são: <span class="math notranslate nohighlight">\(\{a-1, a, a+1, b-1, b, b+1\}\)</span>, onde <span class="math notranslate nohighlight">\(a\)</span> e <span class="math notranslate nohighlight">\(b\)</span> são os limites inferior e superior do domínio válido, respectivamente.</p>
-<p><strong>Analogia para Entender</strong></p>
-<blockquote>
-<div><p>Pense na análise do valor limite como um inspetor de qualidade verificando a resistência de uma ponte. Ele não testa apenas cargas no meio da faixa permitida (que provavelmente funcionarão bem), mas foca nos limites máximos e mínimos de peso suportado. É exatamente nos extremos que as estruturas tendem a falhar. No software, os algoritmos frequentemente contêm erros de lógica como “menor que” versus “menor ou igual que”, que só aparecem nos valores limítrofes.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Analogia</strong>: Pense na análise do valor limite como um inspetor de qualidade verificando a resistência de uma ponte. Ele não testa apenas cargas no meio da faixa permitida (que provavelmente funcionarão bem), mas foca nos limites máximos e mínimos de peso suportado. É exatamente nos extremos que as estruturas tendem a falhar. No software, os algoritmos frequentemente contêm erros de lógica como “menor que” versus “menor ou igual que”, que só aparecem nos valores limítrofes.</p>
+</div>
 </section>
 <section id="id2">
 <h4>Estrutura Conceitual<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
@@ -922,10 +922,10 @@ A: Sim! Teste se o sistema produz saídas corretas nos limites dos domínios de 
 <li><p><span class="math notranslate nohighlight">\(A = \{a_1, a_2, ..., a_m\}\)</span> é o conjunto de ações possíveis</p></li>
 <li><p><span class="math notranslate nohighlight">\(R = \{r_1, r_2, ..., r_k\}\)</span> é o conjunto de regras, onde cada regra <span class="math notranslate nohighlight">\(r_i\)</span> especifica uma combinação de valores para todas as condições e as ações correspondentes</p></li>
 </ul>
-<p><strong>Analogia para Entender</strong></p>
-<blockquote>
-<div><p>Uma tabela de decisão funciona como um manual de procedimentos de emergência em um hospital. Para cada combinação de sintomas (condições) que um paciente pode apresentar - febre alta (sim/não), dor no peito (sim/não), dificuldade respiratória (sim/não) - existe um protocolo específico de ações a serem tomadas. O médico consulta a tabela, identifica a combinação de sintomas e segue exatamente o procedimento definido. A tabela garante que todas as combinações possíveis foram consideradas e que há uma resposta clara para cada situação.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Analogia</strong>: Uma tabela de decisão funciona como um manual de procedimentos de emergência em um hospital. Para cada combinação de sintomas (condições) que um paciente pode apresentar - febre alta (sim/não), dor no peito (sim/não), dificuldade respiratória (sim/não) - existe um protocolo específico de ações a serem tomadas. O médico consulta a tabela, identifica a combinação de sintomas e segue exatamente o procedimento definido. A tabela garante que todas as combinações possíveis foram consideradas e que há uma resposta clara para cada situação.</p>
+</div>
 </section>
 <section id="id7">
 <h4>Estrutura Conceitual<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
@@ -1201,10 +1201,10 @@ A: Derive pelo menos um caso de teste para cada regra. Para regras críticas, co
 <li><p><span class="math notranslate nohighlight">\(s_0 \in S\)</span> é o estado inicial</p></li>
 <li><p><span class="math notranslate nohighlight">\(F \subseteq S\)</span> é o conjunto de estados finais/de aceitação</p></li>
 </ul>
-<p><strong>Analogia para Entender</strong></p>
-<blockquote>
-<div><p>Uma máquina de estado funciona como o sistema de semáforos em um cruzamento. O semáforo tem estados bem definidos (Verde, Amarelo, Vermelho) e transições específicas entre eles (Verde→Amarelo após 30s, Amarelo→Vermelho após 5s, Vermelho→Verde após 25s). O sistema nunca vai diretamente de Verde para Vermelho, e cada transição tem uma condição clara. Máquinas de estado de software funcionam da mesma forma: estados representam condições do sistema, e transições são mudanças controladas baseadas em eventos específicos.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Analogia</strong>: Uma máquina de estado funciona como o sistema de semáforos em um cruzamento. O semáforo tem estados bem definidos (Verde, Amarelo, Vermelho) e transições específicas entre eles (Verde→Amarelo após 30s, Amarelo→Vermelho após 5s, Vermelho→Verde após 25s). O sistema nunca vai diretamente de Verde para Vermelho, e cada transição tem uma condição clara. Máquinas de estado de software funcionam da mesma forma: estados representam condições do sistema, e transições são mudanças controladas baseadas em eventos específicos.</p>
+</div>
 </section>
 <section id="id12">
 <h4>Estrutura Conceitual<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
@@ -1447,10 +1447,10 @@ A: Use parâmetros de estado ou considere decompor em múltiplas máquinas menor
 <li><p><span class="math notranslate nohighlight">\(F_a\)</span> é o conjunto de fluxos alternativos</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_e\)</span> é o conjunto de fluxos de exceção</p></li>
 </ul>
-<p><strong>Analogia para Entender</strong></p>
-<blockquote>
-<div><p>Testes baseados em casos de uso funcionam como um roteiro de filme detalhado. Assim como um roteiro descreve exatamente como cada cena deve se desenrolar - quais personagens participam, qual o objetivo da cena, o que acontece no cenário ideal, quais variações são possíveis e como lidar com imprevistos - os casos de uso descrevem como os usuários interagem com o sistema. Os testes então verificam se o “filme” (sistema) realmente segue o “roteiro” (casos de uso) corretamente.</p>
-</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Analogia</strong>: Testes baseados em casos de uso funcionam como um roteiro de filme detalhado. Assim como um roteiro descreve exatamente como cada cena deve se desenrolar - quais personagens participam, qual o objetivo da cena, o que acontece no cenário ideal, quais variações são possíveis e como lidar com imprevistos - os casos de uso descrevem como os usuários interagem com o sistema. Os testes então verificam se o “filme” (sistema) realmente segue o “roteiro” (casos de uso) corretamente.</p>
+</div>
 </section>
 <section id="id17">
 <h4>Estrutura Conceitual<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
