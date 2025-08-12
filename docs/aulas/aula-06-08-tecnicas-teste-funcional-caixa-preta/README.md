@@ -93,8 +93,9 @@ A crescente complexidade dos sistemas modernos, combinada com a necessidade de d
 
 **Particionamento de Equivalência** é uma técnica de teste funcional que divide o domínio de entrada de um programa em classes ou partições, onde todos os valores dentro de uma mesma classe devem ser tratados de forma equivalente pelo sistema sob teste. Formalmente, dado um domínio de entrada $D$ e uma função de software $f$, uma partição de equivalência $P_i \subseteq D$ é um subconjunto do domínio onde $\forall x, y \in P_i$, o comportamento de $f(x)$ é equivalente ao comportamento de $f(y)$.
 
-**Analogia para Entender**
-> Imagine que você está organizando uma festa e precisa definir faixas etárias para diferentes atividades. Você não precisa testar cada idade individualmente (16, 17, 18, 19...), mas pode criar grupos: "menores de 18", "18-65" e "maiores de 65". Todos dentro de cada grupo têm o mesmo tratamento. O particionamento de equivalência funciona da mesma forma: agrupa valores que o sistema trata de maneira idêntica.
+```{note}
+**Analogia:** Imagine que você está organizando uma festa e precisa definir faixas etárias para diferentes atividades. Você não precisa testar cada idade individualmente (16, 17, 18, 19...), mas pode criar grupos: "menores de 18", "18-65" e "maiores de 65". Todos dentro de cada grupo têm o mesmo tratamento. O particionamento de equivalência funciona da mesma forma: agrupa valores que o sistema trata de maneira idêntica.
+```
 
 #### Estrutura Conceitual
 
@@ -232,8 +233,9 @@ A: Use conhecimento do domínio para criar partições representativas. Por exem
 
 Formalmente, dado um intervalo $[a, b]$, os valores limite são: $\{a-1, a, a+1, b-1, b, b+1\}$, onde $a$ e $b$ são os limites inferior e superior do domínio válido, respectivamente.
 
-**Analogia para Entender**
-> Pense na análise do valor limite como um inspetor de qualidade verificando a resistência de uma ponte. Ele não testa apenas cargas no meio da faixa permitida (que provavelmente funcionarão bem), mas foca nos limites máximos e mínimos de peso suportado. É exatamente nos extremos que as estruturas tendem a falhar. No software, os algoritmos frequentemente contêm erros de lógica como "menor que" versus "menor ou igual que", que só aparecem nos valores limítrofes.
+```{note}
+**Analogia**: Pense na análise do valor limite como um inspetor de qualidade verificando a resistência de uma ponte. Ele não testa apenas cargas no meio da faixa permitida (que provavelmente funcionarão bem), mas foca nos limites máximos e mínimos de peso suportado. É exatamente nos extremos que as estruturas tendem a falhar. No software, os algoritmos frequentemente contêm erros de lógica como "menor que" versus "menor ou igual que", que só aparecem nos valores limítrofes.
+```
 
 #### Estrutura Conceitual
 
@@ -363,8 +365,9 @@ Formalmente, uma Tabela de Decisão $T$ é definida como uma tupla $T = (C, A, R
 - $A = \{a_1, a_2, ..., a_m\}$ é o conjunto de ações possíveis
 - $R = \{r_1, r_2, ..., r_k\}$ é o conjunto de regras, onde cada regra $r_i$ especifica uma combinação de valores para todas as condições e as ações correspondentes
 
-**Analogia para Entender**
-> Uma tabela de decisão funciona como um manual de procedimentos de emergência em um hospital. Para cada combinação de sintomas (condições) que um paciente pode apresentar - febre alta (sim/não), dor no peito (sim/não), dificuldade respiratória (sim/não) - existe um protocolo específico de ações a serem tomadas. O médico consulta a tabela, identifica a combinação de sintomas e segue exatamente o procedimento definido. A tabela garante que todas as combinações possíveis foram consideradas e que há uma resposta clara para cada situação.
+```{note}
+**Analogia**: Uma tabela de decisão funciona como um manual de procedimentos de emergência em um hospital. Para cada combinação de sintomas (condições) que um paciente pode apresentar - febre alta (sim/não), dor no peito (sim/não), dificuldade respiratória (sim/não) - existe um protocolo específico de ações a serem tomadas. O médico consulta a tabela, identifica a combinação de sintomas e segue exatamente o procedimento definido. A tabela garante que todas as combinações possíveis foram consideradas e que há uma resposta clara para cada situação.
+```
 
 #### Estrutura Conceitual
 
@@ -525,8 +528,9 @@ Formalmente, uma máquina de estado $M$ é definida como uma quintupla $M = (S, 
 - $s_0 \in S$ é o estado inicial
 - $F \subseteq S$ é o conjunto de estados finais/de aceitação
 
-**Analogia para Entender**
-> Uma máquina de estado funciona como o sistema de semáforos em um cruzamento. O semáforo tem estados bem definidos (Verde, Amarelo, Vermelho) e transições específicas entre eles (Verde→Amarelo após 30s, Amarelo→Vermelho após 5s, Vermelho→Verde após 25s). O sistema nunca vai diretamente de Verde para Vermelho, e cada transição tem uma condição clara. Máquinas de estado de software funcionam da mesma forma: estados representam condições do sistema, e transições são mudanças controladas baseadas em eventos específicos.
+```{note}
+**Analogia**: Uma máquina de estado funciona como o sistema de semáforos em um cruzamento. O semáforo tem estados bem definidos (Verde, Amarelo, Vermelho) e transições específicas entre eles (Verde→Amarelo após 30s, Amarelo→Vermelho após 5s, Vermelho→Verde após 25s). O sistema nunca vai diretamente de Verde para Vermelho, e cada transição tem uma condição clara. Máquinas de estado de software funcionam da mesma forma: estados representam condições do sistema, e transições são mudanças controladas baseadas em eventos específicos.
+```
 
 #### Estrutura Conceitual
 
@@ -686,8 +690,9 @@ Formalmente, um Caso de Uso $UC$ é definido como uma tupla $UC = (A, G, P_{pre}
 - $F_a$ é o conjunto de fluxos alternativos
 - $F_e$ é o conjunto de fluxos de exceção
 
-**Analogia para Entender**
-> Testes baseados em casos de uso funcionam como um roteiro de filme detalhado. Assim como um roteiro descreve exatamente como cada cena deve se desenrolar - quais personagens participam, qual o objetivo da cena, o que acontece no cenário ideal, quais variações são possíveis e como lidar com imprevistos - os casos de uso descrevem como os usuários interagem com o sistema. Os testes então verificam se o "filme" (sistema) realmente segue o "roteiro" (casos de uso) corretamente.
+```{note}
+**Analogia**: Testes baseados em casos de uso funcionam como um roteiro de filme detalhado. Assim como um roteiro descreve exatamente como cada cena deve se desenrolar - quais personagens participam, qual o objetivo da cena, o que acontece no cenário ideal, quais variações são possíveis e como lidar com imprevistos - os casos de uso descrevem como os usuários interagem com o sistema. Os testes então verificam se o "filme" (sistema) realmente segue o "roteiro" (casos de uso) corretamente.
+```
 
 #### Estrutura Conceitual
 
